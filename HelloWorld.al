@@ -1,2 +1,2 @@
 //TEST
-//Dette blir en konflikt
+//TEST2
