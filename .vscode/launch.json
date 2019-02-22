@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Your own server",
+            "server": "https://auziliumapp03.auzilium.no",
+            "serverInstance": "AUZILIUM_LIVE",
+            "port": 7049,
+            "authentication": "UserPassword",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true
+        }
+    ]
+}
