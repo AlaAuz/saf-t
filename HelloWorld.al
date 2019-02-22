@@ -1,1 +1,2 @@
-//Dette er ny kode
+//Dette er ny kode asdfasdf
+//asfasdf
