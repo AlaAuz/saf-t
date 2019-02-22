@@ -1,5 +1,2 @@
 //TEST
-//TEST2
-//KAKE2
-//Kake3
 //TEST NEW
