@@ -1,4 +1,1 @@
-//TEST
-//TEST2
-//KAKE
-//TEST NEW
+//Dette er ny kode
