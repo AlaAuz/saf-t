@@ -15,6 +15,7 @@ page 50101 MyPage
                 {
                     Caption = 'test 1';
                     ApplicationArea = All;
+                    Caption = 'aasdf';
                 }
 
                 field(MyField4; MyField4)
