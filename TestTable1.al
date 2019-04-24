@@ -7,7 +7,16 @@ table 50100 MyTable
         field(1; MyField; Integer)
         {
             DataClassification = ToBeClassified;
+        }
 
+        field(2; MyField2; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(3; MyField3; Code[20])
+        {
+            DataClassification = ToBeClassified;
         }
     }
 

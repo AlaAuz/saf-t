@@ -15,6 +15,15 @@ page 50101 MyPage
                 {
                     ApplicationArea = All;
                 }
+
+                field(MyField2; MyField2)
+                {
+                    ApplicationArea = All;
+                }
+                field(MyField3; MyField3)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
