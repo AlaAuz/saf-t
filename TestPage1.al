@@ -28,6 +28,15 @@ page 50101 MyPage
                     Caption = 'test 5';
                     ApplicationArea = All;
                 }
+
+                field(MyField2; MyField2)
+                {
+                    ApplicationArea = All;
+                }
+                field(MyField3; MyField3)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
