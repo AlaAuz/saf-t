@@ -9,16 +9,6 @@ table 50100 MyTable
             DataClassification = ToBeClassified;
         }
 
-        field(2; MyField2; Code[20])
-        {
-            DataClassification = ToBeClassified;
-        }
-
-        field(3; MyField3; Code[20])
-        {
-            DataClassification = ToBeClassified;
-        }
-
         field(4; MyField4; Text[10])
         {
             DataClassification = ToBeClassified;
