@@ -11,11 +11,10 @@ page 50101 MyPage
         {
             group(GroupName)
             {
-                field(MyField; MyField)
+                field(MyField6; MyField6)
                 {
-                    Caption = 'test 1';
+                    Caption = 'test 6';
                     ApplicationArea = All;
-                    Caption = 'aasdf';
                 }
 
                 field(MyField4; MyField4)

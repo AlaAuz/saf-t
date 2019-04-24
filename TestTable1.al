@@ -4,7 +4,7 @@ table 50100 MyTable
 
     fields
     {
-        field(1; MyField; Integer)
+        field(1; MyField6; Integer)
         {
             DataClassification = ToBeClassified;
         }
@@ -22,7 +22,7 @@ table 50100 MyTable
 
     keys
     {
-        key(PK; MyField)
+        key(PK; MyField6)
         {
             Clustered = true;
         }
