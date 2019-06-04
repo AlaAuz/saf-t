@@ -17,7 +17,7 @@ page 50101 MyPage
                     ApplicationArea = All;
                 }
 
-                field(MyField3; MyField3)
+                field(MyField3111; MyField3)
                 {
                     Caption = 'test 5';
                     ApplicationArea = All;
@@ -29,7 +29,7 @@ page 50101 MyPage
                     ApplicationArea = All;
                 }
 
-                field(MyField99; MyField99)
+                field(MyField99; asdf)
                 {
                     Caption = 'test 9';
                     ApplicationArea = All;
