@@ -11,12 +11,6 @@ page 50101 MyPage
         {
             group(GroupName)
             {
-                field(MyField6; MyField6)
-                {
-                    Caption = 'test 6';
-                    ApplicationArea = All;
-                }
-
                 field(MyField2; MyField2)
                 {
                     Caption = 'test 4';
@@ -34,6 +28,13 @@ page 50101 MyPage
                     Caption = 'test 4';
                     ApplicationArea = All;
                 }
+
+                field(MyField99; MyField99)
+                {
+                    Caption = 'test 9';
+                    ApplicationArea = All;
+                }
+
 
                 field(MyField5; MyField5)
                 {
