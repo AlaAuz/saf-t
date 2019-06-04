@@ -11,36 +11,7 @@ page 50101 MyPage
         {
             group(GroupName)
             {
-                field(MyField2; MyField2)
-                {
-                    Caption = 'test 4';
-                    ApplicationArea = All;
-                }
 
-                field(MyField3; MyField3)
-                {
-                    Caption = 'test 5';
-                    ApplicationArea = All;
-                }
-
-                field(MyField4; MyField4)
-                {
-                    Caption = 'test 4';
-                    ApplicationArea = All;
-                }
-
-                field(MyField99; MyField99)
-                {
-                    Caption = 'test 9';
-                    ApplicationArea = All;
-                }
-
-
-                field(MyField5; MyField5)
-                {
-                    Caption = 'test 5';
-                    ApplicationArea = All;
-                }
             }
         }
     }
