@@ -1,24 +1,27 @@
 {
   "id": "405b5386-8f56-49b1-9bb2-31e714d9ed0b",
   "name": "Auzilium",
-  "publisher": "Default publisher",
+  "publisher": "Auzilium",
   "brief": "",
   "description": "",
   "version": "1.0.0.0",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
+  "privacyStatement": "http://auzilium.no",
+  "EULA": "http://auzilium.no",
+  "help": "http://auzilium.no",
+  "url": "http://auzilium.no",
+  "logo": "logo.png",
   "capabilities": [],
   "dependencies": [],
   "screenshots": [],
-  "platform": "13.0.0.0",
-  "application": "13.0.0.0",
-  "idRange": {
-    "from": 50100,
-    "to": 50149
-  },
-  "runtime": "2.1",
-  "target": "Internal"
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges":[ 
+    {
+    "from": 50000,
+    "to": 50100
+    }
+],
+  "runtime": "3.0",
+  "target":"Extension",
+  "features": ["TranslationFile"]
 }

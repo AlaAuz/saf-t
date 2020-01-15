@@ -4,13 +4,11 @@
         {
             "type": "al",
             "request": "launch",
-            "name": "Your own server",
+            "name": "Auzilium",
             "server": "https://auziliumapp03.auzilium.no",
-            "serverInstance": "AUZILIUM_LIVE",
+            "serverInstance": "PROD",
             "port": 7049,
             "authentication": "UserPassword",
-            "startupObjectId": 22,
-            "startupObjectType": "Page",
             "breakOnError": true
         }
     ]
