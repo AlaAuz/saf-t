@@ -15,7 +15,7 @@ codeunit 50070 "Camt.054"
         if FileMgt.BLOBImport(TempBlob, '') = '' then
             Error('');
 
-        LineNo := GetLastLineNo(GenJnlLine);
+        //LineNo := GetLastLineNo(GenJnlLine);
 
         TempBlob.blob.CreateInStream(IStream, TEXTENCODING::UTF8);
         XmlDocument.ReadFrom(IStream, XmlDoc);
@@ -42,15 +42,16 @@ codeunit 50070 "Camt.054"
         EndToEndId: Text;
     begin
         CustomExchRateIsConfirmed := false;
-        GetTransactionInfo(TxDtlsNode, PmtInfId);
-
+        GetTransactionInfo(TxDtlsNode,MsgId, PmtInfId, EndToEndId);
+        WaitingJournal.SetRange("SEPA Msg. ID", MsgId);
         WaitingJournal.SetRange("SEPA Payment Inf ID", PmtInfId);
+        WaitingJournal.SetRange("SEPA End To End ID", EndToEndId);
         WaitingJournal.FindSet();
         repeat
-            IncrementLineNo();
             GenJnlLine.Init();
-            GenJnlLine."Line No." := LineNo;
             GenJnlLine.TransferFields(WaitingJournal);
+            IncrementLineNo();
+            GenJnlLine."Line No." := LineNo;
             GenJnlLine."Waiting Journal Reference" := WaitingJournal.Reference; //Sjekk om du trenger denne
             SetCurrencyFactor(GenJnlLine, TxDtlsNode, InnerTxt);
             GenJnlLine.Insert(true);
@@ -107,7 +108,7 @@ codeunit 50070 "Camt.054"
         end;
     end;
 
-    local procedure GetLastLineNo(var GenJnlLine: Record "Gen. Journal Line") LineNo: Integer
+    /*local procedure GetLastLineNo(var GenJnlLine: Record "Gen. Journal Line") LineNo: Integer
     var
         GenJournalLine2: Record "Gen. Journal Line";
     begin
@@ -115,16 +116,18 @@ codeunit 50070 "Camt.054"
         GenJournalLine2.SetRange("Journal Batch Name", GenJournalLine2."Journal Batch Name");
         if GenJournalLine2.FindLast then
             LineNo := GenJournalLine2."Line No."
-    end;
+    end; */
 
     local procedure IncrementLineNo()
     begin
         LineNo += 10000;
     end;
 
-    local procedure GetTransactionInfo(Node: XmlNode; var PmtInfId: Text)
+    local procedure GetTransactionInfo(Node: XmlNode; var MsgId: Text; var PmtInfId: Text; var EndToEndId: Text)
     begin
+        GetElementInnerText(Node, './n:Refs/n:MsgId', MsgId);
         GetElementInnerText(Node, '../n:PmtInfId', PmtInfId);
+        GetElementInnerText(Node, '../n:EndToEndId', EndToEndId);
     end;
 
     local procedure ConvertTextToDate(Node: XmlNode; Path: Text; var InnerText: Text) NewDate: Date
@@ -151,7 +154,94 @@ codeunit 50070 "Camt.054"
     /*[EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnAfterGLFinishPosting', '', true, true)]
     local procedure UpdaeWaitingJournalAfterGLFinishPosting(GenJournalLine: Record "Gen. Journal Line")
     begin
+        UpdateWaitingJournal(
+          WaitingJournal, MapReceivedStatusToFinalStatus(TransactionStatus), '', '',
+          RemittancePaymentOrder, GetMsgCreationDate(XmlNodeTransactionEntry), CurrentGenJournalLine, AccountCurrency, NumberApproved,
+          NumberSettled, NumberRejected,
+          TransDocumentNo, BalanceEntryAmountLCY, MoreReturnJournals, First, LatestDate, LatestVend, LatestRemittanceAccount,
+          LatestRemittanceAgreement,
+          LatestCurrencyCode,
+          CreateNewDocumentNo, false, BalanceEntryAmount);
     
+    end;
+    procedure UpdateWaitingJournal(var WaitingJournal: Record "Waiting Journal"; MappedTransactionStatus: Option Approved,Settled,Rejected,Pending; TransactionCauseCode: Text[20]; TransactionCauseInfo: Text[150]; RemittancePaymentOrder: Record "Remittance Payment Order"; ValueDate: Date; CurrentGenJournalLine: Record "Gen. Journal Line"; var AccountCurrency: Code[10]; var NumberApproved: Integer; var NumberSettled: Integer; var NumberRejected: Integer; var TransDocumentNo: Code[20]; var BalanceEntryAmountLCY: Decimal; var MoreReturnJournals: Boolean; var First: Boolean; var LatestDate: Date; var LatestVend: Code[20]; var LatestRemittanceAccount: Record "Remittance Account"; var LatestRemittanceAgreement: Record "Remittance Agreement"; var LatestCurrencyCode: Code[10]; var CreateNewDocumentNo: Boolean; IsPain002Format: Boolean; var BalanceEntryAmount: Decimal)
+    var
+        RemittanceAccount: Record "Remittance Account";
+        RemittanceAgreement: Record "Remittance Agreement";
+        GenJournalLine: Record "Gen. Journal Line";
+    begin
+        repeat
+            case MappedTransactionStatus of
+                TransactionStatusOption::Approved:
+                    begin
+                        NumberApproved += 1;
+                        CheckBeforeApprove(WaitingJournal);
+                        WaitingJournal.Validate("Remittance Status", WaitingJournal."Remittance Status"::Approved);
+                        WaitingJournal."Payment Order ID - Approved" := RemittancePaymentOrder.ID;
+                    end;
+                TransactionStatusOption::Settled:
+                    begin
+                        RemittanceAccount.Get(WaitingJournal."Remittance Account Code");
+                        RemittanceAgreement.Get(RemittanceAccount."Remittance Agreement Code");
+                        AccountCurrency := RemittanceAccount."Currency Code";
+
+                        // Check whether a balance entry should be created now:
+                        CreateBalanceEntry(
+                          ValueDate, AccountCurrency, WaitingJournal."Account No.", RemittanceAccount, RemittanceAgreement, LatestDate,
+                          LatestVend, LatestRemittanceAccount, LatestRemittanceAgreement, LatestCurrencyCode, CurrentGenJournalLine,
+                          TransDocumentNo, MoreReturnJournals,
+                          First,
+                          BalanceEntryAmountLCY, CreateNewDocumentNo, BalanceEntryAmount);
+
+                        NumberSettled += 1;
+
+                        FindDocumentNo(ValueDate, RemittanceAccount, CreateNewDocumentNo, TransDocumentNo);
+
+                        CheckBeforeSettle(WaitingJournal, RemittanceAgreement, IsPain002Format);
+
+                        // Prepare and insert the journal:
+                        GenJournalLine.Init;
+                        GenJournalLine.TransferFields(WaitingJournal);
+                        InitJournalLine(GenJournalLine, RemittanceAccount, CurrentGenJournalLine, MoreReturnJournals);
+
+                        if GenJournalLine."Posting Date" <> ValueDate then
+                            RemittanceTools.InsertWarning(
+                              GenJournalLine, StrSubstNo(DateChangedTxt,
+                                GenJournalLine."Posting Date", ValueDate));
+
+                        GenJournalLine.Validate("Posting Date", ValueDate);
+                        GenJournalLine.Validate("Document No.", TransDocumentNo);
+                        // GenJournalLine.VALIDATE("Currency Factor",-); // we do not have the real exchange rate in the file from the bank, do not update the currency factor
+
+                        GenJournalLine.Validate("Bal. Account Type", GenJournalLine."Bal. Account Type"::"G/L Account");
+                        GenJournalLine.Validate("Bal. Account No.", '');
+                        GenJournalLine.Validate("Currency Code", WaitingJournal."Currency Code");
+                        GenJournalLine.Validate("Currency Factor", WaitingJournal."Currency Factor");
+                        GenJournalLine.Insert(true);
+
+                        WaitingJournal.RecreateLineDimensions(GenJournalLine);
+
+                        // Update balance entry amount
+                        BalanceEntryAmountLCY := BalanceEntryAmountLCY + GenJournalLine."Amount (LCY)";
+                        BalanceEntryAmount += GenJournalLine.Amount;
+
+                        WaitingJournal.Validate("Journal, Settlement Template", GenJournalLine."Journal Template Name");
+                        WaitingJournal.Validate("Journal - Settlement", GenJournalLine."Journal Batch Name");
+                        WaitingJournal.Validate("Payment Order ID - Settled", RemittancePaymentOrder.ID);
+                        WaitingJournal.Validate("Remittance Status", WaitingJournal."Remittance Status"::Settled);
+                    end;
+                TransactionStatusOption::Rejected:
+                    begin
+                        NumberRejected += 1;
+                        WaitingJournal."Payment Order ID - Rejected" := RemittancePaymentOrder.ID;
+                        SaveErrorInfo(WaitingJournal, TransactionCauseCode, TransactionCauseInfo, RemittancePaymentOrder);
+                        WaitingJournal.Validate("Remittance Status", WaitingJournal."Remittance Status"::Rejected);
+                    end;
+                TransactionStatusOption::Pending:
+                    ; // do nothing
+            end;
+            WaitingJournal.Modify;
+        until WaitingJournal.Next = 0;
     end;
 
     local procedure UpdateWaitingJournalWithAmtDtls(var WaitingJournal: Record "Waiting Journal"; GenJournalLine: Record "Gen. Journal Line"): Boolean //STD. LOCAL Procedure from ImportCAMT054
