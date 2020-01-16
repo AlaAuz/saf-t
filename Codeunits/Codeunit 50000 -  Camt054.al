@@ -15,7 +15,7 @@ codeunit 50070 "Camt.054"
         if FileMgt.BLOBImport(TempBlob, '') = '' then
             Error('');
 
-        //LineNo := GetLastLineNo(GenJnlLine);
+        LineNo := GetLastLineNo(GenJnlLine);
 
         TempBlob.blob.CreateInStream(IStream, TEXTENCODING::UTF8);
         XmlDocument.ReadFrom(IStream, XmlDoc);
@@ -104,7 +104,7 @@ codeunit 50070 "Camt.054"
         end;
     end;
 
-    /*local procedure GetLastLineNo(var GenJnlLine: Record "Gen. Journal Line") LineNo: Integer
+    local procedure GetLastLineNo(var GenJnlLine: Record "Gen. Journal Line") LineNo: Integer
     var
         GenJournalLine2: Record "Gen. Journal Line";
     begin
@@ -112,7 +112,7 @@ codeunit 50070 "Camt.054"
         GenJournalLine2.SetRange("Journal Batch Name", GenJournalLine2."Journal Batch Name");
         if GenJournalLine2.FindLast then
             LineNo := GenJournalLine2."Line No."
-    end; */
+    end;
 
     local procedure IncrementLineNo()
     begin
