@@ -17,7 +17,6 @@ pageextension 50000 "Payment Journal" extends "Payment Journal"
                 begin
                     Camt054.Import(Rec)
                 end;
-                //test
             }
         }
     }
