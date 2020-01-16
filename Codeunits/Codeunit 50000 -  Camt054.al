@@ -14,9 +14,7 @@ codeunit 50070 "Camt.054"
     begin
         if FileMgt.BLOBImport(TempBlob, '') = '' then
             Error('');
-
         LineNo := GetLastLineNo(GenJnlLine);
-
         TempBlob.blob.CreateInStream(IStream, TEXTENCODING::UTF8);
         XmlDocument.ReadFrom(IStream, XmlDoc);
         Namespace.AddNamespace('n', 'urn:iso:std:iso:20022:tech:xsd:camt.054.001.02');
@@ -37,10 +35,12 @@ codeunit 50070 "Camt.054"
     local procedure TransfereFieldFromWaitingLine(GenJnlLine: Record "Gen. Journal Line"; EntryNode: XmlNode; TxDtlsNode: XmlNode; var InnerTxt: Text)
     var
         WaitingJournal: Record "Waiting Journal";
+        MsgId: Text;
+        PmtInfId: Text;
         EndToEndId: Text;
     begin
         CustomExchRateIsConfirmed := false;
-        GetTransactionInfo(TxDtlsNode, EndToEndId);
+        GetTransactionInfo(TxDtlsNode,MsgId, PmtInfId, EndToEndId);
         WaitingJournal.SetRange("SEPA End To End ID", EndToEndId);
         WaitingJournal.FindSet();
         repeat
@@ -108,6 +108,7 @@ codeunit 50070 "Camt.054"
     var
         GenJournalLine2: Record "Gen. Journal Line";
     begin
+        GenJournalLine2 := GenJnlLine;
         GenJournalLine2.SetRange("Journal Template Name", GenJournalLine2."Journal Template Name");
         GenJournalLine2.SetRange("Journal Batch Name", GenJournalLine2."Journal Batch Name");
         if GenJournalLine2.FindLast then
@@ -119,8 +120,10 @@ codeunit 50070 "Camt.054"
         LineNo += 10000;
     end;
 
-    local procedure GetTransactionInfo(Node: XmlNode; var EndToEndId: Text)
+    local procedure GetTransactionInfo(Node: XmlNode; var MsgId: Text; var PmtInfId: Text; var EndToEndId: Text)
     begin
+        GetElementInnerText(Node, './n:Refs/n:MsgId', MsgId);
+        GetElementInnerText(Node, '../n:PmtInfId', PmtInfId);
         GetElementInnerText(Node, '../n:EndToEndId', EndToEndId);
     end;
 
