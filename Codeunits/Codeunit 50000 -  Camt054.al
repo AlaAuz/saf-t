@@ -37,14 +37,10 @@ codeunit 50070 "Camt.054"
     local procedure TransfereFieldFromWaitingLine(GenJnlLine: Record "Gen. Journal Line"; EntryNode: XmlNode; TxDtlsNode: XmlNode; var InnerTxt: Text)
     var
         WaitingJournal: Record "Waiting Journal";
-        MsgId: Text;
-        PmtInfId: Text;
         EndToEndId: Text;
     begin
         CustomExchRateIsConfirmed := false;
-        GetTransactionInfo(TxDtlsNode,MsgId, PmtInfId, EndToEndId);
-        WaitingJournal.SetRange("SEPA Msg. ID", MsgId);
-        WaitingJournal.SetRange("SEPA Payment Inf ID", PmtInfId);
+        GetTransactionInfo(TxDtlsNode, EndToEndId);
         WaitingJournal.SetRange("SEPA End To End ID", EndToEndId);
         WaitingJournal.FindSet();
         repeat
@@ -123,10 +119,8 @@ codeunit 50070 "Camt.054"
         LineNo += 10000;
     end;
 
-    local procedure GetTransactionInfo(Node: XmlNode; var MsgId: Text; var PmtInfId: Text; var EndToEndId: Text)
+    local procedure GetTransactionInfo(Node: XmlNode; var EndToEndId: Text)
     begin
-        GetElementInnerText(Node, './n:Refs/n:MsgId', MsgId);
-        GetElementInnerText(Node, '../n:PmtInfId', PmtInfId);
         GetElementInnerText(Node, '../n:EndToEndId', EndToEndId);
     end;
 
