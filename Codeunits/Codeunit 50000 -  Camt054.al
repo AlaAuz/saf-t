@@ -14,13 +14,14 @@ codeunit 50070 "Camt.054"
     begin
         if FileMgt.BLOBImport(TempBlob, '') = '' then
             Error('');
-        LineNo := GetLastLineNo(GenJnlLine);
+        FindLastLineNo(GenJnlLine);
         TempBlob.blob.CreateInStream(IStream, TEXTENCODING::UTF8);
         XmlDocument.ReadFrom(IStream, XmlDoc);
         Namespace.AddNamespace('n', 'urn:iso:std:iso:20022:tech:xsd:camt.054.001.02');
         if XmlDoc.SelectNodes('//n:BkToCstmrDbtCdtNtfctn/n:Ntfctn/n:Ntry', Namespace, NtryList) then
             foreach NtryNode in NtryList do begin
                 if NtryNode.IsXmlElement then begin
+                    PostingDate := ConvertTextToDate(NtryNode, './n:BookgDt/n:Dt', InnerTxt);
                     if NtryNode.SelectNodes('./n:NtryDtls/n:TxDtls', Namespace, TxDtlsList) then
                         foreach TxDtLsNode in TxDtlsList do
                             if TxDtLsNode.IsXmlElement then begin
@@ -40,15 +41,15 @@ codeunit 50070 "Camt.054"
         EndToEndId: Text;
     begin
         CustomExchRateIsConfirmed := false;
-        GetTransactionInfo(TxDtlsNode,MsgId, PmtInfId, EndToEndId);
+        GetTransactionInfo(TxDtlsNode, MsgId, PmtInfId, EndToEndId);
         WaitingJournal.SetRange("SEPA End To End ID", EndToEndId);
         WaitingJournal.FindSet();
         repeat
+            IncrementLineNo();
             GenJnlLine.Init();
             GenJnlLine.TransferFields(WaitingJournal);
-            IncrementLineNo();
             GenJnlLine."Line No." := LineNo;
-            GenJnlLine."Waiting Journal Reference" := WaitingJournal.Reference; //Sjekk om du trenger denne
+            GenJnlLine.Validate("Posting Date", PostingDate);
             SetCurrencyFactor(GenJnlLine, TxDtlsNode, InnerTxt);
             GenJnlLine.Insert(true);
         until WaitingJournal.Next = 0
@@ -85,6 +86,8 @@ codeunit 50070 "Camt.054"
 
     local procedure SetCurrencyFactor(GenJnlLine: Record "Gen. Journal Line"; TxDtlsNode: XmlNode; var InnerTxt: Text)
     begin
+        if GenJnlLine."Currency Code" = '' then
+            exit;
         if ConvertTextToCode(TxDtlsNode, './n:AmtDtls/n:InstdAmt/n:CcyXchg/n:SrcCcy', InnerTxt) = '' then
             exit;
         GenJnlLine.Validate("Currency Factor", ConvertTextToDecimal(TxDtlsNode, './n:AmtDtls/n:InstdAmt/n:CcyXchg/n:XchgRate', InnerTxt));
@@ -104,15 +107,14 @@ codeunit 50070 "Camt.054"
         end;
     end;
 
-    local procedure GetLastLineNo(var GenJnlLine: Record "Gen. Journal Line") LineNo: Integer
+    local procedure FindLastLineNo(var GenJnlLine: Record "Gen. Journal Line")
     var
-        GenJournalLine2: Record "Gen. Journal Line";
+        GenJnlLine2: Record "Gen. Journal Line";
     begin
-        GenJournalLine2 := GenJnlLine;
-        GenJournalLine2.SetRange("Journal Template Name", GenJournalLine2."Journal Template Name");
-        GenJournalLine2.SetRange("Journal Batch Name", GenJournalLine2."Journal Batch Name");
-        if GenJournalLine2.FindLast then
-            LineNo := GenJournalLine2."Line No."
+        GenJnlLine2.SetRange("Journal Template Name", GenJnlLine."Journal Template Name");
+        GenJnlLine2.SetRange("Journal Batch Name", GenJnlLine."Journal Batch Name");
+        if GenJnlLine2.FindLast then
+            LineNo := GenJnlLine2."Line No."
     end;
 
     local procedure IncrementLineNo()
@@ -131,7 +133,7 @@ codeunit 50070 "Camt.054"
     begin
         if GetElementInnerText(Node, Path, InnerText) then
             if InnerText <> '' then
-                Evaluate(NewDate, InnerText)
+                Evaluate(NewDate, InnerText, 9);
     end;
 
     local procedure ConvertTextToDecimal(Node: XmlNode; Path: Text; var InnerText: Text) NewDecimal: Decimal
@@ -283,6 +285,7 @@ codeunit 50070 "Camt.054"
         Namespace: XmlNamespaceManager;
         LineNo: Integer;
         CustomExchRateIsConfirmed: Boolean;
+        PostingDate: Date;
         VendorRemittanceTxt: Label 'Remittance: Vendor %1';
         BankchargeTxt: Label 'Bank charges';
 
