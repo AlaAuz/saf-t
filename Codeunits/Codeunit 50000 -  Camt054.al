@@ -2,8 +2,10 @@ codeunit 50070 "Camt.054"
 {
     procedure Import(var GenJnlLine: Record "Gen. Journal Line")
     var
-        FileMgt: Codeunit "File Management";
         TempBlob: Record TempBlob temporary;
+        GenJnlBatch: Record "Gen. Journal Batch";
+        FileMgt: Codeunit "File Management";
+        NoSeriesManagement: Codeunit NoSeriesManagement;
         XmlDoc: XmlDocument;
         NtryList: XmlNodeList;
         TxDtlsList: XmlNodeList;
@@ -14,14 +16,19 @@ codeunit 50070 "Camt.054"
     begin
         if FileMgt.BLOBImport(TempBlob, '') = '' then
             Error('');
+        GenJnlBatch.Get(GenJnlLine."Journal Template Name", GenJnlLine."Journal Batch Name");
         FindLastLineNo(GenJnlLine);
         TempBlob.blob.CreateInStream(IStream, TEXTENCODING::UTF8);
         XmlDocument.ReadFrom(IStream, XmlDoc);
         Namespace.AddNamespace('n', 'urn:iso:std:iso:20022:tech:xsd:camt.054.001.02');
         if XmlDoc.SelectNodes('//n:BkToCstmrDbtCdtNtfctn/n:Ntfctn/n:Ntry', Namespace, NtryList) then
-            foreach NtryNode in NtryList do begin
+            foreach NtryNode in NtryList do
                 if NtryNode.IsXmlElement then begin
                     PostingDate := ConvertTextToDate(NtryNode, './n:BookgDt/n:Dt', InnerTxt);
+                    if GenJnlBatch."No. Series" <> '' then begin
+                        Clear(NoSeriesManagement);
+                        DocumentNo := NoSeriesManagement.GetNextNo(GenJnlBatch."No. Series", PostingDate, true);
+                    end;
                     if NtryNode.SelectNodes('./n:NtryDtls/n:TxDtls', Namespace, TxDtlsList) then
                         foreach TxDtLsNode in TxDtlsList do
                             if TxDtLsNode.IsXmlElement then begin
@@ -30,7 +37,6 @@ codeunit 50070 "Camt.054"
                             end;
                     InsertBankDetails(GenJnlLine, NtryNode, InnerTxt);
                 end;
-            end;
     end;
 
     local procedure TransfereFieldFromWaitingLine(GenJnlLine: Record "Gen. Journal Line"; EntryNode: XmlNode; TxDtlsNode: XmlNode; var InnerTxt: Text)
@@ -50,6 +56,7 @@ codeunit 50070 "Camt.054"
             GenJnlLine.TransferFields(WaitingJournal);
             GenJnlLine."Line No." := LineNo;
             GenJnlLine.Validate("Posting Date", PostingDate);
+            GenJnlLine.Validate("Document No.", DocumentNo);
             SetCurrencyFactor(GenJnlLine, TxDtlsNode, InnerTxt);
             GenJnlLine.Insert(true);
         until WaitingJournal.Next = 0
@@ -61,6 +68,7 @@ codeunit 50070 "Camt.054"
         GenJnlLine.Init();
         GenJnlLine."Line No." := LineNo;
         GenJnlLine.Validate("Document Type", GenJnlLine."Document Type"::Payment);
+        GenJnlLine.Validate("Document No.", DocumentNo);
         GenJnlLine.Validate("Account Type", GenJnlLine."Account Type"::"Bank Account");
         GenJnlLine.Validate("Posting Date", ConvertTextToDate(NtryNode, './n:BookgDt/n:Dt', InnerTxt));
         GenJnlLine.Validate(Description, CopyStr(StrSubstNo(VendorRemittanceTxt, GenJnlLine."Posting Date"), 1, MaxStrLen(GenJnlLine.Description)));
@@ -76,6 +84,7 @@ codeunit 50070 "Camt.054"
         GenJnlLine.Init();
         GenJnlLine."Line No." := LineNo;
         GenJnlLine.Validate("Document Type", GenJnlLine."Document Type"::Payment);
+        GenJnlLine.Validate("Document No.", DocumentNo);
         GenJnlLine.Validate("Account Type", GenJnlLine."Account Type"::"G/L Account");
         GenJnlLine.Validate("Posting Date", ConvertTextToDate(NtryNode, './n:BookgDt/n:Dt', InnerTxt));
         GenJnlLine.Validate(Description, BankchargeTxt);
@@ -286,7 +295,9 @@ codeunit 50070 "Camt.054"
         LineNo: Integer;
         CustomExchRateIsConfirmed: Boolean;
         PostingDate: Date;
+        DocumentNo: Code[20];
         VendorRemittanceTxt: Label 'Remittance: Vendor %1';
         BankchargeTxt: Label 'Bank charges';
+        NoSeriesManagement: Codeunit NoSeriesManagement;
 
 }
