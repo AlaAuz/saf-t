@@ -13,6 +13,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - NamedType BankchargeTxt</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2723796888 - NamedType 3412683751" size-unit="char" translate="yes" xml:space="preserve">
+          <source>cannot be %1 when settling</source>
+          <note from="Developer" annotates="general" priority="2">%1 is the value of the remittance status</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - NamedType CannotBeWhenSettlingErr</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3196174509 - Action 285658001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
           <source>Import Camt.054</source>
           <note from="Developer" annotates="general" priority="2"></note>

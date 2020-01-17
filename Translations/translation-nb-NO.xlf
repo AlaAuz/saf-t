@@ -3,18 +3,6 @@
   <file datatype="xml" source-language="en-US" target-language="nb-NO" original="Auzilium">
     <body>
       <group id="body">
-        <trans-unit id="Codeunit 2723796888 - Method 3468628405 - NamedType 1542540831" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Return data in the file to be imported has a different currency exchange rate than one in a waiting journal. This may lead to gain/loss detailed ledger entries during application.\\Do you want ConfirmImportExchRateQstto continue?</source>
-          <target>Returdata i filen som skal importeres, har en annen valutakurs enn én i en ventekladd. Dette kan føre til detaljerte resultatposter under utligningen.\\Vil du fortsette?</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - Method ConfirmImportExchRateDialog - NamedType ConfirmImportExchRateQst</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 2723796888 - Method 3468628405 - NamedType 1972975269" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import is cancelled.</source>
-          <target>Innlesing avbrutt.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - Method ConfirmImportExchRateDialog - NamedType ImportCancelledErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 2723796888 - NamedType 3061757578" size-unit="char" translate="yes" xml:space="preserve">
           <source>Remittance: Vendor %1</source>
           <target>Remittering : Leverandør %1</target>
@@ -26,6 +14,18 @@
           <target>Bankgebyr</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - NamedType BankchargeTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2723796888 - NamedType 3412683751" size-unit="char" translate="yes" xml:space="preserve">
+          <source>cannot be %1 when settling</source>
+          <target>kan ikke være %1 ved avregning</target>
+          <note from="Developer" annotates="general" priority="2">%1 is the value of the remittance status</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - NamedType CannotBeWhenSettlingErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2723796888 - NamedType 3297459236" size-unit="char" translate="yes" xml:space="preserve">
+          <source>cannot be %1. Receipt return must be imported before settling</source>
+          <target>kan ikke være %1. Mottaksretur skal leses inn før avregning</target>
+          <note from="Developer" annotates="general" priority="2">%1 is the value of the remittance status</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Camt.054 - NamedType ReceiptReturnNeededErr</note>
         </trans-unit>
         <trans-unit id="PageExtension 3196174509 - Action 285658001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
           <source>Import Camt.054</source>
