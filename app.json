@@ -11,7 +11,14 @@
   "url": "http://auzilium.no",
   "logo": "logo.png",
   "capabilities": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "appId": "7131e8bb-6f25-4d99-b4ad-182893108dc8",
+      "publisher": "Auzilium AS",
+      "name": "Auzilium Base",
+      "version": "1.0.0.0"
+    }
+  ],
   "screenshots": [],
   "platform": "14.0.0.0",
   "application": "14.0.0.0",
@@ -23,5 +30,6 @@
 ],
   "runtime": "3.0",
   "target":"Extension",
-  "features": ["TranslationFile"]
+  "features": ["TranslationFile"],
+  "showMyCode": true
 }

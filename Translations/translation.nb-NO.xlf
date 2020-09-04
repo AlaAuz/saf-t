@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="nb-NO" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="PageExtension 3233907214 - Action 2620247524 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Case</source>
+          <target>Opprett sak</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90001 - Action CreateCase - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1320817363 - Action 1174581978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Cases</source>
+          <target>Opprett saker</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90002 - Action Opprett saker - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Control 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Control Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Control 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Control Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Control 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Control Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Control 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target>Feil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Control Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683120746 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90005 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Control 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Control Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Control 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Control Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Control 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Control Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Control 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target>Feil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Control Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3064998191 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90006 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3702694808 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90007 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3702694808 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90007 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3702694808 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90007 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3402816237 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90008 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3402816237 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90008 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3402816237 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90008 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4040512854 - Action 1283814244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Lines from Case Hours</source>
+          <target>Foreslå linjer fra sakstimer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90009 - Action SuggestLinesFromCaseHours - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 508016548 - Action 495241676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import &amp;Payroll</source>
+          <target>Importer &amp;lønnskostnad</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90012 - Action ImportPayroll - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 508016548 - Action 495241676 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import payroll transactions from one of two external payroll solutions: Huldt &amp; Lillevik or Hogia. You can then post the imported payroll transactions to general ledger accounts or bank accounts. To import payroll transactions, you must first set up payroll integration.</source>
+          <target>Import payroll transactions from one of two external payroll solutions: Huldt &amp; Lillevik or Hogia. You can then post the imported payroll transactions to general ledger accounts or bank accounts. To import payroll transactions, you must first set up payroll integration.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90012 - Action ImportPayroll - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 976804142 - Control 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90018 - Control Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 976804142 - Control 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90018 - Control Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 976804142 - Control 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90018 - Control Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 976804142 - Control 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target>Error</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90018 - Control Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 976804142 - Action 3119063021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribution</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90018 - Action Action1000000004 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 976804142 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90018 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3111690787 - Change 3287053723 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New,Process,Report,Distribution</source>
+          <target>Ny,Prosess,Rapport,Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90020 - Change Issued Reminder List - Property PromotedActionCategories</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3111690787 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90020 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3111690787 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90020 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3111690787 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90020 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 729813342 - Control 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90023 - Control Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 729813342 - Control 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90023 - Control Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 729813342 - Control 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90023 - Control Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 729813342 - Control 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target>Error</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90023 - Control Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 729813342 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90023 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 729813342 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90023 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 560904319 - Change 3138431460 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New,Process,Report,Distribution</source>
+          <target>Ny,Prosess,Rapport,Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90024 - Change Issued Fin. Charge Memo List - Property PromotedActionCategories</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 560904319 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90024 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 560904319 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90024 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 560904319 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90024 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1836297553 - Action 4063678471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Login Information</source>
+          <target>Påloggingsinfo.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90026 - Action Påloggingsinfo. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2473994170 - Action 4063678471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Login Information</source>
+          <target>Påloggingsinfo.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90027 - Action Påloggingsinfo. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3595071558 - Action 1359316502 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy Document</source>
+          <target>Kopier dokument</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90032 - Action CopyDocument - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4063859152 - Change 4083191012 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New,Process,Report,Distribution</source>
+          <target>Ny,Prosess,Rapport,Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90034 - Change Posted Service Credit Memos - Property PromotedActionCategories</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4063859152 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90034 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4063859152 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90034 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4063859152 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90034 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Change 4222048109 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New,Process,Report,Distribution</source>
+          <target>Ny,Prosess,Rapport,Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Change Posted Service Credit Memo - Property PromotedActionCategories</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Control 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Control Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Control 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Control Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Control 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Control Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Control 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target>Feil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Control Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3426162535 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90035 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1044285090 - Change 540259714 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New,Process,Report,Distribution</source>
+          <target>Ny,Prosess,Rapport,Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90036 - Change Posted Service Invoices - Property PromotedActionCategories</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1044285090 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90036 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1044285090 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90036 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1044285090 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90036 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Control 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Control Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Control 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Control Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Control 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Control Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Control 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target>Feil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Control Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Action 441825230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target>Distribuering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Action Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Action 2961529186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disitribute</source>
+          <target>Distribuer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Action Disitribute - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 406588473 - Action 1931894536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change Type</source>
+          <target>Endre type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90037 - Action ChangeDistributionType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3647959329 - Control 2318452738 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Kunde ID (KID) associated with purchase header.</source>
+          <target>Angir kunde-ID-en (KID) som er knyttet til bestillingshodet.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90040 - Control KID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3647959329 - Control 1577567912 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for Shortcut Dimension 1, which is one of two global dimension codes that you set up in the General Ledger Setup window.</source>
+          <target>Angir koden til Snarveisdimensjon 1, som er én av to globale dimensjonskoder som du har definert i vinduet Finansoppsett.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90040 - Control Shortcut Dimension 1 Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3647959329 - Control 1003760969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for Shortcut Dimension 2, which is one of two global dimension codes that you set up in the General Ledger Setup window.</source>
+          <target>Angir koden til Snarveisdimensjon 2, som er én av to globale dimensjonskoder som du har definert i vinduet Finansoppsett.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90040 - Control Shortcut Dimension 2 Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3647959329 - Action 2648269774 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Sales Order</source>
+          <target>Opprett salgsordre</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90040 - Action CreateSalesOrder - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 474069421 - Control 3689123519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Line Cost Per Period</source>
+          <target>Total linjekostnad per periode</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension pageextension90055 - Control TotalLineCostPerPeriod - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502143553 - Field 2371948793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Budgeted Quantity</source>
+          <target>Budsjettert antall</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90001 - Field Budgeted Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502143553 - Field 4105396539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoiced Amount</source>
+          <target>Fakturert beløp</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90001 - Field Invoiced Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502143553 - Field 3582421358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Amount</source>
+          <target>Linjebeløp</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90001 - Field Line Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502143553 - Field 5473935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Non-Transferred Case Hours</source>
+          <target>Ikke-overførte sakstimer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90001 - Field Non-Transferred Case Hours - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502143553 - Field 2891886144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Non-Posted Case Hours</source>
+          <target>Ikke-bokførte sakstimer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90001 - Field Non-Posted Case Hours - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1864446936 - Field 448976717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case No.</source>
+          <target>Saksnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90002 - Field Case No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1864446936 - Field 492653799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Line No.</source>
+          <target>Sakslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90002 - Field Case Hour Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1864446936 - Field 3335101878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Description</source>
+          <target>Saksbeskrivelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90002 - Field Case Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1226750319 - Field 47657272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description 2</source>
+          <target>Beskrivelse 2</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90003 - Field Description 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1395659342 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90004 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1395659342 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90004 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1395659342 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90004 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1395659342 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90004 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 757962725 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90005 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 757962725 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90005 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 757962725 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90005 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 120266108 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90006 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 120266108 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90006 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 120266108 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90006 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 120266108 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90006 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 448976717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case No.</source>
+          <target>Saksnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Case No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 492653799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Line No.</source>
+          <target>Sakslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Case Hour Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 2411645955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expense Line No.</source>
+          <target>Utleggslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Expense Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 3335101878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Description</source>
+          <target>Saksbeskrivelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Case Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3777536787 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90007 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3946445810 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90008 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3946445810 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90008 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3946445810 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90008 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3946445810 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90008 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 448976717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case No.</source>
+          <target>Saksnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Case No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 492653799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Line No.</source>
+          <target>Sakslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Case Hour Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 2411645955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expense Line No.</source>
+          <target>Utleggslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Expense Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 3335101878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Description</source>
+          <target>Saksbeskrivelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Case Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3308749193 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90009 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2863307897 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90010 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2863307897 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90010 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2863307897 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90010 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3501004514 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90011 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3501004514 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90011 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3501004514 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90011 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1587914663 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90012 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1587914663 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90012 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1587914663 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90012 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2225611280 - Field 1381577857 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked for Time Registration</source>
+          <target>Sperret for timeregistrering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90013 - Field Blocked for Time Registration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1119127069 - Field 448976717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case No.</source>
+          <target>Saksnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90014 - Field Case No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1119127069 - Field 492653799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Line No.</source>
+          <target>Sakslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90014 - Field Case Hour Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1119127069 - Field 3335101878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Description</source>
+          <target>Saksbeskrivelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90014 - Field Case Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1756823686 - Field 4164737368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoicing Period Code</source>
+          <target>Faktureringsperiodekode</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90015 - Field Invoicing Period Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1756823686 - Field 1229224685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Developer ID</source>
+          <target>Utvikler-ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90015 - Field Developer ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1756823686 - Field 4136379670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Consultant ID</source>
+          <target>Konsulent-ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90015 - Field Consultant ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1756823686 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90015 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1756823686 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90015 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1756823686 - Field 1899926256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Email</source>
+          <target>Faktura til-e-post</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90015 - Field Bill-to E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4138701131 - Field 448976717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case No.</source>
+          <target>Saksnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90016 - Field Case No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4138701131 - Field 492653799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Line No.</source>
+          <target>Sakslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90016 - Field Case Hour Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4138701131 - Field 3335101878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Description</source>
+          <target>Saksbeskrivelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90016 - Field Case Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 481430452 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90017 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 481430452 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail</source>
+          <target>Skriv ut,E-post</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90017 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 481430452 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90017 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 481430452 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90017 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2056702257 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90018 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2056702257 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail</source>
+          <target>Skriv ut,E-post</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90018 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2056702257 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90018 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2056702257 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90018 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694398874 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90019 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694398874 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail</source>
+          <target>Skriv ut,E-post</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90019 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694398874 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90019 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694398874 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90019 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3655320360 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90020 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3655320360 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail</source>
+          <target>Skriv ut,E-post</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90020 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3655320360 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90020 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3655320360 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90020 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3017623743 - Field 4164737368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoicing Period Code</source>
+          <target>Faktureringsperiodekode</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90021 - Field Invoicing Period Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3017623743 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90021 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3017623743 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90021 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3017623743 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90021 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3017623743 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90021 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 448976717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case No.</source>
+          <target>Saksnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Case No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 492653799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Line No.</source>
+          <target>Sakslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Case Hour Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 2411645955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expense Line No.</source>
+          <target>Utleggslinjenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Expense Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 3335101878 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Case Description</source>
+          <target>Saksbeskrivelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Case Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 635746298 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90022 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4293016977 - Field 1025398309 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recipient Bank Account No.</source>
+          <target>Bankkontonummer for mottaker</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90023 - Field Recipient Bank Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4293016977 - NamedType 14768227" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure that you want to update the vendors bank account number.?</source>
+          <target>Er du sikker på at du ønsker å oppdatere leverandøren sitt bank kontonr.?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90023 - NamedType Text50001</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1911139532 - Field 428061401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date (Accrual)</source>
+          <target>Startdato (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90024 - Field Accrual Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1911139532 - Field 1253284416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No. (Accrual)</source>
+          <target>Motkontonr. (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90024 - Field Accrual Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1911139532 - Field 1443686066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Months (Accrual)</source>
+          <target>Antall måneder (Periodisering)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90024 - Field Accrual No. of Months - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1273442915 - Field 1153434933 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default Job No.</source>
+          <target>Standard prosjektnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90025 - Field Default Job No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1273442915 - Field 3240609922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default Job Task No.</source>
+          <target>Standard prosjektoppgavenr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90025 - Field Default Job Task No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1273442915 - Field 662245329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Login Information</source>
+          <target>Pålogginsinfo.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90025 - Field Login Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1273442915 - Field 2558878333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Login Company No.</source>
+          <target>Påloggingsselskapsnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90025 - Field Login Company No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1273442915 - NamedType 14768227" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to save the changes?</source>
+          <target>Vil du lagre endringene?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90025 - NamedType Text50001</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 2302997446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Date</source>
+          <target>Neste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field Serv. Contr. Next Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 3898361561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Date</source>
+          <target>Siste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field Serv. Contr. Last Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 3082983463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period Start</source>
+          <target>Startdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field SC Next Inv. Period Start - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 667333998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period End</source>
+          <target>Sluttdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field SC Next Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 2322792497 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Period End</source>
+          <target>Sluttdato siste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field SC Last Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3186532766 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90026 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 3229084350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line From Date</source>
+          <target>Servicekontraktlinje fra dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field Serv. Contract Line From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 3019189289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line To Date</source>
+          <target>Servicekontraktlinje til dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field Serv. Contract Line To Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 2217226746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Invoiced to Date</source>
+          <target>Fakturert t.o.m. fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field SCL Invoiced to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 2202607621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show on Print</source>
+          <target>Vis på utskrift</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field Show on Print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 3517801601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Quantity</source>
+          <target>Antall fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field SCL Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 1437444915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual From Date</source>
+          <target>Periodiseringsdato - fra</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field Accrual From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 2530959232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual to Date</source>
+          <target>Periodiseringsdato - til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field Accrual to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 3416169791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Line No.</source>
+          <target>Linjenr. for servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field SCL Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2548836149 - Field 296563930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line New Line</source>
+          <target>Ny linje for Servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90027 - Field SCL New Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 166958704 - Field 2217226746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Invoiced to Date</source>
+          <target>Fakturert t.o.m. fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90028 - Field SCL Invoiced to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 166958704 - Field 3517801601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Quantity</source>
+          <target>Antall fra servicekontraktslinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90028 - Field SCL Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 166958704 - Field 3416169791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Line No.</source>
+          <target>Linjenr. for servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90028 - Field SCL Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 166958704 - Field 296563930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line New Line</source>
+          <target>Ny linje for  Servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90028 - Field SCL New Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3824229383 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>Antall</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90029 - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 2302997446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Date</source>
+          <target>Neste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field Serv. Contr. Next Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 3898361561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Date</source>
+          <target>Siste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field Serv. Contr. Last Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 3082983463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period Start</source>
+          <target>Startdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field SC Next Inv. Period Start - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 667333998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period End</source>
+          <target>Sluttdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field SC Next Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 2322792497 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Period End</source>
+          <target>Sluttdato siste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field SC Last Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3399576439 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90030 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 3229084350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line From Date</source>
+          <target>Servicekontraktlinje fra dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field Serv. Contract Line From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 3019189289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line To Date</source>
+          <target>Servicekontraktlinje til dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field Serv. Contract Line To Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 2217226746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Invoiced to Date</source>
+          <target>Fakturert t.o.m. fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field SCL Invoiced to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 2202607621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show on Print</source>
+          <target>Vis på utskrift</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field Show on Print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 3517801601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Quantity</source>
+          <target>Antall fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field SCL Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 1437444915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual From Date</source>
+          <target>Periodiseringsdato - fra</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field Accrual From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 2530959232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual to Date</source>
+          <target>Periodiseringsdato - til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field Accrual to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 3416169791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Line No.</source>
+          <target>Linjenr. for servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field SCL Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4037273056 - Field 296563930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line New Line</source>
+          <target>Ny linje for Servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90031 - Field SCL New Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 2302997446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Date</source>
+          <target>Neste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field Serv. Contr. Next Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 3898361561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Date</source>
+          <target>Siste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field Serv. Contr. Last Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 3082983463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period Start</source>
+          <target>Startdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field SC Next Inv. Period Start - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 667333998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period End</source>
+          <target>Sluttdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field SC Next Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 2322792497 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Period End</source>
+          <target>Sluttdato siste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field SC Last Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 380002377 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90032 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 3229084350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line From Date</source>
+          <target>Servicekontraktlinje fra dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field Serv. Contract Line From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 3019189289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line To Date</source>
+          <target>Servicekontraktlinje til dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field Serv. Contract Line To Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 2217226746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Invoiced to Date</source>
+          <target>Fakturert t.o.m. fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field SCL Invoiced to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 2202607621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show on Print</source>
+          <target>Vis på utskrift</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field Show on Print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 3517801601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Quantity</source>
+          <target>Antall fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field SCL Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 1437444915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual From Date</source>
+          <target>Periodiseringsdato - fra</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field Accrual From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 2530959232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual to Date</source>
+          <target>Periodiseringsdato - til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field Accrual to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 3416169791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Line No.</source>
+          <target>Linjenr. for servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field SCL Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1017698994 - Field 296563930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line New Line</source>
+          <target>Ny linje for Servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90033 - Field SCL New Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 2302997446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Date</source>
+          <target>Neste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field Serv. Contr. Next Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 3898361561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Date</source>
+          <target>Siste fakturadato fra servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field Serv. Contr. Last Inv. Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 3082983463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period Start</source>
+          <target>Startdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field SC Next Inv. Period Start - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 667333998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Next Invoice Period End</source>
+          <target>Sluttdato neste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field SC Next Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 2322792497 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Last Invoice Period End</source>
+          <target>Sluttdato siste fakturaperiode for servicekontrakt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field SC Last Inv. Period End - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 421604926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Type</source>
+          <target>Distribusjonstype</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field Distribution Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 421604926 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,E-Mail,EHF</source>
+          <target>Skriv ut,E-post,EHF</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field Distribution Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 999190242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Date</source>
+          <target>Distribusjonsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field Distribution Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1655395611 - Field 2754882814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Distribution Error</source>
+          <target>Distribusjonsfeil</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90034 - Field Distribution Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 3229084350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line From Date</source>
+          <target>Servicekontraktlinje fra dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field Serv. Contract Line From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 3019189289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Serv. Contract Line To Date</source>
+          <target>Servicekontraktlinje til dato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field Serv. Contract Line To Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 2217226746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Invoiced to Date</source>
+          <target>Fakturert t.o.m. fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field SCL Invoiced to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 2202607621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show on Print</source>
+          <target>Vis på utskrift</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field Show on Print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 3517801601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Quantity</source>
+          <target>Antall fra servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field SCL Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 1437444915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual From Date</source>
+          <target>Periodiseringsdato - fra</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field Accrual From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 2530959232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accrual to Date</source>
+          <target>Periodiseringsdato - til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field Accrual to Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 3416169791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line Line No.</source>
+          <target>Linjenr. for servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field SCL Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2293092228 - Field 296563930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Contract Line New Line</source>
+          <target>Ny linje for Servicekontraktlinje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90035 - Field SCL New Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2592970799 - Change 1878130204 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Identification,Master</source>
+          <target> ,Identifikasjon,Master</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90038 - Change Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2592970799 - Change 3385984347 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No,Yes</source>
+          <target>Nei,Ja</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90038 - Change Recognize Lines - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3230667416 - Change 1878130204 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Header,Line</source>
+          <target>Hode,Linje</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90039 - Change Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3230667416 - Change 2145620180 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text,Number,Date,Boolean,,,,,Lookup</source>
+          <target>Tekst,Tall,Dato,Boolean,,,,,Oppslag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90039 - Change Data Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3230667416 - Change 691972269 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,If lines are not recognised,Always</source>
+          <target> ,Hvis linjer ikke er plukket,Alltid</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90039 - Change Transfer Amount to Document - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3230667416 - Change 4071208951 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,If lines are not recognised,Always</source>
+          <target> ,Hvis linjer ikke er plukket,Alltid</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90039 - Change New Transfer Amt. to Document - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1429606469 - Field 3190844836 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Development Administrator</source>
+          <target>Utviklingsansvarlig</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90041 - Field Development Administrator - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1429606469 - Field 3961767479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource No.</source>
+          <target>Ressursnr.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90041 - Field Resource No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1429606469 - Field 917700362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Developer</source>
+          <target>Utvikler</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90041 - Field Developer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1429606469 - Field 2127533209 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Consultant</source>
+          <target>Konsulent</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension90041 - Field Consultant - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

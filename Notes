@@ -1,0 +1,77 @@
+    // *** Auzilium AS Document Distribution ***
+pageextension 90050 pageextension90050 extends "Sales Order List"
+pageextension 90005 pageextension90005 extends "Posted Sales Invoice"
+pageextension 90006 pageextension90006 extends "Posted Sales Credit Memo"
+pageextension 90007 pageextension90007 extends "Posted Sales Invoices"
+pageextension 90008 pageextension90008 extends "Posted Sales Credit Memos"
+pageextension 90010 pageextension90010 extends "Customer Card"
+pageextension 90011 pageextension90011 extends "Customer List"
+pageextension 90013 pageextension90013 extends "Sales Quote"
+pageextension 90014 pageextension90014 extends "Sales Order"
+pageextension 90015 pageextension90015 extends "Sales Invoice"
+pageextension 90016 pageextension90016 extends Reminder
+pageextension 90017 pageextension90017 extends "Reminder List"
+pageextension 90018 pageextension90018 extends "Issued Reminder"
+pageextension 90019 pageextension90019 extends "Sales Credit Memo"
+pageextension 90020 pageextension90020 extends "Issued Reminder List"
+pageextension 90021 pageextension90021 extends "Finance Charge Memo"
+pageextension 90022 pageextension90022 extends "Finance Charge Memo List"
+pageextension 90023 pageextension90023 extends "Issued Finance Charge Memo"
+pageextension 90024 pageextension90024 extends "Issued Fin. Charge Memo List"
+pageextension 90030 pageextension90030 extends "Service Order"
+pageextension 90030 pageextension90030 extends "Service Order"
+pageextension 90031 pageextension90031 extends "Service Invoice"
+pageextension 90032 pageextension90032 extends "Service Credit Memo"
+pageextension 90033 pageextension90033 extends "Service Quote"
+pageextension 90034 pageextension90034 extends "Posted Service Credit Memos"
+pageextension 90035 pageextension90035 extends "Posted Service Credit Memo"
+pageextension 90036 pageextension90036 extends "Posted Service Invoices"
+pageextension 90037 pageextension90037 extends "Posted Service Invoice"
+pageextension 90047 pageextension90047 extends "Sales Quotes"
+pageextension 90048 pageextension90048 extends "Sales Invoice List"
+pageextension 90049 pageextension90049 extends "Sales Credit Memos"
+pageextension 90050 pageextension90050 extends "Sales Order List"
+pageextension 90051 pageextension90051 extends "Service Quotes"
+pageextension 90052 pageextension90052 extends "Service Orders"
+pageextension 90053 pageextension90053 extends "Service Invoices"
+pageextension 90054 pageextension90054 extends "Service Credit Memos"
+
+tableextension 90004 tableextension90004 extends "Sales Shipment Header"
+tableextension 90006 tableextension90006 extends "Sales Invoice Header"
+tableextension 90008 tableextension90008 extends "Sales Cr.Memo Header"
+tableextension 90015 tableextension90015 extends Customer
+tableextension 90017 tableextension90017 extends "Reminder Header"
+tableextension 90018 tableextension90018 extends "Issued Reminder Header"
+tableextension 90019 tableextension90019 extends "Finance Charge Memo Header"
+tableextension 90020 tableextension90020 extends "Issued Fin. Charge Memo Header"
+tableextension 90021 tableextension90021 extends "Sales Header
+tableextension 90026 tableextension90026 extends "Service Header"
+tableextension 90030 tableextension90030 extends "Service Shipment Header"
+tableextension 90032 tableextension90032 extends "Service Invoice Header"
+tableextension 90034 tableextension90034 extends "Service Cr.Memo Header"
+
+
+CDC 
+pageextension90039.PageExt-CDC Document Capture Setup
+pageextension90040.PageExt-CDC Purch. Invoice With Image
+pageextension90041.PageExt-CDC Template Upg..al
+pageextension90042.PageExt-CDC Template Field Upg.
+
+CDEM
+pageextension90043.PageExt-CEM Expense Management Setup
+
+
+    // *** Auzilium AS Accounting ***
+    tableextension 90005 tableextension90005 extends "Sales Shipment Line"
+    tableextension 90007 tableextension90007 extends "Sales Invoice Line"
+    tableextension 90009 tableextension90009 extends "Sales Cr.Memo Line"
+    tableextension 90010 tableextension90010 extends "Purch. Rcpt. Line"
+    tableextension 90011 tableextension90011 extends "Purch. Inv. Line"
+    tableextension 90012 tableextension90012 extends "Purch. Cr. Memo Line"
+    tableextension 90022 tableextension90022 extends "Sales Line"
+    tableextension 90024 tableextension90024 extends "Purchase Line"
+
+
+
+
+
