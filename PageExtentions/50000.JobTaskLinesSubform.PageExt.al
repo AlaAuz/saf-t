@@ -1,4 +1,4 @@
-pageextension 50000 pageextension90001 extends "Job Task Lines Subform"
+pageextension 50000 "AUZ Job Task Lines Subform" extends "Job Task Lines Subform"
 {
     layout
     {

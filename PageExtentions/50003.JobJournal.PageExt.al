@@ -1,4 +1,4 @@
-pageextension 90009 pageextension90009 extends "Job Journal"
+pageextension 90009 "AUZ Job Journal" extends "Job Journal"
 {
     // *** Auzilium AS ***
     // AZ99999 17.04.2017 EVA New Action - SuggestLinesFromCaseHours

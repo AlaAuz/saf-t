@@ -1,15 +1,8 @@
-pageextension 90032 pageextension90032 extends "Service Credit Memo"
+pageextension 90032 "AUZ Service Credit Memo" extends "Service Credit Memo"
 {
-    // *** Auzilium AS ***
-    // 
-    // 
-    // *** Auzilium AS Document Distribution ***
-    // <DD>
-    //   Added field "Distribution Type".
-    // </DD>
     actions
     {
-        addafter("H&ent forh.bet. kontraktposter")
+        addafter("Get Prepaid Contract E&ntries")
         {
             action(CopyDocument)
             {

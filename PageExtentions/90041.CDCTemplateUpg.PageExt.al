@@ -1,4 +1,4 @@
-pageextension 90041 pageextension90041 extends "CDC Template Upg."
+pageextension 90041 "AUZ Template Upg." extends "CDC Template Upg."
 {
     Caption = 'CDC Template Upg.';
 

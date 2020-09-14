@@ -1,4 +1,4 @@
-pageextension 90028 pageextension90028 extends "Purchase Invoice"
+pageextension 90028 "AUZ Purchase Invoice" extends "Purchase Invoice"
 {
     // *** Auzilium AS ***
     // AZ10001 10.05.2014 EVA Moved KID and other fiels for accounting.

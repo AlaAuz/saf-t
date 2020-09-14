@@ -1,4 +1,4 @@
-pageextension 90010 pageextension90010 extends "Customer Card"
+pageextension 90010 "AUZ Customer Card" extends "Customer Card"
 {
     // *** Auzilium AS ***
     // 

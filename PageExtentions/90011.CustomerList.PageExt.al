@@ -1,4 +1,4 @@
-pageextension 90011 pageextension90011 extends "Customer List"
+pageextension 90011 "AUZ Customer List" extends "Customer List"
 {
     // *** Auzilium AS ***
     // 

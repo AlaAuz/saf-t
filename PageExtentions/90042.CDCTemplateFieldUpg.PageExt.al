@@ -1,4 +1,4 @@
-pageextension 90042 pageextension90042 extends "CDC Template Field Upg."
+pageextension 90042 "AUZ Template Field Upg." extends "CDC Template Field Upg."
 {
     Caption = 'CDC Template Field Upg.';
     layout

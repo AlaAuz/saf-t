@@ -1,4 +1,4 @@
-pageextension 90027 pageextension90027 extends "Contact List"
+pageextension 90027 "AUZ Contact List" extends "Contact List"
 {
     layout
     {
@@ -9,9 +9,9 @@ pageextension 90027 pageextension90027 extends "Contact List"
     }
     actions
     {
-        addafter(Webkilder)
+        addafter("Web Sources")
         {
-            action("Påloggingsinfo.")
+            action(LoginInfo)
             {
                 Caption = 'Login Information';
                 Image = Database;

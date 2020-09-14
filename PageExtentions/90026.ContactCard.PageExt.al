@@ -1,4 +1,4 @@
-pageextension 90026 pageextension90026 extends "Contact Card"
+pageextension 90026 "AUZ Contact Card" extends "Contact Card"
 {
     layout
     {
@@ -20,9 +20,9 @@ pageextension 90026 pageextension90026 extends "Contact Card"
     }
     actions
     {
-        addafter(Webkilder)
+        addafter("Web Sources")
         {
-            action("Påloggingsinfo.")
+            action(LoginInfo)
             {
                 Caption = 'Login Information';
                 Image = Database;

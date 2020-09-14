@@ -1,4 +1,4 @@
-pageextension 90040 pageextension90040 extends "CDC Purch. Invoice With Image"
+pageextension 90040 "AUZ Purch. Invoice With Image" extends "CDC Purch. Invoice With Image"
 {
     layout
     {

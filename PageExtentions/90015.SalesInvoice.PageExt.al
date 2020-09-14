@@ -1,12 +1,5 @@
-pageextension 90015 pageextension90015 extends "Sales Invoice"
+pageextension 90015 "AUZ Sales Invoice" extends "Sales Invoice"
 {
-    // *** Auzilium AS ***
-    // 
-    // 
-    // *** Auzilium AS Document Distribution ***
-    // <DD>
-    //   Added field "Distribution Type".
-    // </DD>
     layout
     {
         addafter("EU 3-Party Trade")

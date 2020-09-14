@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        /*
         {
             "type": "al",
             "request": "launch",
@@ -10,6 +11,23 @@
             "port": 7049,
             "authentication": "UserPassword",
             "breakOnError": true
-        }
+        },
+        /*
+        SYMBOLS 
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "SSN - Sandbox",
+            "server": "https://businesscentral.dynamics.com/",
+            "tenant": "ssnno.onmicrosoft.com",
+            "serverInstance": "Sandbox",
+            "authentication": "AAD",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "sandboxName": "Sandbox4",
+        } 
+        */
     ]
 }
