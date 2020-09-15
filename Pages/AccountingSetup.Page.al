@@ -1,4 +1,4 @@
-page 70300 "Accounting Setup"
+page 50009 "Accounting Setup"
 {
     Caption = 'Accounting Setup';
     PageType = Card;

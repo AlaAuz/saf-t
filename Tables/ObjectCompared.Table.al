@@ -1,4 +1,5 @@
-table 70001 "Object Compared"
+//table 70001 "Object Compared" //ALA
+table 50006 "Object Compared"
 {
     Caption = 'Case - Objects';
 
@@ -105,7 +106,7 @@ table 70001 "Object Compared"
     {
     }
 
-    [Scope('Internal')]
+
     procedure ObjectImport()
     var
         CaseNote: Page "Case Note";

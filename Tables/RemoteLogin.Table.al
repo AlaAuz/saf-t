@@ -67,10 +67,11 @@ table 90203 "Remote Login"
         RemoteManagement: Codeunit "Remote Management";
         NoSeriesMgt: Codeunit NoSeriesManagement;
 
-    [Scope('Internal')]
+
     procedure ConnectToComputer()
     begin
-        RemoteManagement.ConnectToComputer(Rec);
+        //ALA
+        //RemoteManagement.ConnectToComputer(Rec);
     end;
 }
 

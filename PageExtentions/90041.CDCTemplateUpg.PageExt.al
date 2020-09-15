@@ -1,3 +1,5 @@
+//ALA
+/*
 pageextension 90041 "AUZ Template Upg." extends "CDC Template Upg."
 {
     Caption = 'CDC Template Upg.';
@@ -63,4 +65,5 @@ pageextension 90041 "AUZ Template Upg." extends "CDC Template Upg."
     //DeleteAllUpgDataQst : ENU=Delete all template upgrade data?;
     //Variable type has not been exported.
 }
+    */
 

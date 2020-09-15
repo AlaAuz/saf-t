@@ -56,7 +56,7 @@ table 90202 "Remote User"
         RemoteLoginSetup: Record "Remote Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
 
-    [Scope('Internal')]
+
     procedure InitRecord()
     begin
         if GetFilter(Domain) <> '' then

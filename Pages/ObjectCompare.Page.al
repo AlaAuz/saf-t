@@ -1,4 +1,5 @@
-page 70000 "Object Compare"
+//page 70000 "Object Compare"
+page 50014 "Object Compare"
 {
     DelayedInsert = false;
     DeleteAllowed = false;
@@ -35,8 +36,9 @@ page 70000 "Object Compare"
 
                 trigger OnAction()
                 begin
-                    HandleObjects.Compare(0, 1);
-                    HandleObjects.Compare(1, 0);
+                    //ALA
+                    //HandleObjects.Compare(0, 1);
+                    //HandleObjects.Compare(1, 0);
                     CurrPage.Update(false);
                 end;
             }
@@ -44,6 +46,7 @@ page 70000 "Object Compare"
     }
 
     var
-        HandleObjects: Codeunit "Handle Objects";
+        //ALA
+        //HandleObjects: Codeunit "Handle Objects";
 }
 

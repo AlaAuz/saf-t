@@ -1,3 +1,6 @@
+
+//ALA
+/*
 codeunit 70001 "Handle Objects"
 {
     // Oseberg Solutions by EVA :)
@@ -18,7 +21,7 @@ codeunit 70001 "Handle Objects"
         LineNumber: Integer;
         InsertRecord: Boolean;
 
-    [Scope('Internal')]
+
     procedure ReadText(var ObjectsCopyPaste: Text; CompareType: Option Compare1,Compare2)
     var
         MyFile: File;
@@ -133,7 +136,7 @@ codeunit 70001 "Handle Objects"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure ReadFile(CompareType: Option Compare1,Compare2)
     var
         MyFile: File;
@@ -247,7 +250,7 @@ codeunit 70001 "Handle Objects"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure InsertNewRecord()
     begin
         ObjectCompare.Insert;
@@ -255,14 +258,14 @@ codeunit 70001 "Handle Objects"
         InsertRecord := false;
     end;
 
-    [Scope('Internal')]
+
     procedure GetInteger(TextValue: Text[100]) IntValue: Integer
     begin
         Evaluate(IntValue, TextValue);
         exit(IntValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetBoolean(TextValue: Text[100]) BoolValue: Boolean
     begin
         if UpperCase(TextValue) in ['YES', 'JA'] then
@@ -274,39 +277,39 @@ codeunit 70001 "Handle Objects"
         exit(BoolValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetDate(TextValue: Text[100]) DateValue: Date
     begin
         Evaluate(DateValue, TextValue);
         exit(DateValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetTime(TextValue: Text[100]) TimeValue: Time
     begin
         Evaluate(TimeValue, TextValue);
         exit(TimeValue);
     end;
 
-    [Scope('Internal')]
+
     procedure SetToDoEntryNo(pTodoCode: Code[20])
     begin
         ToDoCode := pTodoCode;
     end;
 
-    [Scope('Internal')]
+
     procedure SetFileName(pFileName: Text[250])
     begin
         FileName := pFileName;
     end;
 
-    [Scope('Internal')]
+
     procedure SetDateTime(pDateTime: DateTime)
     begin
         TheCurrentDateTime := pDateTime;
     end;
 
-    [Scope('Internal')]
+
     procedure Compare(CompareType1: Option Compare1,Compare2; CompareType2: Option Compare1,Compare2)
     var
         Compare1: Record "Object Compare";
@@ -343,3 +346,4 @@ codeunit 70001 "Handle Objects"
     end;
 }
 
+*/

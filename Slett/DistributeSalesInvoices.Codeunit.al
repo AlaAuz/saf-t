@@ -43,7 +43,7 @@ codeunit 70901 "Distribute Sales Invoices"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeSalesInvoiceOnAfterPosting(SalesInvoiceHeader: Record "Sales Invoice Header")
     begin
         Commit;
@@ -51,7 +51,7 @@ codeunit 70901 "Distribute Sales Invoices"
             DistributionMgt.ShowCompletionMessage(0, 1, 1);
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeSalesInvoices(var SalesInvoiceHeader: Record "Sales Invoice Header")
     var
         RecNo: Integer;

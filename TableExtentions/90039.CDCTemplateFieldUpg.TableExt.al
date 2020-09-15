@@ -1,3 +1,5 @@
+//ALA
+/*
 tableextension 90039 "AUZ Template Field Upg." extends "CDC Template Field Upg."
 {
     Caption = 'Template Field Upg.';
@@ -228,5 +230,5 @@ tableextension 90039 "AUZ Template Field Upg." extends "CDC Template Field Upg."
     //>>>> MODIFIED VALUE:
     //UnableToParseDecimalExpression : DAN=Det indtastede udtryk kan ikke oversætte.;ENU=Unable to translate typed expression.;ESP=No es posible traducir la expresión introducida.;
     //Variable type has not been exported.
-}
+//} 
 

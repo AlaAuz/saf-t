@@ -74,7 +74,7 @@ table 90003 "Case Object"
     {
     }
 
-    [Scope('Internal')]
+
     procedure ObjectImport()
     var
         CaseNote: Page "Case Note";

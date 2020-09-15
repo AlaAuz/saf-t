@@ -108,7 +108,7 @@ table 90103 "Standard Solution Object"
         StandardSolutionMgt: Codeunit "Standard Solution Management";
         ChangeType: Option Insertion,Modification,Deletion;
 
-    [Scope('Internal')]
+
     procedure ImportObjects()
     var
         StandardSolutionNote: Page "Standard Solution Note";
@@ -128,7 +128,7 @@ table 90103 "Standard Solution Object"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure ReadText(var ObjectsCopyPaste: Text)
     var
         MyFile: File;
@@ -248,7 +248,8 @@ table 90103 "Standard Solution Object"
         end;
     end;
 
-    [Scope('Internal')]
+//ALA
+/*
     procedure ReadFile(var ObjectsCopyPaste: Text)
     var
         MyFile: File;
@@ -357,9 +358,9 @@ table 90103 "Standard Solution Object"
         if InsertRecord then begin
             InsertNewRecord();
         end;
-    end;
+    end; */
 
-    [Scope('Internal')]
+
     procedure InsertNewRecord()
     begin
         LineNumber += 10000;
@@ -371,14 +372,14 @@ table 90103 "Standard Solution Object"
         InsertRecord := false;
     end;
 
-    [Scope('Internal')]
+
     procedure GetInteger(TextValue: Text[100]) IntValue: Integer
     begin
         Evaluate(IntValue, TextValue);
         exit(IntValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetBoolean(TextValue: Text[100]) BoolValue: Boolean
     begin
         if UpperCase(TextValue) in ['YES', 'JA'] then
@@ -390,40 +391,40 @@ table 90103 "Standard Solution Object"
         exit(BoolValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetDate(TextValue: Text[100]) DateValue: Date
     begin
         Evaluate(DateValue, TextValue);
         exit(DateValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetTime(TextValue: Text[100]) TimeValue: Time
     begin
         Evaluate(TimeValue, TextValue);
         exit(TimeValue);
     end;
 
-    [Scope('Internal')]
+
     procedure SetPrimaryKey(NewStdSolutionNo: Code[20]; NewVersionCode: Code[10])
     begin
         StdSolutionNo := NewStdSolutionNo;
         VersionCode := NewVersionCode;
     end;
 
-    [Scope('Internal')]
+
     procedure SetFileName(pFileName: Text[250])
     begin
         FileName := pFileName;
     end;
 
-    [Scope('Internal')]
+
     procedure SetDateTime(pDateTime: DateTime)
     begin
         TheCurrentDateTime := pDateTime;
     end;
 
-    [Scope('Internal')]
+
     procedure FindLineNumber(): Integer
     begin
         StandardSolutionObject.SetRange("Standard Solution No.", StdSolutionNo);
@@ -432,7 +433,7 @@ table 90103 "Standard Solution Object"
             exit(StandardSolutionObject."Line No.")
     end;
 
-    [Scope('Internal')]
+
     procedure CheckChangePermissions(Type: Option)
     var
         StandardSolution: Record "Standard Solution";

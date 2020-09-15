@@ -20,9 +20,9 @@ table 70901 "Distribution Log Entry"
         field(3; "Document No."; Code[20])
         {
             Caption = 'Document No.';
-            TableRelation = IF ("Document Type" = CONST ("Sales Invoice")) "Sales Invoice Header"
+            TableRelation = IF ("Document Type" = CONST("Sales Invoice")) "Sales Invoice Header"
             ELSE
-            IF ("Document Type" = CONST ("Sales Credit Memo")) "Sales Comment Line";
+            IF ("Document Type" = CONST("Sales Credit Memo")) "Sales Comment Line";
         }
         field(4; "Last Document Entry"; Boolean)
         {
@@ -95,7 +95,7 @@ table 70901 "Distribution Log Entry"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure SetErrorMessage(ErrorMessage: Text)
     begin
         "Error Message" := CopyStr(ErrorMessage, 1, 250);
@@ -104,7 +104,7 @@ table 70901 "Distribution Log Entry"
         "Error Message 4" := CopyStr(ErrorMessage, 751, 250);
     end;
 
-    [Scope('Internal')]
+
     procedure GetErrorMessage(): Text
     begin
         exit("Error Message" + "Error Message 2" + "Error Message 3" + "Error Message 4");

@@ -13,7 +13,7 @@ codeunit 50050 "Sales Chart Management"
         ActualText: Label 'Actual %1';
         GLSetupRead: Boolean;
 
-    [Scope('Internal')]
+
     procedure OnOpenPage(var SalesChartSetup: Record "Sales Chart Setup"; ChartView: Option Sales,"Accumulated Sales")
     begin
         with SalesChartSetup do
@@ -24,7 +24,7 @@ codeunit 50050 "Sales Chart Management"
             end;
     end;
 
-    [Scope('Internal')]
+
     procedure UpdateData(var BusChartBuf: Record "Business Chart Buffer"; ChartView: Option Sales,"Accumulated Sales")
     var
         AZSetup: Record "AZ Setup";
@@ -61,7 +61,7 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DrillDown(var BusChartBuf: Record "Business Chart Buffer"; ChartView: Option Sales,"Accumulated Sales")
     var
         AZSetup: Record "AZ Setup";
@@ -135,7 +135,7 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure CalcAmount(AZSetup: Record "AZ Setup"; SalesChartSetup: Record "Sales Chart Setup"; Month: Integer; MType: Text; ChartView: Option Sales,"Accumulated Sales"): Decimal
     var
         FromDate: Date;
@@ -209,7 +209,7 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure ColumnIndex2Date(var FromDate: Date; var ToDate: Date; ColumnIndex: Integer; LastYear: Boolean; ChartView: Option Sales,"Accumulated Sales")
     var
         SourceDate: Date;

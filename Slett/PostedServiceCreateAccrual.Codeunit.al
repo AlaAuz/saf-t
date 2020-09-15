@@ -11,7 +11,7 @@ codeunit 50004 "Posted Service-Create Accrual"
         AccrualMgt: Codeunit "Accrual Management";
         Item: Record Item;
 
-    [Scope('Internal')]
+
     procedure Invoice(var ServInvHeader: Record "Service Invoice Header")
     var
         ServInvLine: Record "Service Invoice Line";
@@ -47,7 +47,7 @@ codeunit 50004 "Posted Service-Create Accrual"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure CrMemo(var ServCrMemoHeader: Record "Service Cr.Memo Header")
     var
         ServCrMemoLine: Record "Service Cr.Memo Line";

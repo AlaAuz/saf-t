@@ -84,7 +84,7 @@ table 90010 "Case Hour Chart Setup"
     var
         PeriodTxt: Label 'Period: ';
 
-    [Scope('Internal')]
+
     procedure GetCurrentSelectionText() SelectionText: Text[250]
     begin
         if Day then
@@ -116,7 +116,7 @@ table 90010 "Case Hour Chart Setup"
         SelectionText += SelectionType;
     end;
 
-    [Scope('Internal')]
+
     procedure Index2PeriodType(MeasureIndex: Integer): Integer
     var
         MIndex: Integer;
@@ -158,13 +158,13 @@ table 90010 "Case Hour Chart Setup"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure SetDefault()
     begin
         SetType(Type::Total);
     end;
 
-    [Scope('Internal')]
+
     procedure SetPie()
     begin
         SetType(Type::Pie);
@@ -179,44 +179,44 @@ table 90010 "Case Hour Chart Setup"
         Modify;
     end;
 
-    [Scope('Internal')]
+
     procedure SetChargeable(Value: Option)
     begin
         Chargeable := Value;
         Modify;
     end;
 
-    [Scope('Internal')]
+
     procedure SetDay(Value: Boolean)
     begin
         SetPeriod(Day, Value);
     end;
 
-    [Scope('Internal')]
+
     procedure SetWeek(Value: Boolean)
     begin
         SetPeriod(Week, Value);
     end;
 
-    [Scope('Internal')]
+
     procedure SetMonth(Value: Boolean)
     begin
         SetPeriod(Month, Value);
     end;
 
-    [Scope('Internal')]
+
     procedure SetQuarter(Value: Boolean)
     begin
         SetPeriod(Quarter, Value);
     end;
 
-    [Scope('Internal')]
+
     procedure SetYear(Value: Boolean)
     begin
         SetPeriod(Year, Value);
     end;
 
-    [Scope('Internal')]
+
     procedure SetTotal(Value: Boolean)
     begin
         SetPeriod(Total, Value);
@@ -240,7 +240,7 @@ table 90010 "Case Hour Chart Setup"
         Total := false;
     end;
 
-    [Scope('Internal')]
+
     procedure UpdateLastMonthsWinner()
     var
         Date1: Record Date;

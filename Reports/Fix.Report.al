@@ -1,4 +1,4 @@
-report 60010 Fix
+report 50015 Fix
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Fix.rdlc';

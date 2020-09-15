@@ -1,3 +1,5 @@
+//ALA
+/*
 page 50100 Signature
 {
     //  * signature ControlAddIn v1.0
@@ -188,4 +190,5 @@ page 50100 Signature
         end;
     end;
 }
+    */
 

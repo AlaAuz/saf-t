@@ -84,9 +84,11 @@ report 50119 "Calculate Resource Cap Calenda"
         Holiday: Boolean;
         NewDescription: Text[50];
 
-    [Scope('Internal')]
+
     procedure CalculateCap(Rec: Record Resource)
     begin
+        //ALA
+        /*
         with Rec do begin
 
             if WeekTotal <= 0 then
@@ -156,7 +158,7 @@ report 50119 "Calculate Resource Cap Calenda"
 
     end;
 
-    [Scope('Internal')]
+
     procedure SelectCapacity() Hours: Decimal
     begin
         case Date2DWY(TempDate, 1) of
@@ -177,7 +179,7 @@ report 50119 "Calculate Resource Cap Calenda"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure SumWeekTotal()
     begin
         WeekTotal := WorkTemplateRec.Monday + WorkTemplateRec.Tuesday + WorkTemplateRec.Wednesday +

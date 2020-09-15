@@ -44,7 +44,7 @@ codeunit 70905 "Distribute Service Invoices"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DoEmailRecords(var ServInvHeader: Record "Service Invoice Header"; ShowDialog: Boolean)
     var
         DocumentSendingProfile: Record "Document Sending Profile";
@@ -55,7 +55,7 @@ codeunit 70905 "Distribute Service Invoices"
               DummyReportSelections.Usage::"SM.Invoice", ServInvHeader, FieldNo("No."), DocTxt, FieldNo("Bill-to Customer No."), ShowDialog);
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeServInvoices(var ServInvoiceHeader: Record "Service Invoice Header")
     var
         RecNo: Integer;

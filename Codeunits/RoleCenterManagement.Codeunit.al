@@ -10,14 +10,14 @@ codeunit 50049 "Role Center Management"
         UserSetup: Record "User Setup";
         GLSetupRead: Boolean;
 
-    [Scope('Internal')]
+
     procedure GetSalespersPurchCode(): Code[10]
     begin
         GetUserSetup;
         exit(UserSetup."Salespers./Purch. Code");
     end;
 
-    [Scope('Internal')]
+
     procedure GetGlobalDimension1Code(): Code[20]
     var
         Salesperson: Record "Salesperson/Purchaser";
@@ -34,7 +34,7 @@ codeunit 50049 "Role Center Management"
                 UserSetup.Init;
     end;
 
-    [Scope('Internal')]
+
     procedure FindDimensionFilter(var DimensionCode: Code[20]; var DimensionFilter: Text)
     var
         Dimension: Record Dimension;

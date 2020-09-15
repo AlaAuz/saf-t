@@ -30,7 +30,7 @@ codeunit 70904 "Distribute Fin. Charge Memos"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeIssuedFinChargeMemos(var IssuedFinChargeMemoHeader: Record "Issued Fin. Charge Memo Header")
     var
         RecNo: Integer;

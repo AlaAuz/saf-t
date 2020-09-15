@@ -17,7 +17,8 @@ page 50090 "Accumulated Sales Chart"
             }
             usercontrol(BusinessChart; "Microsoft.Dynamics.Nav.Client.BusinessChart")
             {
-
+                //ALA
+                /*
                 trigger DataPointClicked(point: DotNet BusinessChartDataPoint)
                 begin
                     SetDrillDownIndexes(point);
@@ -26,7 +27,7 @@ page 50090 "Accumulated Sales Chart"
 
                 trigger DataPointDoubleClicked(point: DotNet BusinessChartDataPoint)
                 begin
-                end;
+                end; */
 
                 trigger AddInReady()
                 begin

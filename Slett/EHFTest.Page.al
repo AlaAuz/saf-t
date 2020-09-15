@@ -1,4 +1,4 @@
-page 70005 "EHF Test"
+page 50013 "EHF Test"
 {
     PageType = Card;
     SourceTable = "Integer";

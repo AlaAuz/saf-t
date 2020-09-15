@@ -1,4 +1,6 @@
-table 70000 "Object Compare"
+//table 70000 "Object Compare" //ALA
+table 50005 "Object Compare"
+
 {
     Caption = 'Case - Objects';
 
@@ -63,12 +65,13 @@ table 70000 "Object Compare"
     {
     }
 
-    [Scope('Internal')]
+
     procedure ObjectImport(CompareType: Option Compare1,Compare2)
     var
         CaseNote: Page "Case Note";
         MyNote: Text;
-        HandleObjects: Codeunit "Handle Objects";
+        //ALA
+        //HandleObjects: Codeunit "Handle Objects";
     begin
         MyNote := '';
         CaseNote.LookupMode(true);
@@ -82,9 +85,10 @@ table 70000 "Object Compare"
             //CaseNoHandleObjects.SetToDoEntryNo("Case No.");
             SetRange(Compare, CompareType);
             DeleteAll;
-
-            HandleObjects.SetFileName('C:\Temp\Compare' + Format(CompareType) + '.txt');
-            HandleObjects.ReadText(MyNote, CompareType);
+            
+            //ALA
+            //HandleObjects.SetFileName('C:\Temp\Compare' + Format(CompareType) + '.txt');
+            //HandleObjects.ReadText(MyNote, CompareType);
         end;
     end;
 }

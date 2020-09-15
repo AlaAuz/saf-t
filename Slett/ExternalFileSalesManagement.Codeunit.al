@@ -8,7 +8,7 @@ codeunit 70401 "External File Sales Management"
     var
         ExtFileMgtSetup: Record "External File Management Setup";
 
-    [Scope('Internal')]
+
     procedure CopyFilesToPostedDocuments(SalesHeader: Record "Sales Header"; SalesShptHeaderNo: Code[20]; SalesInvHeaderNo: Code[20]; SalesCrMemoHeaderNo: Code[20])
     begin
         if not CheckSetup then
@@ -91,7 +91,7 @@ codeunit 70401 "External File Sales Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure CopyFilesFromOrderToQuote(SalesQuoteHeader: Record "Sales Header"; SalesOrderHeader: Record "Sales Header")
     var
         ExtFileMgtSetup: Record "External File Management Setup";

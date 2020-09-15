@@ -1,4 +1,5 @@
-page 70002 "Object Compare 2"
+//page 70002 "Object Compare 2"
+page 50017 "Object Compare 2"
 {
     AutoSplitKey = true;
     LinksAllowed = false;

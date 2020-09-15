@@ -8,42 +8,6 @@ tableextension 90023 "AUZ Purchase Header" extends "Purchase Header"
     // </DC>
     fields
     {
-
-
-        //Unsupported feature: Code Modification on ""Pay-to Vendor No."(Field 4).OnValidate".
-
-        //trigger "(Field 4)()
-        //Parameters and return type have not been exported.
-        //>>>> ORIGINAL CODE:
-        //begin
-        /*
-        TestStatusOpen;
-        if (xRec."Pay-to Vendor No." <> "Pay-to Vendor No.") and
-           (xRec."Pay-to Vendor No." <> '')
-        #4..60
-        Validate("Payment Method Code");
-        Validate("Currency Code");
-        Validate("Creditor No.",Vend."Creditor No.");
-
-        OnValidatePurchaseHeaderPayToVendorNo(Vend);
-
-        if "Document Type" = "Document Type"::Order then
-        #68..91
-
-        if (xRec."Pay-to Vendor No." <> '') and (xRec."Pay-to Vendor No." <> "Pay-to Vendor No.") then
-          RecallModifyAddressNotification(GetModifyPayToVendorAddressNotificationId);
-        */
-        //end;
-        //>>>> MODIFIED CODE:
-        //begin
-        /*
-        #1..63
-        //AZ99999+
-        "Recipient Bank Account No." := Vend."Recipient Bank Account No.";
-        //AZ99999-
-        #65..94
-        */
-        //end;
         field(50001; "Recipient Bank Account No."; Code[35])
         {
             Caption = 'Recipient Bank Account No.';
@@ -52,22 +16,23 @@ tableextension 90023 "AUZ Purchase Header" extends "Purchase Header"
             trigger OnValidate()
             var
                 RemAccount: Record "Remittance Account";
+                Vendor: Record Vendor;
                 RemmTools: Codeunit "Remittance Tools";
                 ErrorMess: Text[250];
             begin
                 //AZ99999+
                 if "Recipient Bank Account No." <> xRec."Recipient Bank Account No." then
                     if Confirm(Text50001) then begin
-                        GetVend("Pay-to Vendor No.");
-                        RemAccount.Get(Vend."Remittance Account Code");
+                        Vendor.Get("Pay-to Vendor No.");
+                        RemAccount.Get(Vendor."Remittance Account Code");
                         if "Recipient Bank Account No." <> '' then begin
                             ErrorMess := RemmTools.CheckAccountNo("Recipient Bank Account No.", RemAccount.Type);
                             if ErrorMess <> '' then
                                 Error(ErrorMess);
                         end;
 
-                        Vend."Recipient Bank Account No." := "Recipient Bank Account No.";
-                        Vend.Modify;
+                        Vendor."Recipient Bank Account No." := "Recipient Bank Account No.";
+                        Vendor.Modify;
                     end else
                         "Recipient Bank Account No." := xRec."Recipient Bank Account No.";
                 //AZ99999-
@@ -133,6 +98,8 @@ tableextension 90023 "AUZ Purchase Header" extends "Purchase Header"
                 SalesLine.Modify(true);
             until PurchaseLine.Next = 0;
     end;
+
+
 
     var
         Text50001: Label 'Are you sure that you want to update the vendors bank account number.?';

@@ -169,7 +169,7 @@ page 90009 "My Case Lines"
         ResourceNo: Code[20];
         DatePeriod: array[7] of Date;
 
-    [Scope('Internal')]
+
     procedure UpdateData(var Calendar: Record Date)
     var
         CalendarDate: Record Date;
@@ -228,7 +228,7 @@ page 90009 "My Case Lines"
         CurrPage.Update(false);
     end;
 
-    [Scope('Internal')]
+
     procedure FormatDate(Date: Date; DOWFormatType: Option Full,Short): Text[30]
     begin
         case DOWFormatType of
@@ -239,7 +239,7 @@ page 90009 "My Case Lines"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure SetCurrentPeriod(var Calendar: Record Date)
     begin
         Calendar.Reset;
@@ -248,7 +248,7 @@ page 90009 "My Case Lines"
         Calendar.FindLast;
     end;
 
-    [Scope('Internal')]
+
     procedure SetNextPeriod(var Calendar: Record Date)
     begin
         Calendar.SetRange("Period Type", Calendar."Period Type"::Week);
@@ -256,7 +256,7 @@ page 90009 "My Case Lines"
         Calendar.FindLast;
     end;
 
-    [Scope('Internal')]
+
     procedure SetPreviousPeriod(var Calendar: Record Date)
     begin
         Calendar.SetRange("Period Type", Calendar."Period Type"::Week);
@@ -264,7 +264,7 @@ page 90009 "My Case Lines"
         Calendar.FindLast;
     end;
 
-    [Scope('Internal')]
+
     procedure ShowCaseHours(Period: Integer)
     var
         UserSetup: Record "User Setup";
@@ -280,7 +280,7 @@ page 90009 "My Case Lines"
         CaseHoursList.RunModal;
     end;
 
-    [Scope('Internal')]
+
     procedure ShowTotalCaseHours()
     var
         UserSetup: Record "User Setup";

@@ -735,7 +735,6 @@ report 50004 "AZ Service Invoice"
         SalesShptHeader: Record "Sales Shipment Header";
         CountryRegion: Record "Country/Region";
         ServiceItem: Record "Service Item";
-        AZTools: Codeunit "EHF Tools";
         FormatAddress: Codeunit "Format Address";
         DocumentTools: Codeunit DocumentTools;
         DocumentPrinted: Codeunit "Service Inv.-Printed";

@@ -5,7 +5,7 @@ codeunit 90001 "Case Tools"
     begin
     end;
 
-    [Scope('Internal')]
+
     procedure FindJob(ContactNo: Code[20]): Code[10]
     var
         ContactPerson: Record Contact;
@@ -36,7 +36,7 @@ codeunit 90001 "Case Tools"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure EnterCaseHoursIntoTimeSheet(var Rec: Record "Time Sheet Header")
     begin
     end;

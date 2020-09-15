@@ -35,8 +35,8 @@ table 50007 "Tables To Clean"
     {
     }
 
-    [Scope('Internal')]
-    procedure GetAllTables()
+
+   /* procedure GetAllTables() //ALA
     var
         TableObject: Record "Object";
     begin
@@ -49,9 +49,9 @@ table 50007 "Tables To Clean"
                 "Table Caption" := TableObject.Caption;
                 Insert;
             until TableObject.Next = 0;
-    end;
+    end;*/
 
-    [Scope('Internal')]
+
     procedure GetNumberOfRecords()
     var
         RecRef: RecordRef;
@@ -65,7 +65,7 @@ table 50007 "Tables To Clean"
             until Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure MarkON()
     begin
         if FindSet then
@@ -75,7 +75,7 @@ table 50007 "Tables To Clean"
             until Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure MarkOff()
     begin
         if FindSet then
@@ -85,7 +85,7 @@ table 50007 "Tables To Clean"
             until Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteData()
     var
         RecRef: RecordRef;
@@ -102,7 +102,7 @@ table 50007 "Tables To Clean"
             end;
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteData2()
     var
         RecRef: RecordRef;

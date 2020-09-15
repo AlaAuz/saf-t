@@ -1,6 +1,6 @@
-xmlport 60001 "Imp Case Desc"
+xmlport 50001 "Imp Case Desc"
 {
-    Encoding = UTF8;
+    //Encoding = UTF8;  ALA
     FieldSeparator = ';';
     Format = VariableText;
     FormatEvaluate = Legacy;

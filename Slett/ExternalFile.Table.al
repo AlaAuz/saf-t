@@ -1,4 +1,4 @@
-table 70401 "External File"
+table 50003 "External File"
 {
     // *** Auzilium AS File Management ***
 

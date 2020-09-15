@@ -1,4 +1,4 @@
-report 60011 "Fix JOb"
+report 50017 "Fix JOb"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './FixJOb.rdlc';

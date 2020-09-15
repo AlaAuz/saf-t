@@ -190,7 +190,7 @@ report 50093 "AZ Sales Cr.Memo"
             }
             dataitem(Lines; "Sales Cr.Memo Line")
             {
-                DataItemLink = "Document No." = FIELD ("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 column(LineLineNo; Lines."Line No.")
                 {
                 }
@@ -296,7 +296,7 @@ report 50093 "AZ Sales Cr.Memo"
             }
             dataitem(TotalLines; "Integer")
             {
-                DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+                DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
                 column(TotalLineYesNo; TotalLineYesNo)
                 {
                 }
@@ -466,7 +466,7 @@ report 50093 "AZ Sales Cr.Memo"
 
                 TotalLineYesNo := 0;
 
-                DocumentTools.SetupGiroNoAmount(1, "No.", "Bill-to Customer No.", GiroKID, KIDError);
+                DocumentTools.GenerateGiroKID(1, "No.", "Bill-to Customer No.", GiroKID, KIDError);
             end;
 
             trigger OnPreDataItem()

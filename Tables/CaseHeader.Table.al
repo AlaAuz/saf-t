@@ -38,7 +38,7 @@ table 90000 "Case Header"
         {
             Caption = 'Contact No.';
             NotBlank = true;
-            TableRelation = Contact WHERE (Type = CONST (Person));
+            TableRelation = Contact WHERE(Type = CONST(Person));
 
             trigger OnValidate()
             var
@@ -176,21 +176,21 @@ table 90000 "Case Header"
         }
         field(18; "Contact Name"; Text[50])
         {
-            CalcFormula = Lookup (Contact.Name WHERE ("No." = FIELD ("Contact No.")));
+            CalcFormula = Lookup (Contact.Name WHERE("No." = FIELD("Contact No.")));
             Caption = 'Contact Name';
             Editable = false;
             FieldClass = FlowField;
         }
         field(19; "No. of Related Cases"; Integer)
         {
-            CalcFormula = Count ("Related Case" WHERE ("Case No." = FIELD ("No.")));
+            CalcFormula = Count ("Related Case" WHERE("Case No." = FIELD("No.")));
             Caption = 'No. of Related Cases';
             Editable = false;
             FieldClass = FlowField;
         }
         field(20; "Resource Name"; Text[50])
         {
-            CalcFormula = Lookup (Resource.Name WHERE ("No." = FIELD ("Resource No.")));
+            CalcFormula = Lookup (Resource.Name WHERE("No." = FIELD("Resource No.")));
             Caption = 'Resource Name';
             Editable = false;
             FieldClass = FlowField;
@@ -206,7 +206,7 @@ table 90000 "Case Header"
         {
             Caption = 'Contact Company No.';
             Editable = false;
-            TableRelation = Contact WHERE (Type = CONST (Company));
+            TableRelation = Contact WHERE(Type = CONST(Company));
 
             trigger OnValidate()
             var
@@ -228,17 +228,17 @@ table 90000 "Case Header"
         }
         field(23; "Contact Company Name"; Text[50])
         {
-            CalcFormula = Lookup (Contact.Name WHERE ("No." = FIELD ("Contact Company No."),
-                                                     Type = CONST (Company)));
+            CalcFormula = Lookup (Contact.Name WHERE("No." = FIELD("Contact Company No."),
+                                                     Type = CONST(Company)));
             Caption = 'Contact Company Name';
             Editable = false;
             FieldClass = FlowField;
-            TableRelation = Contact.Name WHERE (Type = CONST (Company));
+            TableRelation = Contact.Name WHERE(Type = CONST(Company));
         }
         field(24; "Chargeable Hours"; Decimal)
         {
-            CalcFormula = Sum ("Case Line".Quantity WHERE ("Case No." = FIELD ("No."),
-                                                          Chargeable = CONST (true)));
+            CalcFormula = Sum ("Case Line".Quantity WHERE("Case No." = FIELD("No."),
+                                                          Chargeable = CONST(true)));
             Caption = 'Chargeable';
             Editable = false;
             FieldClass = FlowField;
@@ -247,17 +247,17 @@ table 90000 "Case Header"
         {
             Caption = 'Consultant ID';
             DataClassification = ToBeClassified;
-            TableRelation = "User Setup" WHERE (Consultant = CONST (true));
+            TableRelation = "User Setup" WHERE(Consultant = CONST(true));
         }
         field(26; "Developer ID"; Code[50])
         {
             Caption = 'Developer ID';
             DataClassification = ToBeClassified;
-            TableRelation = "User Setup"."User ID" WHERE (Developer = CONST (true));
+            TableRelation = "User Setup"."User ID" WHERE(Developer = CONST(true));
         }
         field(27; "No. of Standard Solutions"; Integer)
         {
-            CalcFormula = Count ("Case Standard Solultion" WHERE ("Case No." = FIELD ("No.")));
+            CalcFormula = Count ("Case Standard Solultion" WHERE("Case No." = FIELD("No.")));
             Caption = 'No. of Standard Solutions';
             Editable = false;
             FieldClass = FlowField;
@@ -310,7 +310,7 @@ table 90000 "Case Header"
         {
             Caption = 'Job No.';
             NotBlank = true;
-            TableRelation = Job WHERE (Blocked = CONST (" "));
+            TableRelation = Job WHERE(Blocked = CONST(" "));
 
             trigger OnValidate()
             begin
@@ -321,8 +321,8 @@ table 90000 "Case Header"
         {
             Caption = 'Job Task No.';
             NotBlank = true;
-            TableRelation = "Job Task"."Job Task No." WHERE ("Job No." = FIELD ("Job No."),
-                                                             "Job Task Type" = CONST (Posting));
+            TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."),
+                                                             "Job Task Type" = CONST(Posting));
 
             trigger OnValidate()
             var
@@ -368,7 +368,7 @@ table 90000 "Case Header"
         }
         field(50011; "Registered Hours"; Decimal)
         {
-            CalcFormula = Sum ("Case Line".Quantity WHERE ("Case No." = FIELD ("No.")));
+            CalcFormula = Sum ("Case Line".Quantity WHERE("Case No." = FIELD("No.")));
             Caption = 'Registered Hours';
             Editable = false;
             FieldClass = FlowField;
@@ -410,8 +410,9 @@ table 90000 "Case Header"
                         begin
                             if "Development Approval Status" = "Development Approval Status"::"Must be reviewed" then
                                 if Confirm(Text004) then begin
-                                    CaseMailMgt.SetToDevelopmentAdmin(true);
-                                    CaseMailMgt.SendEmail(Rec);
+                                    //ALA
+                                    //CaseMailMgt.SetToDevelopmentAdmin(true);
+                                    //CaseMailMgt.SendEmail(Rec);
                                 end;
 
                             if Status in [Status::"Not Started", Status::"Waiting for Reply"] then
@@ -516,7 +517,7 @@ table 90000 "Case Header"
             "Job Task No." := '';
     end;
 
-    [Scope('Internal')]
+
     procedure JobNoOnLookup()
     var
         Job: Record Job;
@@ -529,7 +530,7 @@ table 90000 "Case Header"
             Validate("Job No.", Job."No.");
     end;
 
-    [Scope('Internal')]
+
     procedure GetResourceNo(): Code[20]
     var
         UserSetup: Record "User Setup";
@@ -538,7 +539,7 @@ table 90000 "Case Header"
         exit(UserSetup."Resource No.");
     end;
 
-    [Scope('Internal')]
+
     procedure SaveDescriptionChangeRequest(DescriptionText: Text)
     var
         oStream: OutStream;
@@ -549,7 +550,7 @@ table 90000 "Case Header"
         oStream.WriteText(DescriptionText);
     end;
 
-    [Scope('Internal')]
+
     procedure SaveDescriptionSolution(DescriptionText: Text)
     var
         oStream: OutStream;
@@ -560,7 +561,7 @@ table 90000 "Case Header"
         oStream.WriteText(DescriptionText);
     end;
 
-    [Scope('Internal')]
+
     procedure GetDescriptionChangeRequest(var DescriptionText: Text)
     var
         iStream: InStream;
@@ -575,7 +576,7 @@ table 90000 "Case Header"
             DescriptionText := '';
     end;
 
-    [Scope('Internal')]
+
     procedure GetDescriptionSolution(var DescriptionText: Text)
     var
         iStream: InStream;
@@ -590,15 +591,16 @@ table 90000 "Case Header"
             DescriptionText := '';
     end;
 
-    [Scope('Internal')]
+
     procedure SendMail()
     var
         CaseMailHandle: Codeunit "Case Mail Management";
     begin
-        CaseMailHandle.SendEmail(Rec);
+        //ALA
+        //CaseMailHandle.SendEmail(Rec);
     end;
 
-    [Scope('Internal')]
+
     procedure InsertCaseResource()
     var
         CaseResource: Record "Case Resource";
@@ -618,7 +620,7 @@ table 90000 "Case Header"
         BuildResourceFilter;
     end;
 
-    [Scope('Internal')]
+
     procedure BuildResourceFilter()
     var
         CaseResource: Record "Case Resource";
@@ -633,13 +635,13 @@ table 90000 "Case Header"
             until CaseResource.Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure GetMyUserFilter(): Text
     begin
         exit('@*' + GetResourceNo + '*');
     end;
 
-    [Scope('Internal')]
+
     procedure ShowContactCompanyCard()
     var
         ContactCompany: Record Contact;
@@ -650,7 +652,7 @@ table 90000 "Case Header"
         ContactCard.Run;
     end;
 
-    [Scope('Internal')]
+
     procedure ShowLoginInformation()
     var
         ContactCompany: Record Contact;
@@ -659,7 +661,7 @@ table 90000 "Case Header"
         ContactCompany.ShowLoginInformation;
     end;
 
-    [Scope('Internal')]
+
     procedure GetLoginInformation(): Text
     var
         ContactCompany: Record Contact;
@@ -668,7 +670,7 @@ table 90000 "Case Header"
         exit(ContactCompany.GetLoginInformation2);
     end;
 
-    [Scope('Internal')]
+
     procedure ConfirmCompleted(): Boolean
     begin
         if Confirm(Text007, true) then begin
@@ -683,7 +685,7 @@ table 90000 "Case Header"
         "Last Time Modified" := Time;
     end;
 
-    [Scope('Internal')]
+
     procedure SetConsultantResource()
     var
         UserSetup: Record "User Setup";
@@ -694,7 +696,7 @@ table 90000 "Case Header"
         Validate("Resource No.", UserSetup."Resource No.");
     end;
 
-    [Scope('Internal')]
+
     procedure SetDeveloperResource()
     var
         UserSetup: Record "User Setup";
@@ -729,7 +731,7 @@ table 90000 "Case Header"
         Modify;
     end;
 
-    [Scope('Internal')]
+
     procedure OpenInformationURL()
     var
         ServiceURL: Text;
@@ -739,7 +741,7 @@ table 90000 "Case Header"
         HyperLink(ServiceURL);
     end;
 
-    [Scope('Internal')]
+
     procedure ShowStandardSolutionLastRelease()
     var
         StandardSolutionRelease: Record "Standard Solution Release";
@@ -752,7 +754,7 @@ table 90000 "Case Header"
         PageMgt.PageRunModal(StandardSolutionRelease);
     end;
 
-    [Scope('Internal')]
+
     procedure SelectStatus()
     var
         Selection: Integer;
@@ -761,7 +763,7 @@ table 90000 "Case Header"
             Validate(Status, Selection);
     end;
 
-    [Scope('Internal')]
+
     procedure SelectDevelopmentStatus()
     var
         Selection: Integer;
@@ -770,7 +772,7 @@ table 90000 "Case Header"
             Validate("Development Status", Selection);
     end;
 
-    [Scope('Internal')]
+
     procedure SelectDevelopmentApprovalStatus()
     var
         Selection: Integer;
@@ -779,7 +781,7 @@ table 90000 "Case Header"
             Validate("Development Approval Status", Selection);
     end;
 
-    [Scope('Internal')]
+
     procedure SelectWaitingFor()
     var
         Selection: Integer;
@@ -788,7 +790,7 @@ table 90000 "Case Header"
             UpdateWaitingFor(Selection);
     end;
 
-    [Scope('Internal')]
+
     procedure UpdateWaitingFor(WaitingFor: Option)
     begin
         Validate(Status, Status::"Waiting for Reply");

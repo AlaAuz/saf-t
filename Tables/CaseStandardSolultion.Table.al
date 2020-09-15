@@ -22,7 +22,7 @@ table 90013 "Case Standard Solultion"
         }
         field(3; "Standard Solution Description"; Text[50])
         {
-            CalcFormula = Lookup ("Standard Solution".Description WHERE ("No." = FIELD ("Standard Solution No.")));
+            CalcFormula = Lookup ("Standard Solution".Description WHERE("No." = FIELD("Standard Solution No.")));
             Caption = 'Standard Solution Description';
             Editable = false;
             FieldClass = FlowField;
@@ -41,7 +41,7 @@ table 90013 "Case Standard Solultion"
     {
     }
 
-    [Scope('Internal')]
+
     procedure ShowStandardSolutionLastRelease()
     var
         StandardSolutionRelease: Record "Standard Solution Release";

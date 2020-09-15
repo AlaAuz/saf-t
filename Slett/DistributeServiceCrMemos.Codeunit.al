@@ -44,7 +44,7 @@ codeunit 70906 "Distribute Service Cr. Memos"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DoEmailRecords(var ServCrMemoHeader: Record "Service Cr.Memo Header"; ShowRequestForm: Boolean)
     var
         DocumentSendingProfile: Record "Document Sending Profile";
@@ -55,7 +55,7 @@ codeunit 70906 "Distribute Service Cr. Memos"
               DummyReportSelections.Usage::"SM.Credit Memo", ServCrMemoHeader, FieldNo("No."), DocTxt, FieldNo("Bill-to Customer No."), ShowRequestForm);
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeServCrMemos(var ServCrMemoHeader: Record "Service Cr.Memo Header")
     var
         RecNo: Integer;

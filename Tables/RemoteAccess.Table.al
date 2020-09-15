@@ -42,7 +42,7 @@ table 90201 "Remote Access"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "No.", Field2, Field3)
+        fieldgroup(DropDown; "No.", Description, "No. Series")
         {
         }
     }

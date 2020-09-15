@@ -8,7 +8,7 @@ page 70401 "External File FactBox"
     ModifyAllowed = false;
     PageType = ListPart;
     SourceTable = "External File";
-    SourceTableView = SORTING ("Record ID");
+    SourceTableView = SORTING("Record ID");
 
     layout
     {
@@ -182,7 +182,7 @@ page 70401 "External File FactBox"
         Text005: Label 'Insert a line.';
         IsWindowsClient: Boolean;
 
-    [Scope('Internal')]
+
     procedure SetRec(NewRec: Variant)
     var
         RecRef: RecordRef;

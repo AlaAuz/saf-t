@@ -1,4 +1,4 @@
-report 60004 resource
+report 50018 resource
 {
     DefaultLayout = RDLC;
     RDLCLayout = './resource.rdlc';

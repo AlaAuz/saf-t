@@ -109,7 +109,7 @@ table 90001 "Case E-Mail Template"
     {
     }
 
-    [Scope('Internal')]
+
     procedure SaveMailLayout(DescriptionText: Text)
     var
         oStream: OutStream;
@@ -120,7 +120,7 @@ table 90001 "Case E-Mail Template"
         oStream.WriteText(DescriptionText);
     end;
 
-    [Scope('Internal')]
+
     procedure GetMailLayout(var DescriptionText: Text)
     var
         iStream: InStream;

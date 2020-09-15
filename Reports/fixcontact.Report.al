@@ -1,4 +1,4 @@
-report 60012 "fix contact"
+report 50016 "fix contact"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './fixcontact.rdlc';

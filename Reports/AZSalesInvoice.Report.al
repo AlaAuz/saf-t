@@ -193,7 +193,7 @@ report 50094 "AZ Sales Invoice"
             }
             dataitem(Lines; "Sales Invoice Line")
             {
-                DataItemLink = "Document No." = FIELD ("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 column(LineLineNo; Lines."Line No.")
                 {
                 }
@@ -305,7 +305,7 @@ report 50094 "AZ Sales Invoice"
             }
             dataitem(TotalLines; "Integer")
             {
-                DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+                DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
                 column(TotalLineYesNo; TotalLineYesNo)
                 {
                 }
@@ -477,7 +477,7 @@ report 50094 "AZ Sales Invoice"
 
                 TotalLineYesNo := 0;
 
-                DocumentTools.SetupGiroNoAmount(1, "No.", "Bill-to Customer No.", GiroKID, KIDError);
+                DocumentTools.GenerateGiroKID(1, "No.", "Bill-to Customer No.", GiroKID, KIDError);
 
                 if "Your Reference" = '' then begin
                     SalesInvoiceLine.SetRange("Document No.", "No.");

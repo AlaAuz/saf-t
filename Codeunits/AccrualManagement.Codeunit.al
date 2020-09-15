@@ -30,13 +30,13 @@ codeunit 50005 "Accrual Management"
         SourceCodeSetup: Record "Source Code Setup";
         Text004: Label 'Amount 0 cannot be accrued.';
 
-    [Scope('Internal')]
+
     procedure CheckSalesPosting(): Boolean
     begin
         exit(CheckPosting(0));
     end;
 
-    [Scope('Internal')]
+
     procedure CheckServicePosting(): Boolean
     begin
         exit(CheckPosting(1));
@@ -62,7 +62,7 @@ codeunit 50005 "Accrual Management"
         exit(true);
     end;
 
-    [Scope('Internal')]
+
     procedure InitValues(NewFirstDate: Date; NewLastInvoiceDate: Date; NewDocumentNo: Code[20]; NewShortcutDim1Code: Code[20]; NewShortcutDim2Code: Code[20]; NewDimSetID: Integer; NewCurrencyCode: Code[10]; NewCurrencyFactor: Decimal; NewAmount: Decimal; NewToAccountNo: Code[20]; NewFromAccountNo: Code[20])
     begin
         FirstDate := NewFirstDate;
@@ -78,7 +78,7 @@ codeunit 50005 "Accrual Management"
         FromAccountNo := NewFromAccountNo;
     end;
 
-    [Scope('Internal')]
+
     procedure Post()
     begin
         SourceCodeSetup.Get;

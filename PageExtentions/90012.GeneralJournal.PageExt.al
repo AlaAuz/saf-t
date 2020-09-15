@@ -2,8 +2,6 @@ pageextension 90012 "AUZ General Journal" extends "General Journal"
 {
     actions
     {
-        //Unsupported feature: Property Deletion (Visible) on "ImportPayrollFile(Action 29)".
-
         addfirst("F&unctions")
         {
             action(ImportPayroll)

@@ -5,9 +5,7 @@ page 50010 "Add-ins Page Test"
     {
         area(content)
         {
-            usercontrol(TestAddIn; "DocumentExplorerControlAddin")
-            {
-            }
+            //ALA usercontrol(TestAddIn; "DocumentExplorerControlAddin")
         }
     }
 

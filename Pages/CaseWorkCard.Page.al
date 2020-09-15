@@ -142,7 +142,7 @@ page 90027 "Case Work Card"
             {
                 Caption = 'Objects';
                 Editable = DynamicEditable;
-                SubPageLink = "Case No." = FIELD ("No.");
+                SubPageLink = "Case No." = FIELD("No.");
             }
             part(CaseLines; "Case SubPage")
             {
@@ -150,7 +150,7 @@ page 90027 "Case Work Card"
                 Editable = DynamicEditable;
                 Enabled = "Contact No." <> '';
                 ShowFilter = false;
-                SubPageLink = "Case No." = FIELD ("No.");
+                SubPageLink = "Case No." = FIELD("No.");
                 UpdatePropagation = Both;
             }
         }
@@ -196,7 +196,7 @@ page 90027 "Case Work Card"
                     ShowLoginInformation();
                 end;
             }
-            action(InformationURL)
+            action(InfoURL)
             {
                 Caption = 'Information URL';
                 Image = LaunchWeb;
@@ -323,7 +323,7 @@ page 90027 "Case Work Card"
                 Caption = 'Objects';
                 Image = List;
                 RunObject = Page "Case Object List";
-                RunPageLink = "Case No." = FIELD ("No.");
+                RunPageLink = "Case No." = FIELD("No.");
             }
             action(RelatedCases)
             {
@@ -332,7 +332,7 @@ page 90027 "Case Work Card"
                 Promoted = true;
                 PromotedCategory = Category4;
                 RunObject = Page "Related Cases";
-                RunPageLink = "Case No." = FIELD ("No.");
+                RunPageLink = "Case No." = FIELD("No.");
             }
             action(StandardSolutions)
             {
@@ -341,7 +341,7 @@ page 90027 "Case Work Card"
                 Promoted = true;
                 PromotedCategory = Category4;
                 RunObject = Page "Case Standard Solutions";
-                RunPageLink = "Case No." = FIELD ("No.");
+                RunPageLink = "Case No." = FIELD("No.");
             }
         }
     }
@@ -372,7 +372,7 @@ page 90027 "Case Work Card"
         InformationURL: Text;
         DynamicEditable: Boolean;
 
-    [Scope('Internal')]
+
     procedure LookupCaseResource()
     var
         CaseResource: Record "Case Resource";

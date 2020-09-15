@@ -34,7 +34,7 @@ codeunit 50002 "Service Contract Management"
         ServiceContractHeader.Modify(true);
     end;
 
-    [Scope('Internal')]
+
     procedure CreateRemainingPeriodInvoice(SkipDialog: Boolean; ConfirmationText: Text; InvFrom: Date; InvTo: Date): Boolean
     begin
         if SkipDialog then
@@ -43,7 +43,7 @@ codeunit 50002 "Service Contract Management"
         exit(Confirm(ConfirmationText, true, InvFrom, InvTo));
     end;
 
-    [Scope('Internal')]
+
     procedure SkipServicePeriodCheck(var ServiceContractHeader: Record "Service Contract Header"): Boolean
     begin
         GetAZSetup;
@@ -51,7 +51,7 @@ codeunit 50002 "Service Contract Management"
             ServiceContractHeader.TestField("Service Period");
     end;
 
-    [Scope('Internal')]
+
     procedure SetServLedgEntryValues(var ServLedgerEntry: Record "Service Ledger Entry"; ContractType: Integer; ContractNo: Code[20]; LineNo: Integer)
     var
         ServiceContractLine: Record "Service Contract Line";
@@ -64,7 +64,7 @@ codeunit 50002 "Service Contract Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure SetContractDatesOnServHeader(var ServiceContractHeader: Record "Service Contract Header"; var ServiceHeader: Record "Service Header")
     begin
         ServiceHeader."Serv. Contr. Next Inv. Date" := ServiceContractHeader."Next Invoice Date";
@@ -74,14 +74,14 @@ codeunit 50002 "Service Contract Management"
         ServiceHeader."SC Last Inv. Period End" := ServiceContractHeader."Last Invoice Period End";
     end;
 
-    [Scope('Internal')]
+
     procedure SetItem(var ServiceLine: Record "Service Line"; ServiceLedgerEntry: Record "Service Ledger Entry")
     begin
         ServiceLine.Type := ServiceLine.Type::Item;
         ServiceLine.Validate("No.", ServiceLedgerEntry."Item No. (Serviced)");
     end;
 
-    [Scope('Internal')]
+
     procedure SetServiceLineValues(var ServiceLine: Record "Service Line"; InvFrom: Date; InvTo: Date; ServiceLedgerEntry: Record "Service Ledger Entry")
     begin
         ServiceLine."Serv. Contract Line From Date" := InvFrom;
@@ -92,27 +92,27 @@ codeunit 50002 "Service Contract Management"
         ServiceLine."SCL New Line" := ServiceLedgerEntry."SCL New Line";
     end;
 
-    [Scope('Internal')]
+
     procedure SetNextInvDate(var NextInvDate: Date; ServiceContractLine: Record "Service Contract Line"; ServiceContractHeader: Record "Service Contract Header")
     begin
         if ServiceContractLine."New Line" then
             NextInvDate := ServiceContractLine."Starting Date";
     end;
 
-    [Scope('Internal')]
+
     procedure SetInvFrom(var InvFrom: Date; ServiceContractLine: Record "Service Contract Line")
     begin
         if ServiceContractLine."New Line" then
             InvFrom := ServiceContractLine."Starting Date";
     end;
 
-    [Scope('Internal')]
+
     procedure SetNewLineOnServiceContractLines(var ServiceContractLine: Record "Service Contract Line"; ServiceContractHeader: Record "Service Contract Header")
     begin
         ServiceContractLine.ModifyAll("New Line", false, true);
     end;
 
-    [Scope('Internal')]
+
     procedure GetTotalLineCostPerPeriod(ServiceContractHeader: Record "Service Contract Header"): Decimal
     var
         ServiceContractLine: Record "Service Contract Line";

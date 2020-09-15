@@ -8,7 +8,7 @@ codeunit 90100 "Standard Solution Management"
     var
         Text000: Label 'You do not have permission to make changes to standard solution %1.';
 
-    [Scope('Internal')]
+
     procedure CheckChangePermissions(StandardSolution: Record "Standard Solution"; ChangeType: Option Insertion,Modification,Deletion)
     var
         UserSetup: Record "User Setup";

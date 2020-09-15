@@ -151,13 +151,13 @@ report 90001 "Suggest Case Job Jnl. Lines"
         DateFilter: Text[30];
         TransferredYesNo: Boolean;
 
-    [Scope('Internal')]
+
     procedure SetJobJnlLine(NewJobJnlLine: Record "Job Journal Line")
     begin
         JobJnlLine := NewJobJnlLine;
     end;
 
-    [Scope('Internal')]
+
     procedure InitParameters(NewJobJnlLine: Record "Job Journal Line"; NewResourceNoFilter: Code[1024]; NewJobNoFilter: Code[1024]; NewJobTaskNoFilter: Code[1024]; NewStartingDate: Date; NewEndingDate: Date; NewTransferred: Boolean)
     begin
         JobJnlLine := NewJobJnlLine;

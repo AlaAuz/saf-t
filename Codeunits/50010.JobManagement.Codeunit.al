@@ -1,4 +1,4 @@
-codeunit 50001 "AUZ Job Management"
+codeunit 50010 "AUZ Job Management"
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Create-Invoice", 'OnBeforeInsertSalesLine', '', false, false)]
     local procedure GetJobPlanningLinesOnBeforeInsertSalesLine(var SalesLine: Record "Sales Line"; var SalesHeader: Record "Sales Header"; Job: Record Job; JobPlanningLine: Record "Job Planning Line")

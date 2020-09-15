@@ -1,3 +1,5 @@
+//ALA
+/*
 tableextension 90038 "AUZ Template Upg." extends "CDC Template Upg."
 {
     Caption = 'Template Upg.';
@@ -624,5 +626,6 @@ tableextension 90038 "AUZ Template Upg." extends "CDC Template Upg."
     //>>>> MODIFIED VALUE:
     //DiscAndChargesTxt : DAN=rabatter og gebyrer;ENU=discounts and charges;ESP=descuentos y cargos;
     //Variable type has not been exported.
-}
+//}
+
 

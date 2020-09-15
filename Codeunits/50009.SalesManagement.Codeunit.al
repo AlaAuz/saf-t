@@ -1,4 +1,4 @@
-codeunit 50000 "AUZ Sales Management"
+codeunit 50009 "AUZ Sales Management"
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnPostSalesLineOnBeforeInsertInvoiceLine', '', false, false)]
     local procedure SetCaseHoursPosted(SalesHeader: Record "Sales Header"; SalesLine: Record "Sales Line"; var IsHandled: Boolean; xSalesLine: Record "Sales Line"; SalesInvHeader: Record "Sales Invoice Header")

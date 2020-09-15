@@ -38,13 +38,13 @@ codeunit 60000 "File Management 2013"
         SingleFilterErr: Label 'Please specify a file filter and an extension filter when using this function.';
         InvalidWindowsChrStringTxt: Label '"#%&*:<>?\/{|}~', Locked = true;
 
-    [Scope('Internal')]
+
     procedure BLOBImport(var BLOBRef: Record TempBlob temporary; Name: Text): Text
     begin
         exit(BLOBImportWithFilter(BLOBRef, Text007, Name, AllFilesDescriptionTxt, AllFilesFilterTxt));
     end;
 
-    [Scope('Internal')]
+
     procedure BLOBImportWithFilter(var TempBlob: Record TempBlob; DialogCaption: Text; Name: Text; FileFilter: Text; ExtFilter: Text): Text
     var
         NVInStream: InStream;
@@ -75,7 +75,7 @@ codeunit 60000 "File Management 2013"
         exit('');
     end;
 
-    [Scope('Internal')]
+
     procedure BLOBExport(var BLOBRef: Record TempBlob temporary; Name: Text; CommonDialog: Boolean): Text
     var
         NVInStream: InStream;
@@ -100,7 +100,7 @@ codeunit 60000 "File Management 2013"
         exit('');
     end;
 
-    [Scope('Internal')]
+
     procedure ServerTempFileName(FileExtension: Text) FileName: Text
     var
         TempFile: File;
@@ -110,7 +110,7 @@ codeunit 60000 "File Management 2013"
         TempFile.Close;
     end;
 
-    [Scope('Internal')]
+
     procedure ClientTempFileName(FileExtension: Text) ClientFileName: Text
     var
         TempFile: File;
@@ -127,7 +127,7 @@ codeunit 60000 "File Management 2013"
         ClientFileName := ClientTempPath + '\' + Format(CreateGuid) + '.' + FileExtension;
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadTempFile(ServerFileName: Text): Text
     var
         FileName: Text;
@@ -139,7 +139,7 @@ codeunit 60000 "File Management 2013"
         exit(FileName);
     end;
 
-    [Scope('Internal')]
+
     procedure UploadFileSilent(ClientFilePath: Text): Text
     var
         ClientFileAttributes: DotNet FileAttributes;
@@ -166,7 +166,7 @@ codeunit 60000 "File Management 2013"
         exit(ServerFileName);
     end;
 
-    [Scope('Internal')]
+
     procedure UploadFile(WindowTitle: Text[50]; ClientFileName: Text) ServerFileName: Text
     var
         "Filter": Text;
@@ -179,7 +179,7 @@ codeunit 60000 "File Management 2013"
         ServerFileName := UploadFileWithFilter(WindowTitle, ClientFileName, Filter, AllFilesFilterTxt);
     end;
 
-    [Scope('Internal')]
+
     procedure UploadFileWithFilter(WindowTitle: Text[50]; ClientFileName: Text; FileFilter: Text; ExtFilter: Text) ServerFileName: Text
     var
         Uploaded: Boolean;
@@ -201,13 +201,13 @@ codeunit 60000 "File Management 2013"
         exit('');
     end;
 
-    [Scope('Internal')]
+
     procedure Magicpath(): Text
     begin
         exit('<TEMP>');   // MAGIC PATH makes sure we don't get a prompt
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadHandler(FromFile: Text; DialogTitle: Text; ToFolder: Text; ToFilter: Text; ToFile: Text): Boolean
     var
         Downloaded: Boolean;
@@ -220,7 +220,7 @@ codeunit 60000 "File Management 2013"
         exit(Downloaded);
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadToFile(ServerFileName: Text; ClientFileName: Text)
     var
         TempClientFileName: Text;
@@ -230,14 +230,14 @@ codeunit 60000 "File Management 2013"
         MoveFile(TempClientFileName, ClientFileName);
     end;
 
-    [Scope('Internal')]
+
     procedure AppendAllTextToClientFile(ServerFileName: Text; ClientFileName: Text)
     begin
         ValidateFileNames(ServerFileName, ClientFileName);
         ClientFileHelper.AppendAllText(ClientFileName, ServerFileHelper.ReadAllText(ServerFileName));
     end;
 
-    [Scope('Internal')]
+
     procedure MoveAndRenameClientFile(OldFilePath: Text; NewFileName: Text; NewSubDirectoryName: Text) NewFilePath: Text
     var
         directory: Text;
@@ -266,7 +266,7 @@ codeunit 60000 "File Management 2013"
         exit(NewFilePath);
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteClientFile(FilePath: Text): Boolean
     begin
         if not ClientFileHelper.Exists(FilePath) then
@@ -276,25 +276,25 @@ codeunit 60000 "File Management 2013"
         exit(true);
     end;
 
-    [Scope('Internal')]
+
     procedure CopyClientFile(SourceFileName: Text; DestFileName: Text; OverWrite: Boolean)
     begin
         ClientFileHelper.Copy(SourceFileName, DestFileName, OverWrite);
     end;
 
-    [Scope('Internal')]
+
     procedure ClientFileExists(FilePath: Text): Boolean
     begin
         exit(ClientFileHelper.Exists(FilePath));
     end;
 
-    [Scope('Internal')]
+
     procedure ClientDirectoryExists(DirectoryPath: Text): Boolean
     begin
         exit(DirectoryHelper.Exists(DirectoryPath));
     end;
 
-    [Scope('Internal')]
+
     procedure MoveFile(SourceFileName: Text; TargetFileName: Text)
     begin
         // System.IO.File.Move is not used due to a known issue in KB310316
@@ -309,19 +309,19 @@ codeunit 60000 "File Management 2013"
         ClientFileHelper.Delete(SourceFileName);
     end;
 
-    [Scope('Internal')]
+
     procedure CopyServerFile(SourceFileName: Text; TargetFileName: Text; Overwrite: Boolean)
     begin
         ServerFileHelper.Copy(SourceFileName, TargetFileName, Overwrite);
     end;
 
-    [Scope('Internal')]
+
     procedure ServerFileExists(FilePath: Text): Boolean
     begin
         exit(Exists(FilePath));
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteServerFile(FilePath: Text): Boolean
     begin
         if not Exists(FilePath) then
@@ -331,13 +331,13 @@ codeunit 60000 "File Management 2013"
         exit(true);
     end;
 
-    [Scope('Internal')]
+
     procedure GetFileName(FilePath: Text): Text
     begin
         exit(PathHelper.GetFileName(FilePath));
     end;
 
-    [Scope('Internal')]
+
     procedure GetDirectoryName(FileName: Text): Text
     begin
         if FileName = '' then
@@ -347,7 +347,7 @@ codeunit 60000 "File Management 2013"
         exit(PathHelper.GetDirectoryName(FileName));
     end;
 
-    [Scope('Internal')]
+
     procedure BLOBImportFromServerFile(var TempBlob: Record TempBlob; FilePath: Text)
     var
         OutStream: OutStream;
@@ -364,7 +364,7 @@ codeunit 60000 "File Management 2013"
         InputFile.Close;
     end;
 
-    [Scope('Internal')]
+
     procedure BLOBExportToServerFile(var TempBlob: Record TempBlob; FilePath: Text)
     var
         OutStream: OutStream;
@@ -382,7 +382,7 @@ codeunit 60000 "File Management 2013"
         OutputFile.Close;
     end;
 
-    [Scope('Internal')]
+
     procedure GetToFilterText(FilterString: Text; FileName: Text): Text
     var
         OutExt: Text;
@@ -415,7 +415,7 @@ codeunit 60000 "File Management 2013"
         exit(OutExt + '|' + AllFilesDescriptionTxt);  // Also give the option of the general selection
     end;
 
-    [Scope('Internal')]
+
     procedure GetExtension(Name: Text): Text
     var
         FileExtension: Text;
@@ -428,7 +428,7 @@ codeunit 60000 "File Management 2013"
         exit(FileExtension);
     end;
 
-    [Scope('Internal')]
+
     procedure OpenFileDialog(WindowTitle: Text[50]; DefaultFileName: Text; FilterString: Text): Text
     var
         [RunOnClient]
@@ -449,7 +449,7 @@ codeunit 60000 "File Management 2013"
         exit('');
     end;
 
-    [Scope('Internal')]
+
     procedure SaveFileDialog(WindowTitle: Text[50]; DefaultFileName: Text; FilterString: Text): Text
     var
         [RunOnClient]
@@ -471,7 +471,7 @@ codeunit 60000 "File Management 2013"
         exit('');
     end;
 
-    [Scope('Internal')]
+
     procedure CanRunDotNetOnClient(): Boolean
     var
         ActiveSession: Record "Active Session";
@@ -482,7 +482,7 @@ codeunit 60000 "File Management 2013"
         exit(false);
     end;
 
-    [Scope('Internal')]
+
     procedure IsWebClient(): Boolean
     var
         ActiveSession: Record "Active Session";
@@ -493,7 +493,7 @@ codeunit 60000 "File Management 2013"
         exit(false);
     end;
 
-    [Scope('Internal')]
+
     procedure IsValidFileName(FileName: Text): Boolean
     var
         String: DotNet String;
@@ -521,7 +521,7 @@ codeunit 60000 "File Management 2013"
             Error(Text012);
     end;
 
-    [Scope('Internal')]
+
     procedure ValidateFileExtension(FilePath: Text; ValidExtensions: Text)
     var
         FileExt: Text;
@@ -550,7 +550,7 @@ codeunit 60000 "File Management 2013"
             Error('');
     end;
 
-    [Scope('Internal')]
+
     procedure Ansi2SystemEncoding(Destination: OutStream; Source: InStream)
     var
         StreamReader: DotNet StreamReader;
@@ -562,7 +562,7 @@ codeunit 60000 "File Management 2013"
         Destination.WriteText(EncodedTxt);
     end;
 
-    [Scope('Internal')]
+
     procedure Ansi2SystemEncodingTxt(Destination: OutStream; Source: Text)
     var
         StreamWriter: DotNet StreamWriter;
@@ -573,7 +573,7 @@ codeunit 60000 "File Management 2013"
         StreamWriter.Close();
     end;
 
-    [Scope('Internal')]
+
     procedure BrowseForFolderDialog(WindowTitle: Text[50]; DefaultFolderName: Text; ShowNewFolderButton: Boolean): Text
     var
         [RunOnClient]
@@ -592,13 +592,13 @@ codeunit 60000 "File Management 2013"
         exit(DefaultFolderName);
     end;
 
-    [Scope('Internal')]
+
     procedure StripNotsupportChrInFileName(InText: Text): Text
     begin
         exit(DelChr(InText, '=', InvalidWindowsChrStringTxt));
     end;
 
-    [Scope('Internal')]
+
     procedure IsGZip(ServerSideFileName: Text): Boolean
     var
         FileStream: DotNet FileStream;

@@ -22,8 +22,8 @@ table 90020 "Case Journal Line"
         }
         field(4; Description; Text[50])
         {
-            CalcFormula = Lookup ("Case Journal Line Description".Description WHERE ("Resource No." = FIELD ("Resource No."),
-                                                                                    "Journal Line No." = FIELD ("Line No.")));
+            CalcFormula = Lookup ("Case Journal Line Description".Description WHERE("Resource No." = FIELD("Resource No."),
+                                                                                    "Journal Line No." = FIELD("Line No.")));
             Caption = 'Description';
             Editable = false;
             FieldClass = FlowField;
@@ -53,8 +53,8 @@ table 90020 "Case Journal Line"
         }
         field(10; "No. of Descriptions"; Integer)
         {
-            CalcFormula = Count ("Case Journal Line Description" WHERE ("Resource No." = FIELD ("Resource No."),
-                                                                       "Journal Line No." = FIELD ("Line No.")));
+            CalcFormula = Count ("Case Journal Line Description" WHERE("Resource No." = FIELD("Resource No."),
+                                                                       "Journal Line No." = FIELD("Line No.")));
             Caption = 'No. of Descriptions';
             Editable = false;
             FieldClass = FlowField;
@@ -81,14 +81,14 @@ table 90020 "Case Journal Line"
         }
         field(100; "Case Description"; Text[50])
         {
-            CalcFormula = Lookup ("Case Header".Description WHERE ("No." = FIELD ("Case No.")));
+            CalcFormula = Lookup ("Case Header".Description WHERE("No." = FIELD("Case No.")));
             Caption = 'Case Description';
             Editable = false;
             FieldClass = FlowField;
         }
         field(101; "Case Company No."; Code[20])
         {
-            CalcFormula = Lookup ("Case Header"."Contact Company No." WHERE ("No." = FIELD ("Case No.")));
+            CalcFormula = Lookup ("Case Header"."Contact Company No." WHERE("No." = FIELD("Case No.")));
             Caption = 'Case Company No.';
             Editable = false;
             FieldClass = FlowField;
@@ -96,7 +96,7 @@ table 90020 "Case Journal Line"
         }
         field(102; "Case Company Name"; Text[50])
         {
-            CalcFormula = Lookup (Contact.Name WHERE ("No." = FIELD ("Case Company No.")));
+            CalcFormula = Lookup (Contact.Name WHERE("No." = FIELD("Case Company No.")));
             Caption = 'Case Company Name';
             Editable = false;
             FieldClass = FlowField;
@@ -138,7 +138,7 @@ table 90020 "Case Journal Line"
     var
         CaseSetup: Record "Case Setup";
 
-    [Scope('Internal')]
+
     procedure SetupNewLine(CaseHourJournalLine: Record "Case Journal Line")
     begin
         if CaseHourJournalLine."Line No." = 0 then begin
@@ -203,7 +203,7 @@ table 90020 "Case Journal Line"
         exit(TempBlob.ReadAsText(CR, TEXTENCODING::Windows));
     end;
 
-    [Scope('Internal')]
+
     procedure InsertCaseHourJnlDescriptions()
     var
         CaseHourJnlMgt: Codeunit "Case Journal Management";
@@ -211,7 +211,7 @@ table 90020 "Case Journal Line"
         CaseHourJnlMgt.InsertCaseHourJnlDescriptions(Rec);
     end;
 
-    [Scope('Internal')]
+
     procedure InsertCaseHours(ResourceNo: Code[20])
     var
         CaseHourJnlMgt: Codeunit "Case Journal Management";
@@ -219,7 +219,7 @@ table 90020 "Case Journal Line"
         CaseHourJnlMgt.InsertCaseHoursFromJnl(ResourceNo);
     end;
 
-    [Scope('Internal')]
+
     procedure ImportCaseHours()
     var
         CaseHourJnlImport: XMLport "Case Journal Import";

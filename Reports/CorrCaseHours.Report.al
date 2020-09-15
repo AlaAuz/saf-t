@@ -1,4 +1,4 @@
-report 60005 "Corr Case Hours"
+report 50011 "Corr Case Hours"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './CorrCaseHours.rdlc';

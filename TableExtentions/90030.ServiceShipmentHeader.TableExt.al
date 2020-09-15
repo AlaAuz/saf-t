@@ -1,4 +1,4 @@
-tableextension 90030 "AUZ Service Contract Line" extends "Service Shipment Header"
+tableextension 90030 "AUZ Service Shipment Header" extends "Service Shipment Header"
 {
     fields
     {

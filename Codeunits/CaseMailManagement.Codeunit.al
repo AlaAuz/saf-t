@@ -1,6 +1,8 @@
 codeunit 90002 "Case Mail Management"
 {
 
+//ALA
+/*
     trigger OnRun()
     begin
     end;
@@ -21,7 +23,7 @@ codeunit 90002 "Case Mail Management"
         OpenInOutlookQst: Label 'Do you want to open the email in Outlook?';
         EmailSentMsg: Label 'The email was sent to %1.';
 
-    [Scope('Internal')]
+
     procedure SendEmail(CaseHeader: Record "Case Header")
     var
         CaseEmailTemplate: Record "Case E-Mail Template";
@@ -153,6 +155,7 @@ codeunit 90002 "Case Mail Management"
         SMTPMail.Send;
         MESSAGE(EmailSentToMsg,ToAddress);
         */
+        /*
 
         if MailBody <> '' then begin
             TempBlob.WriteAsText(MailBody, TEXTENCODING::UTF8);
@@ -204,7 +207,7 @@ codeunit 90002 "Case Mail Management"
             until UserSetup.Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure SelectTemplate(var CasesMailTemplate: Record "Case E-Mail Template"): Boolean
     var
         CaseMailLayoutList: Page "Case E-Mail Templates";
@@ -222,10 +225,11 @@ codeunit 90002 "Case Mail Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure SetToDevelopmentAdmin(Value: Boolean)
     begin
         ToDevelopmentAdmin := Value;
     end;
+    */
 }
 

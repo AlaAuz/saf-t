@@ -1,5 +1,7 @@
 codeunit 90200 "Remote Management"
 {
+    //ALA
+    /*
 
     trigger OnRun()
     begin
@@ -9,15 +11,13 @@ codeunit 90200 "Remote Management"
         NotSupportedErr: Label 'This function does not support login type %1..';
         RemoteUser: Record "Remote User";
         FileManagement: Codeunit "File Management";
-        [RunOnClient]
         Environment: DotNet Environment;
-        [RunOnClient]
         Process: DotNet Process;
         CouldNotFindErr: Label 'Could not not find %1 on your computer.';
         TeamViewerCap: Label 'Team Viewer';
         VMwareCap: ;
 
-    [Scope('Internal')]
+
     procedure ConnectToComputer(RemoteLogin: Record "Remote Login")
     var
         LoginType: Record "Login Type";
@@ -98,5 +98,6 @@ codeunit 90200 "Remote Management"
     trigger Process::Disposed(sender: Variant; e: DotNet EventArgs)
     begin
     end;
+    */
 }
 

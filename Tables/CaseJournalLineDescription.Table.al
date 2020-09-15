@@ -15,7 +15,7 @@ table 90021 "Case Journal Line Description"
         {
             Caption = 'Journal Line No.';
             NotBlank = true;
-            TableRelation = "Case Journal Line"."Line No." WHERE ("Resource No." = FIELD ("Resource No."));
+            TableRelation = "Case Journal Line"."Line No." WHERE("Resource No." = FIELD("Resource No."));
         }
         field(3; "Line No."; Integer)
         {
@@ -48,7 +48,7 @@ table 90021 "Case Journal Line Description"
     var
         RestoreQst: Label 'Do you want to restore imported descriptions?';
 
-    [Scope('Internal')]
+
     procedure RestoreDescriptions()
     var
         CaseHourJournalLine: Record "Case Journal Line";

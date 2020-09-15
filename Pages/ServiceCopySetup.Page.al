@@ -1,4 +1,5 @@
-page 71100 "Service Copy Setup"
+//page 71100 "Service Copy Setup"
+page 50019 "Service Copy Setup"
 {
     Caption = 'Service Copy Setup';
     SourceTable = "Service Copy Setup";

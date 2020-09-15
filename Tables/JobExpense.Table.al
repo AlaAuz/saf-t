@@ -50,7 +50,7 @@ table 90007 "Job Expense"
     {
     }
 
-    [Scope('Internal')]
+
     procedure GetExpenseDefaults()
     var
         Expenses: Record "Expense Code";
@@ -62,7 +62,7 @@ table 90007 "Job Expense"
         Price := Expenses.Price;
     end;
 
-    [Scope('Internal')]
+
     procedure InsertJobExpenseDefaults(JobNo: Code[20]; EntryNo: Integer; var ExpenseEntries: Record "Case Hour Expense")
     begin
         /*

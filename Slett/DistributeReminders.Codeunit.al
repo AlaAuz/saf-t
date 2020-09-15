@@ -30,7 +30,7 @@ codeunit 70903 "Distribute Reminders"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeReminders(var IssuedReminderHeader: Record "Issued Reminder Header")
     var
         RecNo: Integer;

@@ -10,7 +10,7 @@ codeunit 50003 "Merge Service Invoice Lines"
         InvFromDate: Date;
         InvToDate: Date;
 
-    [Scope('Internal')]
+
     procedure MergeServiceInvoiceLines(var TempLine: Record "Service Invoice Line" temporary; ServiceInvoiceHeader: Record "Service Invoice Header")
     var
         ServInvLine: Record "Service Invoice Line";

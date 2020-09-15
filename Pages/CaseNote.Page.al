@@ -22,7 +22,7 @@ page 90005 "Case Note"
     var
         MyNotes: Text;
 
-    [Scope('Internal')]
+
     procedure GetNote(var Note: Text)
     begin
         Note := MyNotes;

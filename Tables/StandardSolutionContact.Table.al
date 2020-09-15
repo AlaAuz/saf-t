@@ -12,11 +12,11 @@ table 90102 "Standard Solution Contact"
         field(2; "Contact No."; Code[20])
         {
             Caption = 'No.';
-            TableRelation = Contact WHERE (Type = CONST (Company));
+            TableRelation = Contact WHERE(Type = CONST(Company));
         }
         field(3; "Contact Name"; Text[50])
         {
-            CalcFormula = Lookup (Contact.Name WHERE ("No." = FIELD ("Contact No.")));
+            CalcFormula = Lookup (Contact.Name WHERE("No." = FIELD("Contact No.")));
             Caption = 'Name';
             Editable = false;
             FieldClass = FlowField;
@@ -63,7 +63,7 @@ table 90102 "Standard Solution Contact"
         StandardSolutionMgt: Codeunit "Standard Solution Management";
         ChangeType: Option Insertion,Modification,Deletion;
 
-    [Scope('Internal')]
+
     procedure CheckChangePermissions(Type: Option)
     var
         StandardSolution: Record "Standard Solution";

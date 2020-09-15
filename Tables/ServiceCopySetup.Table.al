@@ -1,4 +1,5 @@
-table 71100 "Service Copy Setup"
+//table 71100 "Service Copy Setup" //ALA
+table 50008 "Service Copy Setup"
 {
 
     fields

@@ -88,7 +88,7 @@ table 90006 "Case Hour Expense"
         Text003: Label 'You cannot rename a %1.';
         Text90001: Label 'The hours is transferred. Modify or delete is not allowed.';
 
-    [Scope('Internal')]
+
     procedure GetExpenseDefaults()
     var
         Expenses: Record "Expense Code";
@@ -100,7 +100,7 @@ table 90006 "Case Hour Expense"
         Price := Expenses.Price;
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteExpenses(CaseNo: Code[20]; LineNo: Integer)
     begin
         if CaseNo = '' then
@@ -112,7 +112,7 @@ table 90006 "Case Hour Expense"
         DeleteAll;
     end;
 
-    [Scope('Internal')]
+
     procedure CheckTransferred()
     begin
         if Transferred then

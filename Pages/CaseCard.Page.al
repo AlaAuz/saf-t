@@ -155,7 +155,7 @@ page 90001 "Case Card"
                 Editable = DynamicEditable;
                 Enabled = "Contact No." <> '';
                 ShowFilter = false;
-                SubPageLink = "Case No." = FIELD ("No.");
+                SubPageLink = "Case No." = FIELD("No.");
                 UpdatePropagation = Both;
             }
             group(Tilleggsinformasjon)
@@ -343,7 +343,7 @@ page 90001 "Case Card"
             {
                 Caption = 'Objects';
                 Editable = DynamicEditable;
-                SubPageLink = "Case No." = FIELD ("No.");
+                SubPageLink = "Case No." = FIELD("No.");
             }
         }
         area(factboxes)
@@ -358,12 +358,12 @@ page 90001 "Case Card"
             {
                 Caption = 'Line Descriptions';
                 Provider = CaseLines;
-                SubPageLink = "Case No." = FIELD ("Case No."),
-                              "Case Hour Line No." = FIELD ("Line No.");
+                SubPageLink = "Case No." = FIELD("Case No."),
+                              "Case Hour Line No." = FIELD("Line No.");
             }
             part(Control1000000053; "Case Hour Factbox")
             {
-                SubPageLink = "Case No." = FIELD ("No.");
+                SubPageLink = "Case No." = FIELD("No.");
             }
         }
     }
@@ -412,7 +412,7 @@ page 90001 "Case Card"
                     ShowLoginInformation();
                 end;
             }
-            action(InformationURL)
+            action(InforURL)
             {
                 Caption = 'Information URL';
                 Image = LaunchWeb;
@@ -569,7 +569,7 @@ page 90001 "Case Card"
                 Caption = 'Objects';
                 Image = List;
                 RunObject = Page "Case Object List";
-                RunPageLink = "Case No." = FIELD ("No.");
+                RunPageLink = "Case No." = FIELD("No.");
             }
             action(RelatedCases)
             {
@@ -578,7 +578,7 @@ page 90001 "Case Card"
                 Promoted = true;
                 PromotedCategory = Category4;
                 RunObject = Page "Related Cases";
-                RunPageLink = "Case No." = FIELD ("No.");
+                RunPageLink = "Case No." = FIELD("No.");
             }
             action(StandardSolutions)
             {
@@ -587,7 +587,7 @@ page 90001 "Case Card"
                 Promoted = true;
                 PromotedCategory = Category4;
                 RunObject = Page "Case Standard Solutions";
-                RunPageLink = "Case No." = FIELD ("No.");
+                RunPageLink = "Case No." = FIELD("No.");
             }
         }
     }
@@ -618,7 +618,7 @@ page 90001 "Case Card"
         InformationURL: Text;
         DynamicEditable: Boolean;
 
-    [Scope('Internal')]
+
     procedure LookupCaseResource()
     var
         CaseResource: Record "Case Resource";

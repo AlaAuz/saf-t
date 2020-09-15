@@ -4,62 +4,57 @@ pageextension 90028 "AUZ Purchase Invoice" extends "Purchase Invoice"
     // AZ10001 10.05.2014 EVA Moved KID and other fiels for accounting.
     layout
     {
-        modify("Due Date")
+        addafter("Vendor Invoice No.")
         {
-            Visible = false;
+            field("Recipient Bank Account No."; "Recipient Bank Account No.")
+            {
+                ApplicationArea = All;
+            }
         }
-        modify("Payment Terms Code")
-        {
-            Visible = false;
-        }
-        modify("Shortcut Dimension 1 Code")
-        {
-            Visible = false;
-        }
-        modify("Shortcut Dimension 2 Code")
-        {
-            Visible = false;
-        }
+
+        moveafter("Vendor Invoice No."; KID, "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code", "Payment Terms Code")
+        moveafter("Document Date"; "Due Date")
+
         modify(KID)
         {
             Visible = false;
         }
-        addafter("Document Date")
-        {
-            field("Due Date"; "Due Date")
-            {
-                Importance = Promoted;
-            }
-        }
-        addafter("Vendor Invoice No.")
-        {
-            field(KID; KID)
-            {
-            }
-            field("Recipient Bank Account No."; "Recipient Bank Account No.")
-            {
-            }
-            field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
-            {
 
-                trigger OnValidate()
-                begin
-                    ShortcutDimension1CodeOnAfterV;
-                end;
-            }
-            field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
-            {
+        modify("Shortcut Dimension 1 Code")
+        {
+            Visible = false;
 
-                trigger OnValidate()
-                begin
-                    ShortcutDimension2CodeOnAfterV;
-                end;
-            }
-            field("Payment Terms Code"; "Payment Terms Code")
-            {
-                Importance = Promoted;
-            }
+            //ALA
+            /*trigger OnValidate()
+            begin
+                ShortcutDimension1CodeOnAfterV;
+            end; */
         }
+
+        modify("Shortcut Dimension 2 Code")
+        {
+            Visible = false;
+            //ALA
+            /*
+            trigger OnValidate()
+            begin
+                ShortcutDimension2CodeOnAfterV;
+            end; */
+        }
+
+        modify("Payment Terms Code")
+        {
+            Importance = Promoted;
+            Visible = false;
+
+        }
+
+        modify("Due Date")
+        {
+            Importance = Promoted;
+            Visible = false;
+
+        }
+
     }
 }
-

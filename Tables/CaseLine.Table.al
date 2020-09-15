@@ -28,8 +28,8 @@ table 90002 "Case Line"
         }
         field(5; Description; Text[50])
         {
-            CalcFormula = Lookup ("Case Hour Description".Description WHERE ("Case No." = FIELD ("Case No."),
-                                                                            "Case Hour Line No." = FIELD ("Line No.")));
+            CalcFormula = Lookup ("Case Hour Description".Description WHERE("Case No." = FIELD("Case No."),
+                                                                            "Case Hour Line No." = FIELD("Line No.")));
             Caption = 'Beskrivelse';
             Editable = false;
             FieldClass = FlowField;
@@ -57,19 +57,19 @@ table 90002 "Case Line"
         }
         field(12; "Contact Company No."; Code[20])
         {
-            CalcFormula = Lookup ("Case Header"."Contact Company No." WHERE ("No." = FIELD ("Case No.")));
+            CalcFormula = Lookup ("Case Header"."Contact Company No." WHERE("No." = FIELD("Case No.")));
             Caption = 'Contact Company No.';
             Editable = false;
             FieldClass = FlowField;
-            TableRelation = Contact WHERE (Type = CONST (Company));
+            TableRelation = Contact WHERE(Type = CONST(Company));
         }
         field(13; "Contact Company Name"; Text[50])
         {
-            CalcFormula = Lookup (Contact.Name WHERE ("No." = FIELD ("Contact Company No.")));
+            CalcFormula = Lookup (Contact.Name WHERE("No." = FIELD("Contact Company No.")));
             Caption = 'Contact Company Name';
             Editable = false;
             FieldClass = FlowField;
-            TableRelation = Contact.Name WHERE (Type = CONST (Company));
+            TableRelation = Contact.Name WHERE(Type = CONST(Company));
         }
         field(14; "Date/Time Modified"; DateTime)
         {
@@ -113,8 +113,8 @@ table 90002 "Case Line"
         {
             Caption = 'Job Task No.';
             NotBlank = true;
-            TableRelation = "Job Task"."Job Task No." WHERE ("Job No." = FIELD ("Job No."),
-                                                             "Job Task Type" = CONST (Posting));
+            TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."),
+                                                             "Job Task Type" = CONST(Posting));
 
             trigger OnValidate()
             var
@@ -125,7 +125,7 @@ table 90002 "Case Line"
         }
         field(50004; "Case Description"; Text[100])
         {
-            CalcFormula = Lookup ("Case Header".Description WHERE ("No." = FIELD ("Case No.")));
+            CalcFormula = Lookup ("Case Header".Description WHERE("No." = FIELD("Case No.")));
             Caption = 'Case Description';
             Editable = false;
             FieldClass = FlowField;
@@ -201,14 +201,14 @@ table 90002 "Case Line"
         Text001: Label 'Work iaw. %1';
         Text003: Label 'You cannot rename a %1.';
 
-    [Scope('Internal')]
+
     procedure CheckTransferred()
     begin
         if Transferred then
             Error(Text90001);
     end;
 
-    [Scope('Internal')]
+
     procedure SetupNewLine()
     var
         UserSetup: Record "User Setup";
@@ -229,7 +229,7 @@ table 90002 "Case Line"
         Chargeable := true;
     end;
 
-    [Scope('Internal')]
+
     procedure GetDefaultJobExpenses()
     begin
     end;
@@ -246,7 +246,7 @@ table 90002 "Case Line"
         CaseHoursDescription.SetRange("Case Hour Line No.", "Line No.");
     end;
 
-    [Scope('Internal')]
+
     procedure SetFirstDescription(NewDescription: Text[50])
     var
         CaseHoursDescription: Record "Case Hour Description";
@@ -268,7 +268,7 @@ table 90002 "Case Line"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure GetFirstDescription(): Text[50]
     var
         CaseHoursDescription: Record "Case Hour Description";
@@ -278,7 +278,7 @@ table 90002 "Case Line"
             exit(CaseHoursDescription.Description);
     end;
 
-    [Scope('Internal')]
+
     procedure ShowDescriptions()
     var
         CaseHoursDescription: Record "Case Hour Description";
@@ -289,7 +289,7 @@ table 90002 "Case Line"
         PAGE.RunModal(0, CaseHoursDescription);
     end;
 
-    [Scope('Internal')]
+
     procedure GenerateDescription()
     var
         Cases: Record "Case Header";
@@ -303,7 +303,7 @@ table 90002 "Case Line"
             SetFirstDescription(CopyStr(StrSubstNo(Text001, LowerCase(Cases.Description)), 1, 50));
     end;
 
-    [Scope('Internal')]
+
     procedure GetNextLineNo(CaseHourSource: Record "Case Line"; BelowxRec: Boolean): Integer
     var
         CaseHour: Record "Case Line";

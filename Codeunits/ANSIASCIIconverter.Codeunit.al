@@ -15,21 +15,21 @@ codeunit 50001 "ANSI <-> ASCII converter"
         AnsiStr: Text[250];
         CharVar: array[32] of Char;
 
-    [Scope('Internal')]
+
     procedure Ansi2Ascii(_Text: Text[250]): Text[250]
     begin
         MakeVars;
         exit(ConvertStr(_Text, AnsiStr, AsciiStr));
     end;
 
-    [Scope('Internal')]
+
     procedure Ascii2Ansi(_Text: Text[250]): Text[250]
     begin
         MakeVars;
         exit(ConvertStr(_Text, AsciiStr, AnsiStr));
     end;
 
-    [Scope('Internal')]
+
     procedure MakeVars()
     begin
         AsciiStr := 'ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜø£Ø×ƒáíóúñÑªº¿®¬½¼¡«»¦¦¦¦¦ÁÂÀ©¦¦++¢¥++--+-+ãÃ++--¦-+';

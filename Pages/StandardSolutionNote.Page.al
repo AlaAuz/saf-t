@@ -22,7 +22,7 @@ page 90105 "Standard Solution Note"
     var
         Text: Text;
 
-    [Scope('Internal')]
+
     procedure GetText(): Text
     begin
         exit(Text);

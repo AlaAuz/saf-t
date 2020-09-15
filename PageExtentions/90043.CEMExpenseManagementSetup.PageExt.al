@@ -1,3 +1,5 @@
+//ALA
+/*
 pageextension 90043 "AUZ Expense Management Setup" extends "CEM Expense Management Setup"
 {
     actions
@@ -7,4 +9,5 @@ pageextension 90043 "AUZ Expense Management Setup" extends "CEM Expense Manageme
 
     }
 }
+*/
 

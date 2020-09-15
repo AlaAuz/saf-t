@@ -73,7 +73,7 @@ table 90009 "Case Hour Description"
         Text003: Label 'You cannot rename a %1.';
         Text90001: Label 'The hours is transferred. Modify or delete is not allowed.';
 
-    [Scope('Internal')]
+
     procedure DeleteDescription(CaseNo: Code[20]; LineNo: Integer)
     begin
         if CaseNo = '' then
@@ -85,7 +85,7 @@ table 90009 "Case Hour Description"
         DeleteAll;
     end;
 
-    [Scope('Internal')]
+
     procedure CheckTransferred()
     begin
         if Transferred then

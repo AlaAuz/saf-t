@@ -231,7 +231,7 @@ page 90020 "Case Journal"
     begin
         User.SetRange("User Name", UserId);
         User.FindFirst;
-        WebServiceID := IdentityManagement.GetWebServicesKey(User."User Security ID");
+        //ALA WebServiceID := IdentityManagement.GetWebServicesKey(User."User Security ID");
     end;
 
     local procedure CalcTotalQty()

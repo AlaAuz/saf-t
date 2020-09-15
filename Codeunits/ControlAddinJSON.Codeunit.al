@@ -1,5 +1,8 @@
 codeunit 50100 "Control Add-in JSON"
 {
+    //ALA
+    /*
+
     //  * signature ControlAddIn v1.0
     //  *
     //  * Copyright 2018 Geert Rozendom, Newminds
@@ -27,7 +30,7 @@ codeunit 50100 "Control Add-in JSON"
         TextPropertyDoesNotExist: Label 'Property "%1" does not exist in JSON object.\\%2.';
         JRoot: DotNet JObject;
 
-    [Scope('Internal')]
+
     procedure CreateForWriting()
     begin
         ClearAll;
@@ -40,7 +43,7 @@ codeunit 50100 "Control Add-in JSON"
             Error(TextCodeunitNotInitializedForWriting);
     end;
 
-    [Scope('Internal')]
+
     procedure Set("Key": Text; Data: Variant)
     var
         JSON: Codeunit "Control Add-in JSON";
@@ -57,7 +60,7 @@ codeunit 50100 "Control Add-in JSON"
         JDict.Add(Key, Data);
     end;
 
-    [Scope('Internal')]
+
     procedure GetInnerObject(var InnerObject: DotNet Dictionary_Of_T_U)
     begin
         InnerObject := JDict;
@@ -69,7 +72,7 @@ codeunit 50100 "Control Add-in JSON"
             JDict.Remove(Key);
     end;
 
-    [Scope('Internal')]
+
     procedure CreateForReading(JObjectIn: DotNet JObject)
     begin
         Clear(JDict);
@@ -88,7 +91,7 @@ codeunit 50100 "Control Add-in JSON"
         Variant := Object;
     end;
 
-    [Scope('Internal')]
+
     procedure GetJToken(var JToken: DotNet JToken; Property: Text; WithError: Boolean)
     begin
         MakeSureCodeunitIsInitializedForReading;
@@ -97,7 +100,7 @@ codeunit 50100 "Control Add-in JSON"
             Error(TextPropertyDoesNotExist, Property, JObject.ToString);
     end;
 
-    [Scope('Internal')]
+
     procedure GetObject(Property: Text; var "Object": DotNet Object; WithError: Boolean): Boolean
     var
         JToken: DotNet JToken;
@@ -110,7 +113,7 @@ codeunit 50100 "Control Add-in JSON"
         exit(true);
     end;
 
-    [Scope('Internal')]
+
     procedure GetString(Property: Text; WithError: Boolean): Text
     var
         JToken: DotNet JToken;
@@ -120,7 +123,7 @@ codeunit 50100 "Control Add-in JSON"
             exit(JToken.ToString);
     end;
 
-    [Scope('Internal')]
+
     procedure GetBoolean(Property: Text; WithError: Boolean) Bool: Boolean
     var
         String: Text;
@@ -136,7 +139,7 @@ codeunit 50100 "Control Add-in JSON"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure GetDecimal(Property: Text; WithError: Boolean) Dec: Decimal
     var
         DotNetDecimal: DotNet Decimal;
@@ -147,7 +150,7 @@ codeunit 50100 "Control Add-in JSON"
         Dec := Variant;
     end;
 
-    [Scope('Internal')]
+
     procedure GetInteger(Property: Text; WithError: Boolean) Int: Integer
     var
         DotNetInt32: DotNet Int32;
@@ -158,7 +161,7 @@ codeunit 50100 "Control Add-in JSON"
         Int := Variant;
     end;
 
-    [Scope('Internal')]
+
     procedure GetDate(Property: Text; WithError: Boolean) Date: Date
     var
         DotNetDateTime: DotNet DateTime;
@@ -167,7 +170,7 @@ codeunit 50100 "Control Add-in JSON"
         Date := DT2Date(DotNetDateTime);
     end;
 
-    [Scope('Internal')]
+
     procedure SetScope(Name: Text; WithError: Boolean): Boolean
     begin
         MakeSureCodeunitIsInitializedForReading;
@@ -178,13 +181,13 @@ codeunit 50100 "Control Add-in JSON"
         exit(not IsNull(JObject));
     end;
 
-    [Scope('Internal')]
+
     procedure SetScopeRoot(WithError: Boolean): Boolean
     begin
         exit(SetScope('/', WithError));
     end;
 
-    [Scope('Internal')]
+
     procedure Base64Text2File(pTxtData: Text; pTxtFileName: Text): Boolean
     var
         dnFile: DotNet File;
@@ -242,5 +245,6 @@ codeunit 50100 "Control Add-in JSON"
     trigger JRoot::CollectionChanged(sender: Variant; e: DotNet NotifyCollectionChangedEventArgs)
     begin
     end;
+    */
 }
 

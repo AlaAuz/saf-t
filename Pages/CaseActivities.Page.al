@@ -91,7 +91,7 @@ page 50003 "Case Activities"
                     CueRecordRef: RecordRef;
                 begin
                     CueRecordRef.GetTable(Rec);
-                    CueSetup.OpenCustomizePageForCurrentUser(CueRecordRef.Number);
+                    //ALA CueSetup.OpenCustomizePageForCurrentUser(CueRecordRef.Number);
                 end;
             }
         }
@@ -125,6 +125,6 @@ page 50003 "Case Activities"
 
     var
         UserSetup: Record "User Setup";
-        CueSetup: Codeunit "Cue Setup";
+        //ALA CueSetup: Codeunit "Cue Setup";
 }
 

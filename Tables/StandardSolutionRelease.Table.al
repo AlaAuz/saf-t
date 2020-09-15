@@ -21,7 +21,7 @@ table 90101 "Standard Solution Release"
         }
         field(3; Description; Text[50])
         {
-            CalcFormula = Lookup ("Standard Solution".Name WHERE ("No." = FIELD ("Standard Solution No.")));
+            CalcFormula = Lookup ("Standard Solution".Name WHERE("No." = FIELD("Standard Solution No.")));
             Caption = 'Description';
             Editable = false;
             FieldClass = FlowField;
@@ -39,7 +39,7 @@ table 90101 "Standard Solution Release"
         field(14; "Previous Version Code"; Code[10])
         {
             Caption = 'Previous Version Code';
-            TableRelation = "Standard Solution Release"."Version Code" WHERE ("Standard Solution No." = FIELD ("Standard Solution No."));
+            TableRelation = "Standard Solution Release"."Version Code" WHERE("Standard Solution No." = FIELD("Standard Solution No."));
             ValidateTableRelation = false;
         }
     }
@@ -154,7 +154,7 @@ table 90101 "Standard Solution Release"
             until StandardSolutionChange.Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure CheckChangePermissions(Type: Option)
     var
         StandardSolution: Record "Standard Solution";

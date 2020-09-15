@@ -40,7 +40,7 @@ page 50016 "Tables To Clean"
 
                 trigger OnAction()
                 begin
-                    GetAllTables();
+                    //ALA GetAllTables();
                     CurrPage.Update;
                 end;
             }

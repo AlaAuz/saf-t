@@ -1,4 +1,4 @@
-report 60006 "Corr Resource"
+report 50012 "Corr Resource"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './CorrResource.rdlc';

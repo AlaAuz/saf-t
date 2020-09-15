@@ -58,7 +58,7 @@ table 90104 "Standard Solution Change"
         StandardSolutionMgt: Codeunit "Standard Solution Management";
         ChangeType: Option Insertion,Modification,Deletion;
 
-    [Scope('Internal')]
+
     procedure CheckChangePermissions(Type: Option)
     var
         StandardSolution: Record "Standard Solution";

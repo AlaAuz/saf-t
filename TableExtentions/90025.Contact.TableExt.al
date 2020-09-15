@@ -40,12 +40,6 @@ tableextension 90025 "AUZ Contact" extends Contact
             TableRelation = Contact WHERE (Type = CONST (Company));
         }
     }
-    keys
-    {
-        key(Key1; "Company Name")
-        {
-        }
-    }
 
     procedure SaveLoginInformation(DescriptionText: Text)
     var

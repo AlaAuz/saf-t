@@ -29,23 +29,22 @@ page 90024 "Login Info. FactBox"
                 var
                     LoginInfo: Text;
                     TempString: Text;
-                    Separator: DotNet String;
-                    Values: DotNet Array;
-                    LineValue: DotNet String;
-                    String: DotNet String;
+                    Separator: Text;
+                    Values: List of [Text];
+                    LineValue: Text;
+                    String: Text;
                     CR: Char;
                     LF: Char;
                 begin
                     Reset;
                     DeleteAll;
-
                     if ActionText = ClickToShowTxt then begin
                         LoginInfo := CaseHeader.GetLoginInformation;
                         CR := 13;
                         LF := 10;
                         String := LoginInfo;
                         Separator := Format(LF);
-                        Values := String.Split(Separator.ToCharArray);
+                        Values := String.Split(Separator);
                         foreach LineValue in Values do begin
                             TempString := LineValue;
                             TempString := DelChr(TempString, '=', Format(CR));
@@ -76,6 +75,8 @@ page 90024 "Login Info. FactBox"
                     CaseHeader.ShowLoginInformation;
                 end;
             }
+            //ALA
+            /*
             action(Save)
             {
                 Caption = 'Save';
@@ -96,7 +97,7 @@ page 90024 "Login Info. FactBox"
                     FileMgt.DownloadHandler(ServerFileName, '', '', FileMgt.GetToFilterText('', '.txt'), StrSubstNo('%1.txt', CaseHeader."Contact Company Name"));
                     FileMgt.DeleteServerFile(ServerFileName);
                 end;
-            }
+            } */
         }
     }
 
@@ -112,7 +113,7 @@ page 90024 "Login Info. FactBox"
         ClickToHideTxt: Label 'Click here to hide login info.';
         ActionText: Text;
 
-    [Scope('Internal')]
+
     procedure SetCaseHeader(NewCaseHeader: Record "Case Header")
     begin
         CaseHeader := NewCaseHeader;

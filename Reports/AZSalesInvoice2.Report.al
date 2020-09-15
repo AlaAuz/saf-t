@@ -1,4 +1,4 @@
-report 60001 "AZ Sales Invoice 2"
+report 50008 "AZ Sales Invoice 2"
 {
     // AZ99999 09.04.2015 HHV Changed addr fields when the FormatAddr function is changed.
     // AZ10327 17.08.2015 HHV Changed code to not require salesperson.
@@ -200,7 +200,7 @@ report 60001 "AZ Sales Invoice 2"
             }
             dataitem(Lines; "Sales Invoice Line")
             {
-                DataItemLink = "Document No." = FIELD ("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 column(LineLineNo; Lines."Line No.")
                 {
                 }
@@ -242,7 +242,7 @@ report 60001 "AZ Sales Invoice 2"
                 }
                 dataitem(SerialNumber; "Integer")
                 {
-                    DataItemTableView = SORTING (Number);
+                    DataItemTableView = SORTING(Number);
                     column(SerialNumbers; SerialNumbers)
                     {
                     }
@@ -336,7 +336,7 @@ report 60001 "AZ Sales Invoice 2"
             }
             dataitem(TotalLines; "Integer")
             {
-                DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+                DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
                 column(TotalLineYesNo; TotalLineYesNo)
                 {
                 }
@@ -390,7 +390,7 @@ report 60001 "AZ Sales Invoice 2"
             }
             dataitem("Extended Text Line"; "Extended Text Line")
             {
-                DataItemTableView = SORTING ("Table Name", "No.", "Language Code", "Text No.", "Line No.");
+                DataItemTableView = SORTING("Table Name", "No.", "Language Code", "Text No.", "Line No.");
                 column(ShowExtendedText; ShowExtendedText)
                 {
                 }
@@ -407,7 +407,7 @@ report 60001 "AZ Sales Invoice 2"
                 var
                     Country: Record "Country/Region";
                 begin
-                    SetRange("Table Name", "Table Name"::"4");
+                    SetRange("Table Name", "Table Name"::"Standard Text");
                     SetRange("No.", Header."Sell-to Country/Region Code");
 
                     ShowExtendedText := 0;
@@ -415,7 +415,7 @@ report 60001 "AZ Sales Invoice 2"
             }
             dataitem("Company Information"; "Company Information")
             {
-                DataItemTableView = SORTING ("Primary Key");
+                DataItemTableView = SORTING("Primary Key");
                 column(CompanyInfoPicture; "Company Information".Picture)
                 {
                 }
@@ -551,7 +551,7 @@ report 60001 "AZ Sales Invoice 2"
                 if not ShippingAgent.Get("Shipping Agent Code") then
                     ShippingAgent.Init;
 
-                DocumentTools.SetupGiroNoAmount(1, "No.", "Bill-to Customer No.", GiroKID, KIDError);
+                DocumentTools.GenerateGiroKID(1, "No.", "Bill-to Customer No.", GiroKID, KIDError);
             end;
 
             trigger OnPreDataItem()

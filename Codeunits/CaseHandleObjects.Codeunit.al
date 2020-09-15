@@ -20,7 +20,7 @@ codeunit 90000 "Case Handle Objects"
         LineNumber: Integer;
         InsertRecord: Boolean;
 
-    [Scope('Internal')]
+
     procedure ReadText(ObjectsCopyPaste: Text)
     var
         MyFile: File;
@@ -142,7 +142,8 @@ codeunit 90000 "Case Handle Objects"
         end;
     end;
 
-    [Scope('Internal')]
+//ALA 
+/*
     procedure ReadFile(var ObjectsCopyPaste: Text)
     var
         MyFile: File;
@@ -251,8 +252,8 @@ codeunit 90000 "Case Handle Objects"
             InsertNewRecord();
         end;
     end;
+*/
 
-    [Scope('Internal')]
     procedure InsertNewRecord()
     begin
         LineNumber += 10000;
@@ -264,14 +265,14 @@ codeunit 90000 "Case Handle Objects"
         InsertRecord := false;
     end;
 
-    [Scope('Internal')]
+
     procedure GetInteger(TextValue: Text[100]) IntValue: Integer
     begin
         Evaluate(IntValue, TextValue);
         exit(IntValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetBoolean(TextValue: Text[100]) BoolValue: Boolean
     begin
         if UpperCase(TextValue) in ['YES', 'JA'] then
@@ -283,39 +284,39 @@ codeunit 90000 "Case Handle Objects"
         exit(BoolValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetDate(TextValue: Text[100]) DateValue: Date
     begin
         Evaluate(DateValue, TextValue);
         exit(DateValue);
     end;
 
-    [Scope('Internal')]
+
     procedure GetTime(TextValue: Text[100]) TimeValue: Time
     begin
         Evaluate(TimeValue, TextValue);
         exit(TimeValue);
     end;
 
-    [Scope('Internal')]
+
     procedure SetCaseNo(NewCaseNo: Code[20])
     begin
         CaseNo := NewCaseNo;
     end;
 
-    [Scope('Internal')]
+
     procedure SetFileName(pFileName: Text[250])
     begin
         FileName := pFileName;
     end;
 
-    [Scope('Internal')]
+
     procedure SetDateTime(pDateTime: DateTime)
     begin
         TheCurrentDateTime := pDateTime;
     end;
 
-    [Scope('Internal')]
+
     procedure FindLineNumber(): Integer
     begin
         CaseObjects.SetRange("Case No.", CaseNo);

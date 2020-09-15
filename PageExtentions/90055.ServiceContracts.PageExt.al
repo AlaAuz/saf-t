@@ -9,10 +9,6 @@ pageextension 90055 "AUZ Service Contracts" extends "Service Contracts"
         {
             Visible = false;
         }
-        modify("Expiration Date")
-        {
-            Visible = false;
-        }
         modify("First Service Date")
         {
             Visible = false;
@@ -25,18 +21,20 @@ pageextension 90055 "AUZ Service Contracts" extends "Service Contracts"
         {
             Visible = false;
         }
+        modify("Expiration Date")
+        {
+            Visible = false;
+        }
+
+
+        moveafter("Last Price Update Date"; "Invoice Period", "Expiration Date")
+
         addafter("Last Price Update Date")
         {
-            field("Invoice Period"; "Invoice Period")
-            {
-            }
             field("Last Invoice Date"; "Last Invoice Date")
             {
             }
             field("Next Invoice Date"; "Next Invoice Date")
-            {
-            }
-            field("Expiration Date"; "Expiration Date")
             {
             }
             field("Calcd. Annual Amount"; "Calcd. Annual Amount")
@@ -67,4 +65,3 @@ pageextension 90055 "AUZ Service Contracts" extends "Service Contracts"
     var
         TotalLineCostPerPeriod: Decimal;
 }
-

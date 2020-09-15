@@ -19,7 +19,7 @@ codeunit 70400 "External File Management"
         SourceLineNo: Integer;
         Text003: Label 'You cannot change primary key fields when the line have files associated to it.';
 
-    [Scope('Internal')]
+
     procedure UploadFileWithDialog(RecID: RecordID)
     var
         ClientFilename: Text;
@@ -31,7 +31,7 @@ codeunit 70400 "External File Management"
         UploadFile(ClientFilename, RecID);
     end;
 
-    [Scope('Internal')]
+
     procedure UploadFile(ClientFileName: Text; RecID: RecordID)
     var
         ExternalFile: Record "External File";
@@ -81,7 +81,7 @@ codeunit 70400 "External File Management"
         ExternalFile.Insert;
     end;
 
-    [Scope('Internal')]
+
     procedure SetSubpageValues(NewSourceTable: Integer; NewSourceType: Integer; NewSourceNo: Code[20]; NewSourceLineNo: Integer)
     begin
         SourceTable := NewSourceTable;
@@ -106,7 +106,7 @@ codeunit 70400 "External File Management"
         ExternalFile.Modify;
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadAllFiles(RecID: RecordID)
     var
         ExternalFile: Record "External File";
@@ -125,7 +125,7 @@ codeunit 70400 "External File Management"
             until ExternalFile.Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadFileWithDialog(EntryNo: Integer) ClientFileName: Text
     var
         ExternalFile: Record "External File";
@@ -152,7 +152,7 @@ codeunit 70400 "External File Management"
         DownloadFile(ExternalFile, ClientFileName);
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadFileAndOpenFile(EntryNo: Integer) ClientFileName: Text
     begin
         if EntryNo = 0 then
@@ -161,7 +161,7 @@ codeunit 70400 "External File Management"
         HyperLink(DownloadFileOnly(EntryNo));
     end;
 
-    [Scope('Internal')]
+
     procedure DownloadFileOnly(EntryNo: Integer) ClientFileName: Text
     var
         ExternalFile: Record "External File";
@@ -196,14 +196,14 @@ codeunit 70400 "External File Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure MoveFiles(FromRecID: RecordID; ToRecID: RecordID)
     begin
         CopyFiles(FromRecID, ToRecID);
         DeleteFiles(FromRecID);
     end;
 
-    [Scope('Internal')]
+
     procedure CopyFiles(FromRecID: RecordID; ToRecID: RecordID)
     var
         ExternalFile: Record "External File";
@@ -241,7 +241,7 @@ codeunit 70400 "External File Management"
             until ExternalFile.Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteFiles(RecID: RecordID)
     var
         ExternalFile: Record "External File";
@@ -254,7 +254,7 @@ codeunit 70400 "External File Management"
             until ExternalFile.Next = 0;
     end;
 
-    [Scope('Internal')]
+
     procedure DeleteFile(EntryNo: Integer)
     var
         ExternalFile: Record "External File";
@@ -351,7 +351,7 @@ codeunit 70400 "External File Management"
             exit(FolderBrowser.SelectedPath);
     end;
 
-    [Scope('Internal')]
+
     procedure GetDatabaseTableTriggerSetup(TableID: Integer; var Insert: Boolean; var Modify: Boolean; var Delete: Boolean; var Rename: Boolean)
     var
         MarketingSetup: Record "Marketing Setup";
@@ -384,13 +384,13 @@ codeunit 70400 "External File Management"
           ]);
     end;
 
-    [Scope('Internal')]
+
     procedure OnDatabaseDelete(RecRef: RecordRef)
     begin
         DeleteFiles(RecRef.RecordId);
     end;
 
-    [Scope('Internal')]
+
     procedure OnDatabaseRename(RecRef: RecordRef; xRecRef: RecordRef)
     begin
         ChangeRecIDs(xRecRef.RecordId, RecRef.RecordId);

@@ -18,7 +18,7 @@ table 90105 "Standard Solution"
         }
         field(2; "No of Versions"; Integer)
         {
-            CalcFormula = Count ("Standard Solution Release" WHERE ("Standard Solution No." = FIELD ("No.")));
+            CalcFormula = Count ("Standard Solution Release" WHERE("Standard Solution No." = FIELD("No.")));
             Caption = 'No of Versions';
             Editable = false;
             FieldClass = FlowField;
@@ -65,11 +65,11 @@ table 90105 "Standard Solution"
         field(10; "Responsible Resource No."; Code[20])
         {
             Caption = 'Responsible Resource No.';
-            TableRelation = Resource WHERE (Type = CONST (Person));
+            TableRelation = Resource WHERE(Type = CONST(Person));
         }
         field(11; "Responsible Resource Name"; Text[50])
         {
-            CalcFormula = Lookup (Resource.Name WHERE ("No." = FIELD ("Responsible Resource No.")));
+            CalcFormula = Lookup (Resource.Name WHERE("No." = FIELD("Responsible Resource No.")));
             Caption = 'Responsible Resource Name';
             Editable = false;
             FieldClass = FlowField;
@@ -84,7 +84,7 @@ table 90105 "Standard Solution"
         }
         field(14; "Last Version Code"; Code[10])
         {
-            CalcFormula = Max ("Standard Solution Release"."Version Code" WHERE ("Standard Solution No." = FIELD ("No.")));
+            CalcFormula = Max ("Standard Solution Release"."Version Code" WHERE("Standard Solution No." = FIELD("No.")));
             Caption = 'Last Version Code';
             Editable = false;
             FieldClass = FlowField;
@@ -235,7 +235,7 @@ table 90105 "Standard Solution"
         "Date Created" := Today;
     end;
 
-    [Scope('Internal')]
+
     procedure SetExtededDescription(NewExtendedDescription: Text)
     var
         TempBlob: Record TempBlob temporary;
@@ -249,7 +249,7 @@ table 90105 "Standard Solution"
         Modify;
     end;
 
-    [Scope('Internal')]
+
     procedure GetExtededDescription(): Text
     var
         TempBlob: Record TempBlob temporary;
@@ -263,13 +263,13 @@ table 90105 "Standard Solution"
         exit(TempBlob.ReadAsText(CR, TEXTENCODING::Windows));
     end;
 
-    [Scope('Internal')]
+
     procedure CheckChangePermissions(Type: Option)
     begin
         StandardSolutionMgt.CheckChangePermissions(Rec, Type);
     end;
 
-    [Scope('Internal')]
+
     procedure ShowSubSolutions()
     var
         StandardSolution: Record "Standard Solution";
@@ -280,7 +280,7 @@ table 90105 "Standard Solution"
         PAGE.RunModal(PAGE::"Standard Solution List", StandardSolution);
     end;
 
-    [Scope('Internal')]
+
     procedure ShowFileEntries()
     var
         ExternalFileEntry: Record "External File";

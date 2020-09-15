@@ -1,4 +1,5 @@
-codeunit 71100 "Service Copy Management"
+//codeunit 71100 "Service Copy Management"
+codeunit 50015 "Service Copy Management"
 {
 
     trigger OnRun()
@@ -53,6 +54,8 @@ codeunit 71100 "Service Copy Management"
         CopyServiceDocument.RunModal;
     end;
 
+    //ALA
+    /*
     [EventSubscriber(ObjectType::Page, 5933, 'OnAfterActionEvent', 'CopyDocument', false, false)]
     local procedure "ServceInvoice.CopyDocument"(var Rec: Record "Service Header")
     var
@@ -60,9 +63,9 @@ codeunit 71100 "Service Copy Management"
     begin
         CopyServiceDocument.SetServiceHeader(Rec);
         CopyServiceDocument.RunModal;
-    end;
+    end; */
 
-    [Scope('Internal')]
+
     procedure SetProperties(NewIncludeHeader: Boolean; NewRecalculateLines: Boolean; NewMoveNegLines: Boolean; NewCreateToHeader: Boolean; NewHideDialog: Boolean; NewExactCostRevMandatory: Boolean; NewApplyFully: Boolean)
     begin
         IncludeHeader := NewIncludeHeader;
@@ -80,7 +83,7 @@ codeunit 71100 "Service Copy Management"
         SkipTestCreditLimit := false;
     end;
 
-    [Scope('Internal')]
+
     procedure ServiceHeaderDocType(ServiceHeader: Record "Service Header"; DocType: Option): Integer
     begin
         case DocType of
@@ -95,7 +98,7 @@ codeunit 71100 "Service Copy Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure CopyServiceDoc(FromDocType: Option; FromDocNo: Code[20]; var ToServiceHeader: Record "Service Header")
     var
         PaymentTerms: Record "Payment Terms";

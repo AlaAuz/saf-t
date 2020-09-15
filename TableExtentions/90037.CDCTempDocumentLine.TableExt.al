@@ -1,5 +1,6 @@
-tableextension 90037 "AUZ Temp. Document Line" extends "CDC Temp. Document Line"
-{
+//ALA
+//tableextension 90037 "AUZ Temp. Document Line" extends "CDC Temp. Document Line"
+//{
 
     //Unsupported feature: Code Modification on "UpdateTranslInfo(PROCEDURE 1160040001)".
 
@@ -32,5 +33,5 @@ tableextension 90037 "AUZ Temp. Document Line" extends "CDC Temp. Document Line"
     #17..25
     */
     //end;
-}
+//}
 

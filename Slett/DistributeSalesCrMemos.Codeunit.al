@@ -43,7 +43,7 @@ codeunit 70902 "Distribute Sales Cr. Memos"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeSalesCrMemosOnAfterPosting(SalesCrMemoHeader: Record "Sales Cr.Memo Header")
     begin
         Commit;
@@ -51,7 +51,7 @@ codeunit 70902 "Distribute Sales Cr. Memos"
             DistributionMgt.ShowCompletionMessage(0, 1, 1);
     end;
 
-    [Scope('Internal')]
+
     procedure DistributeSalesCrMemos(var SalesCrMemoHeader: Record "Sales Cr.Memo Header")
     var
         RecNo: Integer;

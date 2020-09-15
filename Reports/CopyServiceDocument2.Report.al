@@ -1,4 +1,5 @@
-report 71100 "Copy Service Document 2"
+//ALA report 71100 "Copy Service Document 2"
+report 50009 "Copy Service Document 2"
 {
     Caption = 'Copy Service Document';
     ProcessingOnly = true;
@@ -145,7 +146,7 @@ report 71100 "Copy Service Document 2"
         Text002: Label 'Undo Return Receipt';
         Text003: Label 'Quote,Blanket Order,Order,Invoice,Return Order,Credit Memo,Posted Shipment,Posted Invoice,Posted Return Receipt,Posted Credit Memo';
 
-    [Scope('Internal')]
+
     procedure SetServiceHeader(var NewServiceHeader: Record "Service Header")
     begin
         NewServiceHeader.TestField("No.");
@@ -266,7 +267,7 @@ report 71100 "Copy Service Document 2"
         RecalculateLines := not IncludeHeader;
     end;
 
-    [Scope('Internal')]
+
     procedure InitializeRequest(NewDocType: Option; NewDocNo: Code[20]; NewIncludeHeader: Boolean; NewRecalcLines: Boolean)
     begin
         DocType := NewDocType;

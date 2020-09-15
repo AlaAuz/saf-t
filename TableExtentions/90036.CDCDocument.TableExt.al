@@ -1,5 +1,6 @@
-tableextension 90036 "AUZ CDC Document" extends "CDC Document"
-{
+//ALA
+//tableextension 90036 "AUZ CDC Document" extends "CDC Document"
+//{
 
     //Unsupported feature: Code Modification on "BuildTempLinesTable2(PROCEDURE 6085605)".
 
@@ -37,5 +38,5 @@ tableextension 90036 "AUZ CDC Document" extends "CDC Document"
     #89..97
     */
     //end;
-}
+//}
 

@@ -12,7 +12,7 @@ codeunit 50006 "Posted Sales-Create Accrual"
         AccrualMgt: Codeunit "Accrual Management";
         AmountExclVAT: Decimal;
 
-    [Scope('Internal')]
+
     procedure Invoice(var SalesInvHeader: Record "Sales Invoice Header")
     var
         SalesInvLine: Record "Sales Invoice Line";
@@ -82,7 +82,7 @@ codeunit 50006 "Posted Sales-Create Accrual"
         exit(Qualify);
     end;
 
-    [Scope('Internal')]
+
     procedure CrMemo(var SalesCrMemoHeader: Record "Sales Cr.Memo Header")
     var
         SalesCrMemoLine: Record "Sales Cr.Memo Line";

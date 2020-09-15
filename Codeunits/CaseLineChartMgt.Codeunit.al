@@ -22,7 +22,7 @@ codeunit 90003 "Case Line Chart Mgt."
         CaseSetup: Record "Case Setup";
         PeriodType: Option Day,Week,Month,Quarter,Year;
 
-    [Scope('Internal')]
+
     procedure OnOpenPage(var CaseHoursChartSetup: Record "Case Hour Chart Setup")
     begin
         with CaseHoursChartSetup do
@@ -32,7 +32,7 @@ codeunit 90003 "Case Line Chart Mgt."
             end;
     end;
 
-    [Scope('Internal')]
+
     procedure UpdateData(var BusChartBuf: Record "Business Chart Buffer")
     var
         CaseHoursChartSetup: Record "Case Hour Chart Setup";
@@ -137,7 +137,7 @@ codeunit 90003 "Case Line Chart Mgt."
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure CalcQuantity(CaseHourChartSetup: Record "Case Hour Chart Setup"; MIndex: Integer; MName: Text; CName: Text; CDate: Date): Decimal
     var
         CaseHour: Record "Case Line";
@@ -188,7 +188,7 @@ codeunit 90003 "Case Line Chart Mgt."
             CaseLine.SetRange(Chargeable, Chargeable = Chargeable::Yes);
     end;
 
-    [Scope('Internal')]
+
     procedure DrillDown(var BusChartBuf: Record "Business Chart Buffer")
     var
         CaseHoursChartSetup: Record "Case Hour Chart Setup";

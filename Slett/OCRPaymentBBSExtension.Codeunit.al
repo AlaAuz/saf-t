@@ -5,7 +5,7 @@ codeunit 50008 "OCR Payment - BBS Extension"
     begin
     end;
 
-    [Scope('Internal')]
+
     procedure GetFirstOCRFileName(var FileName: Text)
     var
         TempNameValueBuffer: Record "Name/Value Buffer" temporary;

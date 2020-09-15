@@ -1,4 +1,5 @@
-codeunit 71101 "Service Item-Check Avail."
+//codeunit 71101 "Service Item-Check Avail."
+codeunit 50014 "Service Item-Check Avail."
 {
 
     trigger OnRun()
@@ -27,12 +28,12 @@ codeunit 71101 "Service Item-Check Avail."
         ReservedReq: Decimal;
         Text000: Label 'The update has been interrupted to respect the warning.';
 
-    [Scope('Internal')]
+
     procedure ServiceLineCheck(ServiceLine: Record "Service Line"; Recalculate: Boolean) Rollback: Boolean
     begin
     end;
 
-    [Scope('Internal')]
+
     procedure ServiceLineShowWarning(ServiceLine: Record "Service Line"; Recalculate: Boolean): Boolean
     var
         OldServiceLine: Record "Service Line";
@@ -172,7 +173,7 @@ codeunit 71101 "Service Item-Check Avail."
         exit(Round(Qty * QtyPerUnitOfMeasure, 0.00001));
     end;
 
-    [Scope('Internal')]
+
     procedure RaiseUpdateInterruptedError()
     begin
         Error(Text000);

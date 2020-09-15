@@ -1,4 +1,4 @@
-report 60002 "Del cases description"
+report 50014 "Del cases description"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Delcasesdescription.rdlc';

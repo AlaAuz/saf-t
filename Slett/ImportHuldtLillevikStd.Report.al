@@ -164,7 +164,7 @@ report 50002 "Import Huldt & Lillevik Std"
         Text15000004: Label 'Text Files (*.txt)|*.txt|All Files (*.*)|*.*';
         PostDate: Date;
 
-    [Scope('Internal')]
+
     procedure Initialize(SetGenJnlLine: Record "Gen. Journal Line")
     begin
         DefGenJnlLine := SetGenJnlLine;
@@ -213,7 +213,7 @@ report 50002 "Import Huldt & Lillevik Std"
         GenJnlLine.Insert;
     end;
 
-    [Scope('Internal')]
+
     procedure NewFilename()
     begin
         if FileMgt.ClientFileExists(Filename) then begin

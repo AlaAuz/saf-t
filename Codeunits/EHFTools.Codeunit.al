@@ -1,14 +1,15 @@
+//ALA
+/*
 codeunit 70000 "EHF Tools"
 {
     // *** EHF Solution by Auzilium AS ***
     // AZ99999 02.02.2015 EVA Handle PDF Attachment
 
-
     trigger OnRun()
     begin
     end;
 
-    [Scope('Internal')]
+
     procedure GenerateSalesInvoicePDF(DocNo: Code[20]): Text
     var
         SalesInvHeader: Record "Sales Invoice Header";
@@ -40,7 +41,7 @@ codeunit 70000 "EHF Tools"
         //AZ99999-
     end;
 
-    [Scope('Internal')]
+
     procedure GenerateSalesCrMemoPDF(DocNo: Code[20]): Text
     var
         SalesCrMemoHeader: Record "Sales Cr.Memo Header";
@@ -105,7 +106,7 @@ codeunit 70000 "EHF Tools"
         //AZ99999-
     end;
 
-    [Scope('Internal')]
+
     procedure StreamDecodePDF(InputFile: Text[250]; OutputFile: Text[250]): Text
     var
         Text64BaseDecoded: Text;
@@ -160,4 +161,6 @@ codeunit 70000 "EHF Tools"
         //AZ99999-
     end;
 }
+
+    */
 

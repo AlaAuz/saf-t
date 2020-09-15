@@ -1,11 +1,11 @@
-codeunit 60001 WSUpdate
+codeunit 50013 WSUpdate
 {
 
     trigger OnRun()
     begin
     end;
 
-    [Scope('Internal')]
+
     procedure UpdateCaseDescription(CaseNo: Code[20]; CaseDescription: Text)
     var
         Cases: Record "Case Header";

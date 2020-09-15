@@ -52,7 +52,6 @@ table 50016 "Sales Chart Setup"
     var
         Text000: Label '%1 cannot contain more in %2 characters.';
 
-    [Scope('Internal')]
     procedure GetCurrentSelectionText(): Text[250]
     var
         Dimension: Record Dimension;
@@ -61,6 +60,8 @@ table 50016 "Sales Chart Setup"
         DimensionName: Text[30];
         DimensionFilter: Text[1024];
     begin
+        //ALA
+        /*
         if "Dimension Code" = '' then
             exit;
 
@@ -72,10 +73,9 @@ table 50016 "Sales Chart Setup"
         end else
             DimensionName := DimensionTranslation.Name;
 
-        exit(StrSubstNo('%1: %2', DimensionName, GetDimensionFilter));
+        exit(StrSubstNo('%1: %2', DimensionName, GetDimensionFilter)); */
     end;
 
-    [Scope('Internal')]
     procedure SetDimensionFilter(DimensionCode: Code[20]; DimensionFilter: Text)
     var
         MaxFilterLength: Integer;
@@ -99,7 +99,6 @@ table 50016 "Sales Chart Setup"
         Modify;
     end;
 
-    [Scope('Internal')]
     procedure GetDimensionFilter(): Text
     begin
         exit("Dimension Filter" + "Dimension Filter 2" + "Dimension Filter 3" + "Dimension Filter 4");

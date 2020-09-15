@@ -52,13 +52,13 @@ codeunit 70900 "Distribution Management"
         Customer."Distribution Type" := Customer."Distribution Type"::EHF;
     end;
 
-    [Scope('Internal')]
+
     procedure SelectDistributionType(var DistributionType: Option Print,"E-Mail",EHF): Boolean
     begin
         exit(DoSelectDistributionType(Text007, DistributionType));
     end;
 
-    [Scope('Internal')]
+
     procedure SelectDistributionTypeWithoutEHF(var DistributionType: Option Print,"E-Mail"): Boolean
     begin
         exit(DoSelectDistributionType(Text008, DistributionType));
@@ -75,7 +75,7 @@ codeunit 70900 "Distribution Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure ShowCompletionMessage(NoOfDistributions: Integer; NoOfErrors: Integer; TotalRecNo: Integer)
     var
         MessageText: Text;
@@ -95,7 +95,7 @@ codeunit 70900 "Distribution Management"
         Message(MessageText);
     end;
 
-    [Scope('Internal')]
+
     procedure FindEmailAddresses(RecordVariant: Variant; var CustomReportSelection: Record "Custom Report Selection"): Boolean
     var
         Customer: Record Customer;
@@ -126,7 +126,7 @@ codeunit 70900 "Distribution Management"
         end;
     end;
 
-    [Scope('Internal')]
+
     procedure AddValuesToEmailItem(var TempEmailItem: Record "Email Item" temporary)
     begin
         if EmailBuffer.IsEmpty then exit;
@@ -161,7 +161,7 @@ codeunit 70900 "Distribution Management"
                 exit(Customer."Bill-to E-Mail");
     end;
 
-    [Scope('Internal')]
+
     procedure GetCustEmailAddress(RecordVariant: Variant; BillToCustomerNo: Code[20]): Text[250]
     var
         Customer: Record Customer;
