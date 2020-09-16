@@ -4,27 +4,27 @@ pageextension 50000 "AUZ Job Task Lines Subform" extends "Job Task Lines Subform
     {
         addafter("Schedule (Total Price)")
         {
-            field("Line Amount"; "Line Amount")
+            field("AUZ Line Amount"; "AUZ Line Amount")
             {
                 ApplicationArea = All;
             }
         }
         addafter("Amt. Rcd. Not Invoiced")
         {
-            field("Budgeted Quantity"; "Budgeted Quantity")
+            field("AUZ Budgeted Quantity"; "AUZ Budgeted Quantity")
             {
                 ApplicationArea = All;
             }
-            field("Invoiced Amount"; "Invoiced Amount")
+            field("AUZ Invoiced Amount"; "AUZ Invoiced Amount")
             {
                 ApplicationArea = All;
             }
-            field("Non-Transferred Case Hours"; "Non-Transferred Case Hours")
+            field("AUZ Non-Transferred Case Lines"; "AUZ Non-Transferred Case Lines")
             {
                 ApplicationArea = All;
                 BlankZero = true;
             }
-            field("Non-Posted Case Hours"; "Non-Posted Case Hours")
+            field("AUZ Non-Posted Case Lines"; "AUZ Non-Posted Case Lines")
             {
                 ApplicationArea = All;
                 BlankZero = true;

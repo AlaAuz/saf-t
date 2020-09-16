@@ -4,9 +4,9 @@ codeunit 50010 "AUZ Job Management"
     local procedure GetJobPlanningLinesOnBeforeInsertSalesLine(var SalesLine: Record "Sales Line"; var SalesHeader: Record "Sales Header"; Job: Record Job; JobPlanningLine: Record "Job Planning Line")
     begin
         SalesLine.Validate("Shipment Date", JobPlanningLine."Planning Date");
-        SalesLine."Case No." := JobPlanningLine."Case No.";
-        SalesLine."Case Hour Line No." := JobPlanningLine."Case Hour Line No.";
-        SalesLine."Case Description" := JobPlanningLine."Case Description";
+        SalesLine."AUZ Case No." := JobPlanningLine."AUZ Case No.";
+        SalesLine."AUZ Case Line No." := JobPlanningLine."AUZ Case Line No.";
+        SalesLine."AUZ Case Description" := JobPlanningLine."AUZ Case Description";
         if SalesLine.Type = SalesLine.Type::Resource then
             if SalesLine."No." <> '' then
                 SalesLine.Validate("Shortcut Dimension 1 Code", SalesLine."No.");
@@ -15,24 +15,24 @@ codeunit 50010 "AUZ Job Management"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Create-Invoice", 'OnAfterCreateSalesLine', '', false, false)]
     local procedure InsertCaseHoursAndExpensesOnafterCreateSalesLine(var SalesLine: Record "Sales Line"; SalesHeader: Record "Sales Header"; Job: Record Job; var JobPlanningLine: Record "Job Planning Line")
     begin
-        if JobPlanningLine."Case No." <> '' then begin
-            InsertCaseHoursText(SalesLine, JobPlanningLine."Case No.", JobPlanningLine."Case Hour Line No.");
+        if JobPlanningLine."AUZ Case No." <> '' then begin
+            InsertCaseHoursText(SalesLine, JobPlanningLine."AUZ Case No.", JobPlanningLine."AUZ Case Line No.");
 
-            InsertCaseExpenses(SalesLine, JobPlanningLine."Case No.", JobPlanningLine."Case Hour Line No.");
+            InsertCaseExpenses(SalesLine, JobPlanningLine."AUZ Case No.", JobPlanningLine."AUZ Case Line No.");
         end;
     end;
 
     procedure InsertCaseHoursText(var SalesLine: Record "Sales Line"; CaseNo: Code[20]; CaseHourLineNo: Integer);
     var
         ToSalesLine: Record "Sales Line";
-        CaseHoursDescription: Record "Case Hour Description";
+        CaseHoursDescription: Record "AUZ Case Line Description";
         LineSpacing: Integer;
         NextLineNo: Integer;
         MakeUpdateRequired: Boolean;
     begin
         CaseHoursDescription.Reset;
         CaseHoursDescription.SetRange("Case No.", CaseNo);
-        CaseHoursDescription.SetRange("Case Hour Line No.", CaseHourLineNo);
+        CaseHoursDescription.SetRange("Case Line No.", CaseHourLineNo);
         if (CaseHoursDescription.IsEmpty) or (CaseHoursDescription.Count = 1) then
             exit;
 
@@ -70,14 +70,14 @@ codeunit 50010 "AUZ Job Management"
     procedure InsertCaseExpenses(var SalesLine: Record "Sales Line"; CaseNo: Code[20]; CaseHourLineNo: Integer);
     VAR
         ToSalesLine: Record "Sales Line";
-        CaseHoursExpenses: Record "Case Hour Expense";
-        ExpenseCode: Record "Expense Code";
+        CaseHoursExpenses: Record "AUZ Case Line Expense";
+        ExpenseCode: Record "AUZ Expense Code";
         LineSpacing: Integer;
         NextLineNo: Integer;
     BEGIN
         CaseHoursExpenses.Reset;
         CaseHoursExpenses.SetRange("Case No.", CaseNo);
-        CaseHoursExpenses.SetRange("Case Hour Line No.", CaseHourLineNo);
+        CaseHoursExpenses.SetRange("Case Line No.", CaseHourLineNo);
         CaseHoursExpenses.SetRange(Posted, false);
 
         if (CaseHoursExpenses.IsEmpty) then
@@ -109,12 +109,12 @@ codeunit 50010 "AUZ Job Management"
                 ToSalesLine.Validate("No.", ExpenseCode."G/L Account No.");
                 NextLineNo := NextLineNo + LineSpacing;
                 ToSalesLine.Description := '- ' + CaseHoursExpenses.Description;
-                ToSalesLine.Validate("Unit of Measure Code", CaseHoursExpenses."Unit of Measure");
+                ToSalesLine.Validate("Unit of Measure Code", CaseHoursExpenses."Unit of Measure Code");
                 ToSalesLine.Validate(Quantity, CaseHoursExpenses.Quantity);
                 ToSalesLine.Validate("Unit Price", CaseHoursExpenses.Price);
-                ToSalesLine."Case No." := CaseNo;
-                ToSalesLine."Case Hour Line No." := CaseHourLineNo;
-                ToSalesLine."Expense Line No." := CaseHoursExpenses."Line No.";
+                ToSalesLine."AUZ Case No." := CaseNo;
+                ToSalesLine."AUZ Case Line No." := CaseHourLineNo;
+                ToSalesLine."AUZ Expense Line No." := CaseHoursExpenses."Line No.";
                 ToSalesLine."Shipment Date" := SalesLine."Shipment Date";
                 ToSalesLine.Validate("Shortcut Dimension 1 Code", SalesLine."Shortcut Dimension 1 Code");
                 ToSalesLine.Validate("Shortcut Dimension 2 Code", SalesLine."Shortcut Dimension 2 Code");
@@ -126,34 +126,34 @@ codeunit 50010 "AUZ Job Management"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlLineToLedgEntry', '', false, false)]
     local procedure GetJobJournalLinesOnAfterFromJnlLineToLedgEntry(var JobLedgerEntry: Record "Job Ledger Entry"; JobJournalLine: Record "Job Journal Line")
     begin
-        JobLedgerEntry."Case No." := JobJournalLine."Case No.";
-        JobLedgerEntry."Case Hour Line No." := JobJournalLine."Case Hour Line No.";
-        JobLedgerEntry."Case Description" := JobJournalLine."Case Description";
+        JobLedgerEntry."AUZ Case No." := JobJournalLine."AUZ Case No.";
+        JobLedgerEntry."AUZ Case Line No." := JobJournalLine."AUZ Case Line No.";
+        JobLedgerEntry."AUZ Case Description" := JobJournalLine."AUZ Case Description";
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlToPlanningLine', '', false, false)]
     local procedure GetJobJournalLinesOnAfterFromJnlToPlanningLine(var JobPlanningLine: Record "Job Planning Line"; JobJournalLine: Record "Job Journal Line")
     begin
-        JobPlanningLine."Case No." := JobJournalLine."Case No.";
-        JobPlanningLine."Case Hour Line No." := JobJournalLine."Case Hour Line No.";
-        JobPlanningLine."Case Description" := JobJournalLine."Case Description";
+        JobPlanningLine."AUZ Case No." := JobJournalLine."AUZ Case No.";
+        JobPlanningLine."AUZ Case Line No." := JobJournalLine."AUZ Case Line No.";
+        JobPlanningLine."AUZ Case Description" := JobJournalLine."AUZ Case Description";
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJobLedgEntryToPlanningLine', '', false, false)]
     local procedure GetJobJournalLinesOnAfterFromJobLedgEntryToPlanningLine(var JobPlanningLine: Record "Job Planning Line"; JobLedgEntry: Record "Job Ledger Entry")
     begin
-        JobPlanningLine."Case No." := JobLedgEntry."Case No.";
-        JobPlanningLine."Case Hour Line No." := JobLedgEntry."Case Hour Line No.";
-        JobPlanningLine."Case Description" := JobLedgEntry."Case Description";
+        JobPlanningLine."AUZ Case No." := JobLedgEntry."AUZ Case No.";
+        JobPlanningLine."AUZ Case Line No." := JobLedgEntry."AUZ Case Line No.";
+        JobPlanningLine."AUZ Case Description" := JobLedgEntry."AUZ Case Description";
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Jnl.-Post Line", 'OnBeforeJobLedgEntryInsert', '', false, false)]
     local procedure SetCaseLinePostedOnBeforeJobLedgEntryInsert(var JobLedgerEntry: Record "Job Ledger Entry"; JobJournalLine: Record "Job Journal Line")
     var
-        CaseLine: Record "Case Line";
+        CaseLine: Record "AUZ Case Line";
     begin
-        if JobLedgerEntry."Case No." <> '' then begin
-            CaseLine.Get(JobLedgerEntry."Case No.", JobLedgerEntry."Case Hour Line No.");
+        if JobLedgerEntry."AUZ Case No." <> '' then begin
+            CaseLine.Get(JobLedgerEntry."AUZ Case No.", JobLedgerEntry."AUZ Case Line No.");
             CaseLine.Posted := true;
             CaseLine.Modify;
         end;
