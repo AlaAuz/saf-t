@@ -106,7 +106,6 @@ table 90103 "AUZ Standard Solution Object"
         CheckChangePermissions(ChangeType::Modification);
     end;
 
-
     procedure ImportObjects()
     var
         StandardSolutionNote: Page "Standard Solution Note";
@@ -125,7 +124,6 @@ table 90103 "AUZ Standard Solution Object"
             end;
         end;
     end;
-
 
     procedure ReadText(var ObjectsCopyPaste: Text)
     var
@@ -246,8 +244,6 @@ table 90103 "AUZ Standard Solution Object"
         end;
     end;
 
-    //ALA
-    /*
         procedure ReadFile(var ObjectsCopyPaste: Text)
         var
             MyFile: File;
@@ -356,7 +352,7 @@ table 90103 "AUZ Standard Solution Object"
             if InsertRecord then begin
                 InsertNewRecord();
             end;
-        end; */
+        end;
 
 
     procedure InsertNewRecord()
@@ -370,13 +366,11 @@ table 90103 "AUZ Standard Solution Object"
         InsertRecord := false;
     end;
 
-
     procedure GetInteger(TextValue: Text[100]) IntValue: Integer
     begin
         Evaluate(IntValue, TextValue);
         exit(IntValue);
     end;
-
 
     procedure GetBoolean(TextValue: Text[100]) BoolValue: Boolean
     begin
@@ -389,13 +383,11 @@ table 90103 "AUZ Standard Solution Object"
         exit(BoolValue);
     end;
 
-
     procedure GetDate(TextValue: Text[100]) DateValue: Date
     begin
         Evaluate(DateValue, TextValue);
         exit(DateValue);
     end;
-
 
     procedure GetTime(TextValue: Text[100]) TimeValue: Time
     begin
@@ -403,19 +395,16 @@ table 90103 "AUZ Standard Solution Object"
         exit(TimeValue);
     end;
 
-
     procedure SetPrimaryKey(NewStdSolutionNo: Code[20]; NewVersionCode: Code[10])
     begin
         StdSolutionNo := NewStdSolutionNo;
         VersionCode := NewVersionCode;
     end;
 
-
     procedure SetFileName(pFileName: Text[250])
     begin
         FileName := pFileName;
     end;
-
 
     procedure SetDateTime(pDateTime: DateTime)
     begin

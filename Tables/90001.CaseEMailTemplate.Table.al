@@ -124,7 +124,6 @@ table 90001 "AUZ Case E-Mail Template"
         oStream.WriteText(DescriptionText);
     end;
 
-
     procedure GetMailLayout(var DescriptionText: Text)
     var
         iStream: InStream;

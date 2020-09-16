@@ -22,4 +22,3 @@ tableextension 50001 "AUZ Job Planning Line" extends "Job Planning Line"
         }
     }
 }
-

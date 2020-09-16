@@ -18,4 +18,3 @@ tableextension 50005 "AUZ Job" extends Job
         }
     }
 }
-

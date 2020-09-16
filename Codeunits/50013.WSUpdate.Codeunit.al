@@ -1,11 +1,5 @@
 codeunit 50013 WSUpdate
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-
     procedure UpdateCaseDescription(CaseNo: Code[20]; CaseDescription: Text)
     var
         Cases: Record "AUZ Case Header";
@@ -15,4 +9,3 @@ codeunit 50013 WSUpdate
         Cases.Modify;
     end;
 }
-

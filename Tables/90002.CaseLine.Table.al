@@ -200,14 +200,11 @@ table 90002 "AUZ Case Line"
         Error(Text003, TableCaption);
     end;
 
-
-
     procedure CheckTransferred()
     begin
         if Transferred then
             Error(Text90001);
     end;
-
 
     procedure SetupNewLine()
     var
@@ -229,11 +226,6 @@ table 90002 "AUZ Case Line"
         Chargeable := true;
     end;
 
-
-    procedure GetDefaultJobExpenses()
-    begin
-    end;
-
     local procedure CheckFields()
     begin
         TestField("Case No.");
@@ -245,7 +237,6 @@ table 90002 "AUZ Case Line"
         CaseHoursDescription.SetRange("Case No.", "Case No.");
         CaseHoursDescription.SetRange("Case Line No.", "Line No.");
     end;
-
 
     procedure SetFirstDescription(NewDescription: Text[50])
     var
@@ -268,7 +259,6 @@ table 90002 "AUZ Case Line"
         end;
     end;
 
-
     procedure GetFirstDescription(): Text[50]
     var
         CaseHoursDescription: Record "AUZ Case Line Description";
@@ -277,7 +267,6 @@ table 90002 "AUZ Case Line"
         if CaseHoursDescription.FindFirst then
             exit(CaseHoursDescription.Description);
     end;
-
 
     procedure ShowDescriptions()
     var
@@ -288,7 +277,6 @@ table 90002 "AUZ Case Line"
         SetCaseHoursDescriptionFilter(CaseHoursDescription);
         PAGE.RunModal(0, CaseHoursDescription);
     end;
-
 
     procedure GenerateDescription()
     var
@@ -302,7 +290,6 @@ table 90002 "AUZ Case Line"
         if CaseHoursDescription.IsEmpty then
             SetFirstDescription(CopyStr(StrSubstNo(Text001, LowerCase(Cases.Description)), 1, 50));
     end;
-
 
     procedure GetNextLineNo(CaseHourSource: Record "AUZ Case Line"; BelowxRec: Boolean): Integer
     var
@@ -372,7 +359,6 @@ table 90002 "AUZ Case Line"
 
     var
         Text90001: Label 'The hours is transferred. Modify or delete is not allowed.';
-        Text50001: Label 'Expenses doesn''t exist. Do you want to copy standard values from Job No. %1 ?';
         Text001: Label 'Work iaw. %1';
         Text003: Label 'You cannot rename a %1.';
 }

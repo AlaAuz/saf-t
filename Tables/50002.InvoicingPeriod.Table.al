@@ -33,4 +33,3 @@ table 50002 "AUZ Invoicing Period"
         }
     }
 }
-

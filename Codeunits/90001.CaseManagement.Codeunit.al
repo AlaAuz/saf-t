@@ -30,4 +30,3 @@ codeunit 90001 "AUZ Case Management"
         end;
     end;
 }
-

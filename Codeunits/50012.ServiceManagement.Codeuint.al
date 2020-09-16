@@ -14,8 +14,6 @@ codeunit 50012 "AUZ Service Management"
         //Fortsett i COD5940.Delta
     end;
 
-
-
     [EventSubscriber(ObjectType::Codeunit, Codeunit::SignServContractDoc, 'OnAddendumToContractOnAfterSetStartingDate', '', false, false)]
     local procedure test(FromServContractHeader: Record "Service Contract Header"; var StartingDate: Date)
     begin
@@ -28,7 +26,5 @@ codeunit 50012 "AUZ Service Management"
     begin
 
     end;
-
-
 */
 }

@@ -5,22 +5,6 @@ codeunit 90000 "AUZ Case Handle Objects"
     // OKS001 JLO 11.03.2013 Init of Comment
     // 
     // AZ99999 26.09.2015 HHV Changed code to check on char 10 instead of 13
-
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        CaseNo: Code[20];
-        FileName: Text[250];
-        TheCurrentDateTime: DateTime;
-        CaseObjects: Record "AUZ Case Object";
-        ArrayIndex: Integer;
-        LineNumber: Integer;
-        InsertRecord: Boolean;
-
-
     procedure ReadText(ObjectsCopyPaste: Text)
     var
         MyFile: File;
@@ -142,8 +126,6 @@ codeunit 90000 "AUZ Case Handle Objects"
         end;
     end;
 
-//ALA 
-/*
     procedure ReadFile(var ObjectsCopyPaste: Text)
     var
         MyFile: File;
@@ -252,7 +234,6 @@ codeunit 90000 "AUZ Case Handle Objects"
             InsertNewRecord();
         end;
     end;
-*/
 
     procedure InsertNewRecord()
     begin
@@ -265,13 +246,11 @@ codeunit 90000 "AUZ Case Handle Objects"
         InsertRecord := false;
     end;
 
-
     procedure GetInteger(TextValue: Text[100]) IntValue: Integer
     begin
         Evaluate(IntValue, TextValue);
         exit(IntValue);
     end;
-
 
     procedure GetBoolean(TextValue: Text[100]) BoolValue: Boolean
     begin
@@ -284,13 +263,11 @@ codeunit 90000 "AUZ Case Handle Objects"
         exit(BoolValue);
     end;
 
-
     procedure GetDate(TextValue: Text[100]) DateValue: Date
     begin
         Evaluate(DateValue, TextValue);
         exit(DateValue);
     end;
-
 
     procedure GetTime(TextValue: Text[100]) TimeValue: Time
     begin
@@ -298,24 +275,20 @@ codeunit 90000 "AUZ Case Handle Objects"
         exit(TimeValue);
     end;
 
-
     procedure SetCaseNo(NewCaseNo: Code[20])
     begin
         CaseNo := NewCaseNo;
     end;
-
 
     procedure SetFileName(pFileName: Text[250])
     begin
         FileName := pFileName;
     end;
 
-
     procedure SetDateTime(pDateTime: DateTime)
     begin
         TheCurrentDateTime := pDateTime;
     end;
-
 
     procedure FindLineNumber(): Integer
     begin
@@ -325,5 +298,13 @@ codeunit 90000 "AUZ Case Handle Objects"
         else
             exit(0);
     end;
-}
 
+    var
+        CaseNo: Code[20];
+        FileName: Text[250];
+        TheCurrentDateTime: DateTime;
+        CaseObjects: Record "AUZ Case Object";
+        ArrayIndex: Integer;
+        LineNumber: Integer;
+        InsertRecord: Boolean;
+}

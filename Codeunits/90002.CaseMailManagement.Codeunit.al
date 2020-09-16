@@ -1,29 +1,5 @@
 codeunit 90002 "Case Mail Management"
 {
-
-//ALA
-/*
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        SubjectTxt: Label 'Support Case %1 with %2';
-        ClickToOpenTxt: Label 'Click to open the case in %1, %2 or %3.';
-        WindowsClientTxt: Label 'Windows client';
-        CompanyInfo: Record "Company Information";
-        CaseSetup: Record "Case Setup";
-        UserSetup: Record "User Setup";
-        PageMgt: Codeunit "Page Management";
-        FileMgt: Codeunit "File Management";
-        ToAddress: Text;
-        ToDevelopmentAdmin: Boolean;
-        BrowserTxt: Label 'browser';
-        BusinessCentralAppTxt: Label 'Business Central App';
-        OpenInOutlookQst: Label 'Do you want to open the email in Outlook?';
-        EmailSentMsg: Label 'The email was sent to %1.';
-
-
     procedure SendEmail(CaseHeader: Record "Case Header")
     var
         CaseEmailTemplate: Record "Case E-Mail Template";
@@ -155,7 +131,6 @@ codeunit 90002 "Case Mail Management"
         SMTPMail.Send;
         MESSAGE(EmailSentToMsg,ToAddress);
         */
-        /*
 
         if MailBody <> '' then begin
             TempBlob.WriteAsText(MailBody, TEXTENCODING::UTF8);
@@ -230,6 +205,19 @@ codeunit 90002 "Case Mail Management"
     begin
         ToDevelopmentAdmin := Value;
     end;
-    */
+
+    var
+        SubjectTxt: Label 'Support Case %1 with %2';
+        ClickToOpenTxt: Label 'Click to open the case in %1, %2 or %3.';
+        WindowsClientTxt: Label 'Windows client';
+        CompanyInfo: Record "Company Information";
+        CaseSetup: Record "AUZ Case Setup";
+        UserSetup: Record "User Setup";
+        PageMgt: Codeunit "Page Management";
+        FileMgt: Codeunit "File Management";
+        ToAddress: Text;
+        ToDevelopmentAdmin: Boolean;
+        BrowserTxt: Label 'browser';
+        BusinessCentralAppTxt: Label 'Business Central App';
 }
 

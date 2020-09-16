@@ -71,12 +71,6 @@ table 50005 "AUZ Object Compare"
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-    }
-
-
     procedure ObjectImport(CompareType: Option Compare1,Compare2)
     var
         CaseNote: Page "Case Note";
@@ -103,4 +97,3 @@ table 50005 "AUZ Object Compare"
         end;
     end;
 }
-

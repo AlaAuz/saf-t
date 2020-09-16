@@ -24,4 +24,3 @@ tableextension 50015 "AUZ Service Ledger Entry" extends "Service Ledger Entry"
         }
     }
 }
-

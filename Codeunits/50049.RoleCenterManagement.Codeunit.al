@@ -1,22 +1,10 @@
 codeunit 50049 "Role Center Management"
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        GLSetup: Record "General Ledger Setup";
-        UserSetup: Record "User Setup";
-        GLSetupRead: Boolean;
-
-
     procedure GetSalespersPurchCode(): Code[10]
     begin
         GetUserSetup;
         exit(UserSetup."Salespers./Purch. Code");
     end;
-
 
     procedure GetGlobalDimension1Code(): Code[20]
     var
@@ -33,7 +21,6 @@ codeunit 50049 "Role Center Management"
             if not UserSetup.Get(UserId) then
                 UserSetup.Init;
     end;
-
 
     procedure FindDimensionFilter(var DimensionCode: Code[20]; var DimensionFilter: Text)
     var
@@ -69,5 +56,9 @@ codeunit 50049 "Role Center Management"
             GLSetupRead := true;
         end;
     end;
-}
 
+    var
+        GLSetup: Record "General Ledger Setup";
+        UserSetup: Record "User Setup";
+        GLSetupRead: Boolean;
+}

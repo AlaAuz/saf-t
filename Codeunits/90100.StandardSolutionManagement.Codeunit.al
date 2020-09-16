@@ -1,14 +1,5 @@
 codeunit 90100 "Standard Solution Management"
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        Text000: Label 'You do not have permission to make changes to standard solution %1.';
-
-
     procedure CheckChangePermissions(StandardSolution: Record "AUZ Standard Solution"; ChangeType: Option Insertion,Modification,Deletion)
     var
         UserSetup: Record "User Setup";
@@ -23,5 +14,8 @@ codeunit 90100 "Standard Solution Management"
 
         Error(Text000, StandardSolution."No.");
     end;
+
+    var
+        Text000: Label 'You do not have permission to make changes to standard solution %1.';
 }
 

@@ -13,14 +13,13 @@ tableextension 50007 "AUZ Customer" extends Customer
             Caption = 'Developer ID';
             DataClassification = CustomerContent;
             Description = 'AZ99999';
-            TableRelation = "User Setup"."User ID" WHERE ("AUZ Developer" = CONST (true));
+            TableRelation = "User Setup"."User ID" WHERE("AUZ Developer" = CONST(true));
         }
         field(50002; "AUZ Consultant ID"; Code[50])
         {
             Caption = 'Consultant ID';
             DataClassification = CustomerContent;
-            TableRelation = "User Setup"."User ID" WHERE ("AUZ Consultant" = CONST (true));
+            TableRelation = "User Setup"."User ID" WHERE("AUZ Consultant" = CONST(true));
         }
     }
 }
-

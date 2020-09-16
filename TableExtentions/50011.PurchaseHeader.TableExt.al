@@ -1,11 +1,5 @@
 tableextension 50011 "AUZ Purchase Header" extends "Purchase Header"
 {
-    // **** Auzilium AS ***
-    // AZ99999 13.12.2015 EVA Added Recipient Bank Account, enable to modify.
-    // 
-    // <DC>
-    //   Document Capture
-    // </DC>
     fields
     {
         field(50000; "AUZ Recipient Bank Account No."; Code[35])
@@ -20,7 +14,6 @@ tableextension 50011 "AUZ Purchase Header" extends "Purchase Header"
                 RemmTools: Codeunit "Remittance Tools";
                 ErrorMess: Text[250];
             begin
-                //AZ99999+
                 if "AUZ Recipient Bank Account No." <> xRec."AUZ Recipient Bank Account No." then
                     if Confirm(Text50001) then begin
                         Vendor.Get("Pay-to Vendor No.");
@@ -35,7 +28,6 @@ tableextension 50011 "AUZ Purchase Header" extends "Purchase Header"
                         Vendor.Modify;
                     end else
                         "AUZ Recipient Bank Account No." := xRec."AUZ Recipient Bank Account No.";
-                //AZ99999-
             end;
         }
     }
@@ -99,9 +91,6 @@ tableextension 50011 "AUZ Purchase Header" extends "Purchase Header"
             until PurchaseLine.Next = 0;
     end;
 
-
-
     var
         Text50001: Label 'Are you sure that you want to update the vendors bank account number.?';
 }
-

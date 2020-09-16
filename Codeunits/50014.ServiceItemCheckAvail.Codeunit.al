@@ -1,44 +1,14 @@
 //codeunit 71101 "Service Item-Check Avail."
 codeunit 50014 "Service Item-Check Avail."
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        AvailableToPromise: Codeunit "Available to Promise";
-        ItemCheckAvail: Codeunit "Item-Check Avail.";
-        ItemNo: Code[20];
-        UnitOfMeasureCode: Code[10];
-        QtyPerUnitOfMeasure: Decimal;
-        OldItemNetChange: Decimal;
-        OldItemNetResChange: Decimal;
-        InitialQtyAvailable: Decimal;
-        NewItemNetChange: Decimal;
-        NewItemNetResChange: Decimal;
-        ItemNetChange: Decimal;
-        SchedRcpt: Decimal;
-        GrossReq: Decimal;
-        OldItemShipmentDate: Date;
-        UseOrderPromise: Boolean;
-        EarliestAvailDate: Date;
-        InventoryQty: Decimal;
-        ReservedRcpt: Decimal;
-        ReservedReq: Decimal;
-        Text000: Label 'The update has been interrupted to respect the warning.';
-
-
     procedure ServiceLineCheck(ServiceLine: Record "Service Line"; Recalculate: Boolean) Rollback: Boolean
     begin
     end;
-
 
     procedure ServiceLineShowWarning(ServiceLine: Record "Service Line"; Recalculate: Boolean): Boolean
     var
         OldServiceLine: Record "Service Line";
     begin
-        //AZ12380+
         if not ItemCheckAvail.ShowWarningForThisItem(ServiceLine."No.") then
             exit(false);
 
@@ -70,7 +40,6 @@ codeunit 50014 "Service Item-Check Avail."
             OldItemNetChange,
             ServiceLine."Needed by Date",
             OldServiceLine."Needed by Date"));
-        //AZ12380-
     end;
 
     local procedure ShowWarning(ItemNo2: Code[20]; ItemVariantCode: Code[10]; ItemLocationCode: Code[10]; UnitOfMeasureCode2: Code[10]; QtyPerUnitOfMeasure2: Decimal; NewItemNetChange2: Decimal; OldItemNetChange2: Decimal; ShipmentDate: Date; OldShipmentDate: Date): Boolean
@@ -173,10 +142,30 @@ codeunit 50014 "Service Item-Check Avail."
         exit(Round(Qty * QtyPerUnitOfMeasure, 0.00001));
     end;
 
-
     procedure RaiseUpdateInterruptedError()
     begin
         Error(Text000);
     end;
-}
 
+    var
+        AvailableToPromise: Codeunit "Available to Promise";
+        ItemCheckAvail: Codeunit "Item-Check Avail.";
+        ItemNo: Code[20];
+        UnitOfMeasureCode: Code[10];
+        QtyPerUnitOfMeasure: Decimal;
+        OldItemNetChange: Decimal;
+        OldItemNetResChange: Decimal;
+        InitialQtyAvailable: Decimal;
+        NewItemNetChange: Decimal;
+        NewItemNetResChange: Decimal;
+        ItemNetChange: Decimal;
+        SchedRcpt: Decimal;
+        GrossReq: Decimal;
+        OldItemShipmentDate: Date;
+        UseOrderPromise: Boolean;
+        EarliestAvailDate: Date;
+        InventoryQty: Decimal;
+        ReservedRcpt: Decimal;
+        ReservedReq: Decimal;
+        Text000: Label 'The update has been interrupted to respect the warning.';
+}

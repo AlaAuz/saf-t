@@ -68,4 +68,3 @@ table 90021 "AUZ Case Journal Line Desc."
     var
         RestoreQst: Label 'Do you want to restore imported descriptions?';
 }
-

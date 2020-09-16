@@ -42,4 +42,3 @@ tableextension 50018 "AUZ Service Shipment Line" extends "Service Shipment Line"
         }
     }
 }
-

@@ -1,9 +1,5 @@
 tableextension 50013 "AUZ Service Header" extends "Service Header"
 {
-    // *** Auzilium AS ***
-    // 
-    // *** Auzilium AS Service Copy ***
-    // AZ12858 19.12.2017 DHG Changed CreateDim local property to No.
     fields
     {
         field(50000; "AUZ Serv. Contr. Next Inv. Date"; Date)
@@ -35,7 +31,7 @@ tableextension 50013 "AUZ Service Header" extends "Service Header"
         }
     }
 
-
+    //FIX
     //Unsupported feature: Code Modification on "OnInsert".
 
     //trigger OnInsert()
@@ -70,4 +66,3 @@ tableextension 50013 "AUZ Service Header" extends "Service Header"
     */
     //end;
 }
-

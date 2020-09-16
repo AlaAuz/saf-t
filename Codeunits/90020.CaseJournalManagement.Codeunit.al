@@ -1,16 +1,5 @@
 codeunit 90020 "Case Journal Management"
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        ResourceNoErr: Label 'Resource no. is missing.';
-        NothingToInsertErr: Label 'There is nothing to insert.';
-        DescriptionExistsQst: Label 'There are already descriptions for the line. You must delete these to continue. Do you want to delete them?';
-        InsertCaseHoursQst: Label 'Do you want to insert case lines?';
-
     procedure InsertXml(Resource: Text; Type: Text; Xml: Text): Text
     begin
         case Type of
@@ -310,5 +299,10 @@ codeunit 90020 "Case Journal Management"
             String := DelStr(String, StrPos(String, FindWhat)) + ReplaceWith + CopyStr(String, StrPos(String, FindWhat) + StrLen(FindWhat));
         NewString := String;
     end;
-}
 
+    var
+        ResourceNoErr: Label 'Resource no. is missing.';
+        NothingToInsertErr: Label 'There is nothing to insert.';
+        DescriptionExistsQst: Label 'There are already descriptions for the line. You must delete these to continue. Do you want to delete them?';
+        InsertCaseHoursQst: Label 'Do you want to insert case lines?';
+}

@@ -53,12 +53,7 @@ table 90007 "AUZ Job Expense"
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-    }
-
-
+    
     procedure GetExpenseDefaults()
     var
         Expenses: Record "AUZ Expense Code";

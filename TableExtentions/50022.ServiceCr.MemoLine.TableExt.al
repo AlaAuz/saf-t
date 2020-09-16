@@ -42,4 +42,3 @@ tableextension 50022 "AUZ Service Cr.Memo Line" extends "Service Cr.Memo Line"
         }
     }
 }
-

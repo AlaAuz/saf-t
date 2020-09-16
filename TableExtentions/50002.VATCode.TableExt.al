@@ -9,4 +9,3 @@ tableextension 50002 "AUZ VAT Code" extends "VAT Code"
         }
     }
 }
-

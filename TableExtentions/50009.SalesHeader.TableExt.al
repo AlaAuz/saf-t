@@ -4,7 +4,7 @@ tableextension 50009 "AUZ Sales Header" extends "Sales Header"
     {
         field(50000; "AUZ Invoicing Period Code"; Code[10])
         {
-            CalcFormula = Lookup (Customer."AUZ Invoicing Period Code" WHERE ("No." = FIELD ("Bill-to Customer No.")));
+            CalcFormula = Lookup (Customer."AUZ Invoicing Period Code" WHERE("No." = FIELD("Bill-to Customer No.")));
             Caption = 'Invoicing Period Code';
             Editable = false;
             FieldClass = FlowField;
@@ -12,4 +12,3 @@ tableextension 50009 "AUZ Sales Header" extends "Sales Header"
         }
     }
 }
-

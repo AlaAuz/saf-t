@@ -28,11 +28,6 @@ page 50001 "Time Sheet Query"
             }
         }
     }
-
-    actions
-    {
-    }
-
     trigger OnAfterGetRecord()
     begin
         if not TimeSheet.Read then

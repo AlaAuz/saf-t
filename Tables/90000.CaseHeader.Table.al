@@ -4,7 +4,6 @@ table 90000 "AUZ Case Header"
     DataCaptionFields = "No.", Description;
     DrillDownPageID = "Case List";
     LookupPageID = "Case List";
-
     fields
     {
         field(1; "No."; Code[20])
@@ -460,10 +459,6 @@ table 90000 "AUZ Case Header"
         }
     }
 
-    fieldgroups
-    {
-    }
-
     trigger OnDelete()
     var
         CaseHour: Record "AUZ Case Line";
@@ -517,40 +512,11 @@ table 90000 "AUZ Case Header"
         Error(RenameErr, TableCaption);
     end;
 
-    var
-        RenameErr: Label 'You cannot rename a %1.';
-        Text000: Label 'You cannot delete case %1 as there are registered hours.';
-        Text001: Label 'You cannot change status to %1 as there are registered hours.';
-        Text002: Label 'Status cannot be %1 when comment is empty.';
-        Text003: Label 'You do not have permission to change approval status for development.';
-        Text004: Label 'This case must be reviewed with the development administrator. \Do you want to send email to the development administrator now?';
-        Text006: Label 'The valid range of dates is from %1 to %2. Please enter a date within this range.';
-        CaseSetup: Record "AUZ Case Setup";
-        RMSetup: Record "Marketing Setup";
-        NoSeriesMgt: Codeunit NoSeriesManagement;
-        Text007: Label 'Is the case completed?';
-        DontShowAgainActionLbl: Label 'Don''t show again';
-        UpdateLicenseNotificationMsg: Label 'The license for %1 must be updated when the solution in case %2 is installed.';
-
     local procedure JobNoOnValidate()
     begin
         if "Job No." <> xRec."Job No." then
             "Job Task No." := '';
     end;
-
-
-    procedure JobNoOnLookup()
-    var
-        Job: Record Job;
-    begin
-        // Not in use
-        if "Job No." <> '' then
-            if Job.Get("Job No.") then;
-        Job.SetRange(Blocked, Job.Blocked::" ");
-        if PAGE.RunModal(0, Job) = ACTION::LookupOK then
-            Validate("Job No.", Job."No.");
-    end;
-
 
     procedure GetResourceNo(): Code[20]
     var
@@ -559,7 +525,6 @@ table 90000 "AUZ Case Header"
         UserSetup.Get(UserId);
         exit(UserSetup."AUZ Resource No.");
     end;
-
 
     procedure SaveDescriptionChangeRequest(DescriptionText: Text)
     var
@@ -571,7 +536,6 @@ table 90000 "AUZ Case Header"
         oStream.WriteText(DescriptionText);
     end;
 
-
     procedure SaveDescriptionSolution(DescriptionText: Text)
     var
         oStream: OutStream;
@@ -581,7 +545,6 @@ table 90000 "AUZ Case Header"
         "Desc. Solution".CreateOutStream(oStream);
         oStream.WriteText(DescriptionText);
     end;
-
 
     procedure GetDescriptionChangeRequest(var DescriptionText: Text)
     var
@@ -597,7 +560,6 @@ table 90000 "AUZ Case Header"
             DescriptionText := '';
     end;
 
-
     procedure GetDescriptionSolution(var DescriptionText: Text)
     var
         iStream: InStream;
@@ -612,15 +574,12 @@ table 90000 "AUZ Case Header"
             DescriptionText := '';
     end;
 
-
     procedure SendMail()
     var
         CaseMailHandle: Codeunit "Case Mail Management";
     begin
-        //ALA
-        //CaseMailHandle.SendEmail(Rec);
+        CaseMailHandle.SendEmail(Rec);
     end;
-
 
     procedure InsertCaseResource()
     var
@@ -641,7 +600,6 @@ table 90000 "AUZ Case Header"
         BuildResourceFilter;
     end;
 
-
     procedure BuildResourceFilter()
     var
         CaseResource: Record "AUZ Case Resource";
@@ -656,12 +614,10 @@ table 90000 "AUZ Case Header"
             until CaseResource.Next = 0;
     end;
 
-
     procedure GetMyUserFilter(): Text
     begin
         exit('@*' + GetResourceNo + '*');
     end;
-
 
     procedure ShowContactCompanyCard()
     var
@@ -673,7 +629,6 @@ table 90000 "AUZ Case Header"
         ContactCard.Run;
     end;
 
-
     procedure ShowLoginInformation()
     var
         ContactCompany: Record Contact;
@@ -682,7 +637,6 @@ table 90000 "AUZ Case Header"
         ContactCompany.ShowLoginInformation;
     end;
 
-
     procedure GetLoginInformation(): Text
     var
         ContactCompany: Record Contact;
@@ -690,7 +644,6 @@ table 90000 "AUZ Case Header"
         ContactCompany.Get("Contact Company No.");
         exit(ContactCompany.GetLoginInformation2);
     end;
-
 
     procedure ConfirmCompleted(): Boolean
     begin
@@ -706,7 +659,6 @@ table 90000 "AUZ Case Header"
         "Last Time Modified" := Time;
     end;
 
-
     procedure SetConsultantResource()
     var
         UserSetup: Record "User Setup";
@@ -716,7 +668,6 @@ table 90000 "AUZ Case Header"
         UserSetup.TestField("AUZ Resource No.");
         Validate("Resource No.", UserSetup."AUZ Resource No.");
     end;
-
 
     procedure SetDeveloperResource()
     var
@@ -752,7 +703,6 @@ table 90000 "AUZ Case Header"
         Modify;
     end;
 
-
     procedure OpenInformationURL()
     var
         ServiceURL: Text;
@@ -761,7 +711,6 @@ table 90000 "AUZ Case Header"
         GetInformationURL(ServiceURL);
         HyperLink(ServiceURL);
     end;
-
 
     procedure ShowStandardSolutionLastRelease()
     var
@@ -775,7 +724,6 @@ table 90000 "AUZ Case Header"
         PageMgt.PageRunModal(StandardSolutionRelease);
     end;
 
-
     procedure SelectStatus()
     var
         Selection: Integer;
@@ -783,7 +731,6 @@ table 90000 "AUZ Case Header"
         if SelectOption(Selection, FieldNo(Status), Status + 1) then
             Validate(Status, Selection);
     end;
-
 
     procedure SelectDevelopmentStatus()
     var
@@ -793,7 +740,6 @@ table 90000 "AUZ Case Header"
             Validate("Development Status", Selection);
     end;
 
-
     procedure SelectDevelopmentApprovalStatus()
     var
         Selection: Integer;
@@ -802,7 +748,6 @@ table 90000 "AUZ Case Header"
             Validate("Development Approval Status", Selection);
     end;
 
-
     procedure SelectWaitingFor()
     var
         Selection: Integer;
@@ -810,7 +755,6 @@ table 90000 "AUZ Case Header"
         if SelectOption(Selection, FieldNo("Waiting for"), "Waiting for" + 1) then
             UpdateWaitingFor(Selection);
     end;
-
 
     procedure UpdateWaitingFor(WaitingFor: Option)
     begin
@@ -867,5 +811,19 @@ table 90000 "AUZ Case Header"
     begin
         exit('6d4983b5-fab1-44fa-ab56-b79e5a88908b');
     end;
-}
 
+     var
+        RenameErr: Label 'You cannot rename a %1.';
+        Text000: Label 'You cannot delete case %1 as there are registered hours.';
+        Text001: Label 'You cannot change status to %1 as there are registered hours.';
+        Text002: Label 'Status cannot be %1 when comment is empty.';
+        Text003: Label 'You do not have permission to change approval status for development.';
+        Text004: Label 'This case must be reviewed with the development administrator. \Do you want to send email to the development administrator now?';
+        Text006: Label 'The valid range of dates is from %1 to %2. Please enter a date within this range.';
+        CaseSetup: Record "AUZ Case Setup";
+        RMSetup: Record "Marketing Setup";
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+        Text007: Label 'Is the case completed?';
+        DontShowAgainActionLbl: Label 'Don''t show again';
+        UpdateLicenseNotificationMsg: Label 'The license for %1 must be updated when the solution in case %2 is installed.';
+}

@@ -31,4 +31,3 @@ tableextension 50019 "AUZ Service Invoice Header" extends "Service Invoice Heade
         }
     }
 }
-

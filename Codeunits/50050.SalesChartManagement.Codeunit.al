@@ -1,19 +1,5 @@
 codeunit 50050 "Sales Chart Management"
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        Text001: Label 'Turnover';
-        GLSetup: Record "General Ledger Setup";
-        MeasureType: Option Budget,Sales,"Sales Last Year";
-        BudgetText: Label 'Budget';
-        ActualText: Label 'Actual %1';
-        GLSetupRead: Boolean;
-
-
     procedure OnOpenPage(var SalesChartSetup: Record "AUZ Sales Chart Setup"; ChartView: Option Sales,"Accumulated Sales")
     begin
         with SalesChartSetup do
@@ -60,7 +46,6 @@ codeunit 50050 "Sales Chart Management"
                 until not NextMeasure(BusChartMapMeasure);
         end;
     end;
-
 
     procedure DrillDown(var BusChartBuf: Record "Business Chart Buffer"; ChartView: Option Sales,"Accumulated Sales")
     var
@@ -135,7 +120,6 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-
     procedure CalcAmount(AZSetup: Record "AZ Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; Month: Integer; MType: Text; ChartView: Option Sales,"Accumulated Sales"): Decimal
     var
         FromDate: Date;
@@ -209,7 +193,6 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-
     procedure ColumnIndex2Date(var FromDate: Date; var ToDate: Date; ColumnIndex: Integer; LastYear: Boolean; ChartView: Option Sales,"Accumulated Sales")
     var
         SourceDate: Date;
@@ -240,5 +223,12 @@ codeunit 50050 "Sales Chart Management"
             GLSetupRead := true;
         end;
     end;
-}
 
+    var
+        Text001: Label 'Turnover';
+        GLSetup: Record "General Ledger Setup";
+        MeasureType: Option Budget,Sales,"Sales Last Year";
+        BudgetText: Label 'Budget';
+        ActualText: Label 'Actual %1';
+        GLSetupRead: Boolean;
+}

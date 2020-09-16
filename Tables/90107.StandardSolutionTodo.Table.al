@@ -66,9 +66,4 @@ table 90107 "AUZ Standard Solution To-do"
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-    }
 }
-

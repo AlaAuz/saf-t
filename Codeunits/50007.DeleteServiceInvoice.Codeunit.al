@@ -2,11 +2,6 @@ codeunit 50007 "Delete Service Invoice"
 {
     // AZ99999 18.12.2017 DHG Change code to set filter on type item.
 
-
-    trigger OnRun()
-    begin
-    end;
-
     [EventSubscriber(ObjectType::Table, 5900, 'OnBeforeDeleteEvent', '', false, false)]
     local procedure "ServHeader.OnBeforeDelete"(var Rec: Record "Service Header"; RunTrigger: Boolean)
     begin
@@ -127,4 +122,3 @@ codeunit 50007 "Delete Service Invoice"
             until ServiceLine.Next = 0;
     end;
 }
-

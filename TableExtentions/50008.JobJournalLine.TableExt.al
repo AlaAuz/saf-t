@@ -12,7 +12,7 @@ tableextension 50008 "AUZ Job Journal Line" extends "Job Journal Line"
         {
             Caption = 'Case Line No.';
             DataClassification = CustomerContent;
-            TableRelation = "AUZ Case Line"."Line No." WHERE ("Case No." = FIELD ("AUZ Case No."));
+            TableRelation = "AUZ Case Line"."Line No." WHERE("Case No." = FIELD("AUZ Case No."));
         }
         field(50002; "AUZ Case Description"; Text[100])
         {
@@ -21,4 +21,3 @@ tableextension 50008 "AUZ Job Journal Line" extends "Job Journal Line"
         }
     }
 }
-

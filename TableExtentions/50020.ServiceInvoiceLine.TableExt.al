@@ -42,4 +42,3 @@ tableextension 50020 "AUZ Service Invoice Line" extends "Service Invoice Line"
         }
     }
 }
-

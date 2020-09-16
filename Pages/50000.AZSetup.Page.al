@@ -34,7 +34,6 @@ page 50000 "AZ Setup"
     // AZ11312 23.08.2016 HHV Added field "Create Software Item when Ship".
     // AZ11595 15.11.2016 HHV Removed template and batch field and replaced it with "Cons. Scanning No. Series".
     // AZ99999 30.01.2017 HHV Added fields "Company Language Code" and "Serv. Order Proforma Inv. No.".
-
     Caption = 'AZ Setup';
     DataCaptionExpression = '';
     DeleteAllowed = false;
@@ -140,10 +139,6 @@ page 50000 "AZ Setup"
         }
     }
 
-    actions
-    {
-    }
-
     trigger OnOpenPage()
     begin
         Reset;
@@ -153,4 +148,3 @@ page 50000 "AZ Setup"
         end;
     end;
 }
-

@@ -13,4 +13,10 @@ codeunit 50009 "AUZ Sales Management"
                 end;
         end;
     end;
+
+    [EventSubscriber(ObjectType::Table, DataBase::"Sales Line", 'OnBeforeTestJobPlanningLine', '', false, false)]
+    local procedure OnBeforeTestJobPlanningLineIsHandled(var SalesLine: Record "Sales Line"; var IsHandled: Boolean; CallingFieldNo: Integer)
+    begin
+       IsHandled := true;
+    end;
 }

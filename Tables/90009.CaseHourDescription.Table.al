@@ -3,7 +3,6 @@ table 90009 "AUZ Case Line Description"
     Caption = 'Case Line Description';
     DrillDownPageID = "Case Line Descriptions";
     LookupPageID = "Case Line Descriptions";
-
     fields
     {
         field(1; "Case No."; Code[20])

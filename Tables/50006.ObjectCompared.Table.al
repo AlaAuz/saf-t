@@ -124,11 +124,6 @@ table 50006 "AUZ Object Compared"
         }
     }
 
-    fieldgroups
-    {
-    }
-
-
     procedure ObjectImport()
     var
         CaseNote: Page "Case Note";
@@ -149,4 +144,3 @@ table 50006 "AUZ Object Compared"
         end;
     end;
 }
-

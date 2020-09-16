@@ -41,4 +41,3 @@ tableextension 50016 "AUZ Service Contract Line" extends "Service Contract Line"
         Modify;
     end;
 }
-

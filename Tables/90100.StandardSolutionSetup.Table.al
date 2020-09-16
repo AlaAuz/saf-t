@@ -16,7 +16,6 @@ table 90100 "AUZ Standard Solution Setup"
             DataClassification = CustomerContent;
         }
     }
-
     keys
     {
         key(Key1; "Primary Key")
@@ -24,9 +23,4 @@ table 90100 "AUZ Standard Solution Setup"
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-    }
 }
-

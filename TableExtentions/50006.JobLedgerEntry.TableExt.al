@@ -13,7 +13,7 @@ tableextension 50006 "AUZ Job Ledger Entry" extends "Job Ledger Entry"
             Caption = 'Case Line No.';
             DataClassification = CustomerContent;
             Description = 'AZ10001';
-            TableRelation = "AUZ Case Line"."Line No." WHERE ("Case No." = FIELD ("AUZ Case No."));
+            TableRelation = "AUZ Case Line"."Line No." WHERE("Case No." = FIELD("AUZ Case No."));
         }
         field(50002; "AUZ Case Description"; Text[100])
         {
@@ -22,4 +22,3 @@ tableextension 50006 "AUZ Job Ledger Entry" extends "Job Ledger Entry"
         }
     }
 }
-

@@ -31,4 +31,3 @@ tableextension 50021 "AUZ Service Cr.Memo Header" extends "Service Cr.Memo Heade
         }
     }
 }
-

@@ -66,7 +66,6 @@ table 90006 "AUZ Case Line Expense"
             DataClassification = CustomerContent;
         }
     }
-
     keys
     {
         key(Key1; "Case No.", "Case Line No.", "Line No.")
@@ -122,4 +121,3 @@ table 90006 "AUZ Case Line Expense"
         Text90001: Label 'The hours is transferred. Modify or delete is not allowed.';
         BlankCaseNoErr: Label 'Case No. is missing, not able to delete description!';
 }
-

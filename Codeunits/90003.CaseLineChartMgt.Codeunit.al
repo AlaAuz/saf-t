@@ -6,23 +6,6 @@ codeunit 90003 "Case Line Chart Mgt."
     // - Visningstekst for akkumuert.
     // - Ikke total når akkululert
 
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        ResourceTxt: Label 'Resource';
-        TodayTxt: Label 'Today';
-        ThisWeekTxt: Label 'This Week';
-        ThisQuarterTxt: Label 'This Quarter';
-        ThisMonthTxt: Label 'This Month';
-        ThisYearTxt: Label 'This Year';
-        TotalTxt: Label 'Total';
-        CaseSetup: Record "AUZ Case Setup";
-        PeriodType: Option Day,Week,Month,Quarter,Year;
-
-
     procedure OnOpenPage(var CaseHoursChartSetup: Record "AUZ Case Line Chart Setup")
     begin
         with CaseHoursChartSetup do
@@ -137,7 +120,6 @@ codeunit 90003 "Case Line Chart Mgt."
         end;
     end;
 
-
     procedure CalcQuantity(CaseHourChartSetup: Record "AUZ Case Line Chart Setup"; MIndex: Integer; MName: Text; CName: Text; CDate: Date): Decimal
     var
         CaseHour: Record "AUZ Case Line";
@@ -188,7 +170,6 @@ codeunit 90003 "Case Line Chart Mgt."
             CaseLine.SetRange(Chargeable, Chargeable = Chargeable::Yes);
     end;
 
-
     procedure DrillDown(var BusChartBuf: Record "Business Chart Buffer")
     var
         CaseHoursChartSetup: Record "AUZ Case Line Chart Setup";
@@ -210,5 +191,15 @@ codeunit 90003 "Case Line Chart Mgt."
         end;
         PAGE.Run(0, CaseHour);
     end;
-}
 
+    var
+        ResourceTxt: Label 'Resource';
+        TodayTxt: Label 'Today';
+        ThisWeekTxt: Label 'This Week';
+        ThisQuarterTxt: Label 'This Quarter';
+        ThisMonthTxt: Label 'This Month';
+        ThisYearTxt: Label 'This Year';
+        TotalTxt: Label 'Total';
+        CaseSetup: Record "AUZ Case Setup";
+        PeriodType: Option Day,Week,Month,Quarter,Year;
+}

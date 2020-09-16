@@ -1,50 +1,6 @@
 //codeunit 71100 "Service Copy Management"
 codeunit 50015 "Service Copy Management"
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        TempServiceInvLine: Record "Service Invoice Line" temporary;
-        Item: Record Item;
-        Currency: Record Currency;
-        CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";
-        TransferOldExtLines: Codeunit "Transfer Old Ext. Text Lines";
-        ServiceItemCheckAvail: Codeunit "Service Item-Check Avail.";
-        ServiceDocType: Option Quote,"Order",Invoice,"Credit Memo","Posted Shipment","Posted Invoice","Posted Credit Memo";
-        Window: Dialog;
-        IncludeHeader: Boolean;
-        RecalculateLines: Boolean;
-        MoveNegLines: Boolean;
-        WindowUpdateDateTime: DateTime;
-        CreateToHeader: Boolean;
-        HideDialog: Boolean;
-        ExactCostRevMandatory: Boolean;
-        ApplyFully: Boolean;
-        AskApply: Boolean;
-        ReappDone: Boolean;
-        SkippedLine: Boolean;
-        SomeAreFixed: Boolean;
-        AsmHdrExistsForFromDocLine: Boolean;
-        SkipCopyFromDescription: Boolean;
-        SkipTestCreditLimit: Boolean;
-        Text000: Label 'Please enter a Document No.';
-        Text001: Label '%1 %2 cannot be copied onto itself.';
-        Text003: Label 'The existing lines for %1 %2 will be deleted.\\Do you want to continue?', Comment = '%1=Document type, e.g. Invoice. %2=Document No., e.g. 001';
-        Text004: Label 'Message from Auzilium AS: You cannot copy from service document to service order or quote. This part of the functionality has not been implementet and/or tested.';
-        Text005: Label 'Exact Cost Reversing Link has not been created for all copied document lines.';
-        Text006: Label '\';
-        Text007: Label 'The document line(s) with a G/L account where direct posting is not allowed have not been copied to the new document by the Copy Document batch job.';
-        Text008: Label 'There are no negative sales lines to move.';
-        Text009: Label 'Copying document lines...\';
-        Text010: Label 'Processing source lines      #1######\';
-        Text011: Label '%1 %2:';
-        Text012: Label 'Shipment No.,Invoice No.,Return Receipt No.,Credit Memo No.';
-        Text013: Label '%1 - %2:';
-        Text014: Label 'Inv. No. ,Shpt. No. ,Cr. Memo No. ,Rtrn. Rcpt. No. ';
-
     [EventSubscriber(ObjectType::Page, 5935, 'OnAfterActionEvent', 'CopyDocument', false, false)]
     local procedure "ServiceCrMemo.CopyDocument"(var Rec: Record "Service Header")
     var
@@ -61,8 +17,7 @@ codeunit 50015 "Service Copy Management"
     begin
         CopyServiceDocument.SetServiceHeader(Rec);
         CopyServiceDocument.RunModal;
-    end; 
-
+    end;
 
     procedure SetProperties(NewIncludeHeader: Boolean; NewRecalculateLines: Boolean; NewMoveNegLines: Boolean; NewCreateToHeader: Boolean; NewHideDialog: Boolean; NewExactCostRevMandatory: Boolean; NewApplyFully: Boolean)
     begin
@@ -95,7 +50,6 @@ codeunit 50015 "Service Copy Management"
                 exit(ServiceHeader."Document Type"::"Credit Memo");
         end;
     end;
-
 
     procedure CopyServiceDoc(FromDocType: Option; FromDocNo: Code[20]; var ToServiceHeader: Record "Service Header")
     var
@@ -1421,5 +1375,42 @@ codeunit 50015 "Service Copy Management"
     local procedure OnAfterCopyServiceDoc(FromDocType: Option; FromDocNo: Code[20]; var ToServiceHeader: Record "Service Header")
     begin
     end;
-}
 
+    var
+        TempServiceInvLine: Record "Service Invoice Line" temporary;
+        Item: Record Item;
+        Currency: Record Currency;
+        CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";
+        TransferOldExtLines: Codeunit "Transfer Old Ext. Text Lines";
+        ServiceItemCheckAvail: Codeunit "Service Item-Check Avail.";
+        ServiceDocType: Option Quote,"Order",Invoice,"Credit Memo","Posted Shipment","Posted Invoice","Posted Credit Memo";
+        Window: Dialog;
+        IncludeHeader: Boolean;
+        RecalculateLines: Boolean;
+        MoveNegLines: Boolean;
+        WindowUpdateDateTime: DateTime;
+        CreateToHeader: Boolean;
+        HideDialog: Boolean;
+        ExactCostRevMandatory: Boolean;
+        ApplyFully: Boolean;
+        AskApply: Boolean;
+        ReappDone: Boolean;
+        SkippedLine: Boolean;
+        SomeAreFixed: Boolean;
+        SkipCopyFromDescription: Boolean;
+        SkipTestCreditLimit: Boolean;
+        Text000: Label 'Please enter a Document No.';
+        Text001: Label '%1 %2 cannot be copied onto itself.';
+        Text003: Label 'The existing lines for %1 %2 will be deleted.\\Do you want to continue?', Comment = '%1=Document type, e.g. Invoice. %2=Document No., e.g. 001';
+        Text004: Label 'Message from Auzilium AS: You cannot copy from service document to service order or quote. This part of the functionality has not been implementet and/or tested.';
+        Text005: Label 'Exact Cost Reversing Link has not been created for all copied document lines.';
+        Text006: Label '\';
+        Text007: Label 'The document line(s) with a G/L account where direct posting is not allowed have not been copied to the new document by the Copy Document batch job.';
+        Text008: Label 'There are no negative sales lines to move.';
+        Text009: Label 'Copying document lines...\';
+        Text010: Label 'Processing source lines      #1######\';
+        Text011: Label '%1 %2:';
+        Text012: Label 'Shipment No.,Invoice No.,Return Receipt No.,Credit Memo No.';
+        Text013: Label '%1 - %2:';
+        Text014: Label 'Inv. No. ,Shpt. No. ,Cr. Memo No. ,Rtrn. Rcpt. No. ';
+}

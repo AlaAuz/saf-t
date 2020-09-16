@@ -229,4 +229,3 @@ table 90020 "AUZ Case Journal Line"
     var
         CaseSetup: Record "AUZ Case Setup";
 }
-

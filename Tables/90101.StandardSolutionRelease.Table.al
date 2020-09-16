@@ -19,6 +19,7 @@ table 90101 "AUZ Standard Solution Release"
         field(2; "Version Code"; Code[10])
         {
             Caption = 'Version Code';
+            DataClassification = CustomerContent;
         }
         field(3; Description; Text[100])
         {
@@ -87,11 +88,6 @@ table 90101 "AUZ Standard Solution Release"
         UpdateSubRecords;
     end;
 
-    var
-        StandardSolutionSetup: Record "AUZ Standard Solution Setup";
-        StandardSolutionMgt: Codeunit "Standard Solution Management";
-        ChangeType: Option Insertion,Modification,Deletion;
-
     local procedure InitInsert()
     var
         StandardSolutionRelease: Record "AUZ Standard Solution Release";
@@ -158,7 +154,6 @@ table 90101 "AUZ Standard Solution Release"
             until StandardSolutionChange.Next = 0;
     end;
 
-
     procedure CheckChangePermissions(Type: Option)
     var
         StandardSolution: Record "AUZ Standard Solution";
@@ -166,5 +161,7 @@ table 90101 "AUZ Standard Solution Release"
         StandardSolution.Get("Standard Solution No.");
         StandardSolution.CheckChangePermissions(Type);
     end;
-}
 
+    var
+        ChangeType: Option Insertion,Modification,Deletion;
+}

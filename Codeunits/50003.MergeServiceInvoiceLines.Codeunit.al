@@ -1,16 +1,5 @@
 codeunit 50003 "Merge Service Invoice Lines"
 {
-
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        Item: Record Item;
-        InvFromDate: Date;
-        InvToDate: Date;
-
-
     procedure MergeServiceInvoiceLines(var TempLine: Record "Service Invoice Line" temporary; ServiceInvoiceHeader: Record "Service Invoice Header")
     var
         ServInvLine: Record "Service Invoice Line";
@@ -113,5 +102,9 @@ codeunit 50003 "Merge Service Invoice Lines"
         TempLine."Description 2" := StrSubstNo('%1 - %2', ServInvLine."AUZ Serv. Contract Line From Date", ServInvLine."AUZ Serv. Contract Line To Date");
         TempLine.Modify;
     end;
-}
 
+    var
+        Item: Record Item;
+        InvFromDate: Date;
+        InvToDate: Date;
+}

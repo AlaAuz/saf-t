@@ -31,4 +31,3 @@ tableextension 50017 "AUZ Service Shipment Header" extends "Service Shipment Hea
         }
     }
 }
-

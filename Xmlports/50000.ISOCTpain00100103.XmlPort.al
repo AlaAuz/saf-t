@@ -1,4 +1,3 @@
-//FIX dependencies - File Management, Document Distribution, AZ Base og Norway
 xmlport 50000 "ISO CT pain.001.001.03" //FIX SJEKK
 {
     Caption = 'ISO CT pain.001.001.03';

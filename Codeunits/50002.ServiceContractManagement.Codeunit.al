@@ -2,15 +2,6 @@ codeunit 50002 "Service Contract Management"
 {
     Permissions = TableData "Service Ledger Entry" = rm;
 
-    trigger OnRun()
-    begin
-    end;
-
-    var
-        AZSetup: Record "AZ Setup";
-        AZSetupRead: Boolean;
-        Text000: Label '%1 cannot be less than %2';
-
     [EventSubscriber(ObjectType::Table, 5965, 'OnAfterInsertEvent', '', true, true)]
     local procedure "ServiceContractHeader.OnAfterInsertEvent"(var Rec: Record "Service Contract Header"; RunTrigger: Boolean)
     begin
@@ -34,7 +25,6 @@ codeunit 50002 "Service Contract Management"
         ServiceContractHeader.Modify(true);
     end;
 
-
     procedure CreateRemainingPeriodInvoice(SkipDialog: Boolean; ConfirmationText: Text; InvFrom: Date; InvTo: Date): Boolean
     begin
         if SkipDialog then
@@ -43,14 +33,12 @@ codeunit 50002 "Service Contract Management"
         exit(Confirm(ConfirmationText, true, InvFrom, InvTo));
     end;
 
-
     procedure SkipServicePeriodCheck(var ServiceContractHeader: Record "Service Contract Header"): Boolean
     begin
         GetAZSetup;
         if AZSetup."Check Service Period" then
             ServiceContractHeader.TestField("Service Period");
     end;
-
 
     procedure SetServLedgEntryValues(var ServLedgerEntry: Record "Service Ledger Entry"; ContractType: Integer; ContractNo: Code[20]; LineNo: Integer)
     var
@@ -64,7 +52,6 @@ codeunit 50002 "Service Contract Management"
         end;
     end;
 
-
     procedure SetContractDatesOnServHeader(var ServiceContractHeader: Record "Service Contract Header"; var ServiceHeader: Record "Service Header")
     begin
         ServiceHeader."AUZ Serv. Contr. Next Inv. Date" := ServiceContractHeader."Next Invoice Date";
@@ -74,13 +61,11 @@ codeunit 50002 "Service Contract Management"
         ServiceHeader."AUZ SC Last Inv. Period End" := ServiceContractHeader."Last Invoice Period End";
     end;
 
-
     procedure SetItem(var ServiceLine: Record "Service Line"; ServiceLedgerEntry: Record "Service Ledger Entry")
     begin
         ServiceLine.Type := ServiceLine.Type::Item;
         ServiceLine.Validate("No.", ServiceLedgerEntry."Item No. (Serviced)");
     end;
-
 
     procedure SetServiceLineValues(var ServiceLine: Record "Service Line"; InvFrom: Date; InvTo: Date; ServiceLedgerEntry: Record "Service Ledger Entry")
     begin
@@ -92,13 +77,11 @@ codeunit 50002 "Service Contract Management"
         ServiceLine."AUZ SCL New Line" := ServiceLedgerEntry."AUZ SCL New Line";
     end;
 
-
     procedure SetNextInvDate(var NextInvDate: Date; ServiceContractLine: Record "Service Contract Line"; ServiceContractHeader: Record "Service Contract Header")
     begin
         if ServiceContractLine."New Line" then
             NextInvDate := ServiceContractLine."Starting Date";
     end;
-
 
     procedure SetInvFrom(var InvFrom: Date; ServiceContractLine: Record "Service Contract Line")
     begin
@@ -106,12 +89,10 @@ codeunit 50002 "Service Contract Management"
             InvFrom := ServiceContractLine."Starting Date";
     end;
 
-
     procedure SetNewLineOnServiceContractLines(var ServiceContractLine: Record "Service Contract Line"; ServiceContractHeader: Record "Service Contract Header")
     begin
         ServiceContractLine.ModifyAll("New Line", false, true);
     end;
-
 
     procedure GetTotalLineCostPerPeriod(ServiceContractHeader: Record "Service Contract Header"): Decimal
     var
@@ -154,5 +135,8 @@ codeunit 50002 "Service Contract Management"
             AZSetupRead := true;
         end;
     end;
-}
 
+    var
+        AZSetup: Record "AZ Setup";
+        AZSetupRead: Boolean;
+}

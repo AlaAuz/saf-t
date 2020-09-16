@@ -39,7 +39,6 @@ table 90005 "AUZ Expense Code"
             Caption = 'Price';
             AutoFormatType = 2;
             DataClassification = CustomerContent;
-            //sjekke properties
         }
     }
 
@@ -51,4 +50,3 @@ table 90005 "AUZ Expense Code"
         }
     }
 }
-

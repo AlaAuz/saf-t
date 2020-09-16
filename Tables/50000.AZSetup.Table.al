@@ -123,7 +123,7 @@ table 50000 "AZ Setup"
             Caption = 'Role Center';
             Enabled = false;
         }
-        //FIX - se på dargan hvor disse ligger nå
+        //FIX - se på dargan hvor disse ligger nå --> Role Center Setup
         field(14001; "Sales Chart G/L Account Filter"; Text[100])
         {
             Caption = 'Sales Chart G/L Account Filter';
@@ -146,7 +146,7 @@ table 50000 "AZ Setup"
         }
         field(90000; "Expenses Entries No. Series"; Code[10])
         {
-            Caption = 'Omkostningsløpenummer serie';
+            Caption = 'Expenses Entries No. Series';
             TableRelation = "No. Series";
         }
     }

@@ -25,4 +25,3 @@ tableextension 50023 "AUZ User Setup" extends "User Setup"
         }
     }
 }
-

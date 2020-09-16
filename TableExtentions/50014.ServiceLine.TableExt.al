@@ -42,4 +42,3 @@ tableextension 50014 "AUZ Service Line" extends "Service Line"
         }
     }
 }
-

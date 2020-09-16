@@ -58,11 +58,6 @@ table 90102 "AUZ Standard Solution Contact"
         CheckChangePermissions(ChangeType::Modification);
     end;
 
-    var
-        StandardSolutionMgt: Codeunit "Standard Solution Management";
-        ChangeType: Option Insertion,Modification,Deletion;
-
-
     procedure CheckChangePermissions(Type: Option)
     var
         StandardSolution: Record "AUZ Standard Solution";
@@ -70,4 +65,7 @@ table 90102 "AUZ Standard Solution Contact"
         StandardSolution.Get("Standard Solution No.");
         StandardSolution.CheckChangePermissions(Type);
     end;
+
+    var
+        ChangeType: Option Insertion,Modification,Deletion;
 }

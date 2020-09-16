@@ -238,14 +238,12 @@ table 90105 "AUZ Standard Solution"
         CheckChangePermissions(ChangeType::Modification);
     end;
 
-
     local procedure InitInsert()
     begin
         TestField("No.");
         "Date Modified" := Today;
         "Date Created" := Today;
     end;
-
 
     procedure SetExtededDescription(NewExtendedDescription: Text)
     var
@@ -280,12 +278,10 @@ table 90105 "AUZ Standard Solution"
         exit(Content);
     end;
 
-
     procedure CheckChangePermissions(Type: Option)
     begin
         StandardSolutionMgt.CheckChangePermissions(Rec, Type);
     end;
-
 
     procedure ShowSubSolutions()
     var
@@ -296,7 +292,6 @@ table 90105 "AUZ Standard Solution"
         StandardSolution.FilterGroup(0);
         PAGE.RunModal(PAGE::"Standard Solution List", StandardSolution);
     end;
-
 
     procedure ShowFileEntries()
     var

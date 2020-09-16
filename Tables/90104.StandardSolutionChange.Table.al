@@ -34,10 +34,6 @@ table 90104 "AUZ Standard Solution Change"
         }
     }
 
-    fieldgroups
-    {
-    }
-
     trigger OnDelete()
     begin
         CheckChangePermissions(ChangeType::Deletion);
@@ -70,4 +66,3 @@ table 90104 "AUZ Standard Solution Change"
         StandardSolution.CheckChangePermissions(Type);
     end;
 }
-

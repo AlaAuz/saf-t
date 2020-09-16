@@ -120,7 +120,6 @@ table 90010 "AUZ Case Line Chart Setup"
         SelectionText += SelectionType;
     end;
 
-
     procedure Index2PeriodType(MeasureIndex: Integer): Integer
     var
         MIndex: Integer;
@@ -162,12 +161,10 @@ table 90010 "AUZ Case Line Chart Setup"
         end;
     end;
 
-
     procedure SetDefault()
     begin
         SetType(Type::Total);
     end;
-
 
     procedure SetPie()
     begin
@@ -183,43 +180,36 @@ table 90010 "AUZ Case Line Chart Setup"
         Modify;
     end;
 
-
     procedure SetChargeable(Value: Option)
     begin
         Chargeable := Value;
         Modify;
     end;
 
-
     procedure SetDay(Value: Boolean)
     begin
         SetPeriod(Day, Value);
     end;
-
 
     procedure SetWeek(Value: Boolean)
     begin
         SetPeriod(Week, Value);
     end;
 
-
     procedure SetMonth(Value: Boolean)
     begin
         SetPeriod(Month, Value);
     end;
-
 
     procedure SetQuarter(Value: Boolean)
     begin
         SetPeriod(Quarter, Value);
     end;
 
-
     procedure SetYear(Value: Boolean)
     begin
         SetPeriod(Year, Value);
     end;
-
 
     procedure SetTotal(Value: Boolean)
     begin
@@ -243,7 +233,6 @@ table 90010 "AUZ Case Line Chart Setup"
         Year := false;
         Total := false;
     end;
-
 
     procedure UpdateLastMonthsWinner()
     var
