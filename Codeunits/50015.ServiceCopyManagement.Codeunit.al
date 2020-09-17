@@ -1,10 +1,13 @@
 //codeunit 71100 "Service Copy Management"
-codeunit 50015 "Service Copy Management"
+
+codeunit 50015 "AUZ Service Copy Management"
 {
+    //ALA //FIX
+    /*
     [EventSubscriber(ObjectType::Page, 5935, 'OnAfterActionEvent', 'CopyDocument', false, false)]
     local procedure "ServiceCrMemo.CopyDocument"(var Rec: Record "Service Header")
     var
-        CopyServiceDocument: Report "Copy Service Document 2";
+        CopyServiceDocument: Report "AUZ Copy Service Document 2";
     begin
         CopyServiceDocument.SetServiceHeader(Rec);
         CopyServiceDocument.RunModal;
@@ -13,11 +16,11 @@ codeunit 50015 "Service Copy Management"
     [EventSubscriber(ObjectType::Page, 5933, 'OnAfterActionEvent', 'CopyDocument', false, false)]
     local procedure "ServceInvoice.CopyDocument"(var Rec: Record "Service Header")
     var
-        CopyServiceDocument: Report "Copy Service Document 2";
+        CopyServiceDocument: Report "AUZ Copy Service Document 2";
     begin
         CopyServiceDocument.SetServiceHeader(Rec);
         CopyServiceDocument.RunModal;
-    end;
+    end; */
 
     procedure SetProperties(NewIncludeHeader: Boolean; NewRecalculateLines: Boolean; NewMoveNegLines: Boolean; NewCreateToHeader: Boolean; NewHideDialog: Boolean; NewExactCostRevMandatory: Boolean; NewApplyFully: Boolean)
     begin
@@ -1382,7 +1385,7 @@ codeunit 50015 "Service Copy Management"
         Currency: Record Currency;
         CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";
         TransferOldExtLines: Codeunit "Transfer Old Ext. Text Lines";
-        ServiceItemCheckAvail: Codeunit "Service Item-Check Avail.";
+        ServiceItemCheckAvail: Codeunit "AUZ Service Item-Check Avail.";
         ServiceDocType: Option Quote,"Order",Invoice,"Credit Memo","Posted Shipment","Posted Invoice","Posted Credit Memo";
         Window: Dialog;
         IncludeHeader: Boolean;

@@ -1,8 +1,8 @@
 table 50002 "AUZ Invoicing Period"
 {
     Caption = 'Invoicing Period';
-    DrillDownPageID = "Invoicing Periods";
-    LookupPageID = "Invoicing Periods";
+    DrillDownPageID = "AUZ Invoicing Periods";
+    LookupPageID = "AUZ Invoicing Periods";
 
     fields
     {

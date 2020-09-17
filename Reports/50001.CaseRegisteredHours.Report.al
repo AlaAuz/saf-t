@@ -1,4 +1,4 @@
-report 50001 "Case - Registered Hours"
+report 50001 "AUZ Case - Registered Hours"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './CaseRegisteredHours.rdlc';
@@ -17,8 +17,8 @@ report 50001 "Case - Registered Hours"
             }
             dataitem("Case Line"; "AUZ Case Line")
             {
-                DataItemLink = "Case No." = FIELD ("No.");
-                DataItemTableView = SORTING ("Case No.", "Line No.");
+                DataItemLink = "Case No." = FIELD("No.");
+                DataItemTableView = SORTING("Case No.", "Line No.");
                 column(CaseHours_ResourceNo; "Case Line"."Resource No.")
                 {
                 }
@@ -50,10 +50,12 @@ report 50001 "Case - Registered Hours"
                 field(StartDate; StartDate)
                 {
                     Caption = 'Start Date';
+                    ApplicationArea = All;
                 }
                 field(EndDate; EndDate)
                 {
                     Caption = 'End Date';
+                    ApplicationArea = All;
                 }
             }
         }

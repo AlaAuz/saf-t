@@ -1,4 +1,4 @@
-report 50003 "Saksliste pr. kunde"
+report 50003 "AUZ Saksliste pr. kunde"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Sakslisteprkunde.rdlc';

@@ -1,4 +1,4 @@
-xmlport 50000 "ISO CT pain.001.001.03" //FIX SJEKK
+xmlport 50000 "AUZ ISO CT pain.001.001.03" //FIX SJEKK
 {
     Caption = 'ISO CT pain.001.001.03';
     DefaultNamespace = 'urn:iso:std:iso:20022:tech:xsd:pain.001.001.03';

@@ -1,4 +1,4 @@
-report 50004 "AZ Service Invoice"
+report 50004 "AUZ Service Invoice"
 {
     // *** Auzilium AS ***
     // AZ12786 03.01.2018 DHG Added code to merge lines.
@@ -287,8 +287,8 @@ report 50004 "AZ Service Invoice"
             }
             dataitem(TempLine; "Service Invoice Line")
             {
-                DataItemLink = "Document No." = FIELD ("No.");
-                DataItemTableView = SORTING ("Document No.", "Line No.") WHERE ("AUZ Show on Print" = CONST (true));
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.") WHERE("AUZ Show on Print" = CONST(true));
                 UseTemporary = true;
                 column(LineLineNo; "Line No.")
                 {
@@ -344,12 +344,12 @@ report 50004 "AZ Service Invoice"
                 }
                 dataitem(ExtendedTextHeader; "Extended Text Header")
                 {
-                    DataItemLink = "No." = FIELD ("No.");
-                    DataItemTableView = SORTING ("Table Name", "No.", "Language Code", "Text No.") WHERE ("Table Name" = CONST (Item));
+                    DataItemLink = "No." = FIELD("No.");
+                    DataItemTableView = SORTING("Table Name", "No.", "Language Code", "Text No.") WHERE("Table Name" = CONST(Item));
                     dataitem(ExtendedTextLine; "Extended Text Line")
                     {
-                        DataItemLink = "Table Name" = FIELD ("Table Name"), "No." = FIELD ("No."), "Language Code" = FIELD ("Language Code"), "Text No." = FIELD ("Text No.");
-                        DataItemTableView = SORTING ("Table Name", "No.", "Language Code", "Text No.", "Line No.");
+                        DataItemLink = "Table Name" = FIELD("Table Name"), "No." = FIELD("No."), "Language Code" = FIELD("Language Code"), "Text No." = FIELD("Text No.");
+                        DataItemTableView = SORTING("Table Name", "No.", "Language Code", "Text No.", "Line No.");
                         column(ExtendedTextLineLineNo; "Line No.")
                         {
                         }
@@ -363,12 +363,12 @@ report 50004 "AZ Service Invoice"
                 }
                 dataitem(ValueEntry; "Value Entry")
                 {
-                    DataItemLink = "Document No." = FIELD ("Document No.");
-                    DataItemTableView = SORTING ("Document No.") WHERE ("Document Type" = CONST ("Sales Invoice"));
+                    DataItemLink = "Document No." = FIELD("Document No.");
+                    DataItemTableView = SORTING("Document No.") WHERE("Document Type" = CONST("Sales Invoice"));
                     dataitem(ItemLedgEntry; "Item Ledger Entry")
                     {
-                        DataItemLink = "Entry Type" = FIELD ("Item Ledger Entry Type"), "Entry No." = FIELD ("Item Ledger Entry No.");
-                        DataItemTableView = SORTING ("Entry No.") WHERE ("Document Type" = CONST ("Sales Shipment"));
+                        DataItemLink = "Entry Type" = FIELD("Item Ledger Entry Type"), "Entry No." = FIELD("Item Ledger Entry No.");
+                        DataItemTableView = SORTING("Entry No.") WHERE("Document Type" = CONST("Sales Shipment"));
                         column(ItemLedgEntryEntryNo; ItemLedgEntry."Entry No.")
                         {
                         }
@@ -470,7 +470,7 @@ report 50004 "AZ Service Invoice"
             }
             dataitem(TotalLine; "Integer")
             {
-                DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+                DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
                 column(TotalLineYesNo; TotalLineYesNo)
                 {
                 }
@@ -522,11 +522,11 @@ report 50004 "AZ Service Invoice"
             }
             dataitem(FirstInvoiceExtendedTextHeader; "Extended Text Header")
             {
-                DataItemTableView = SORTING ("Table Name", "No.", "Language Code", "Text No.");
+                DataItemTableView = SORTING("Table Name", "No.", "Language Code", "Text No.");
                 dataitem(FirstInvoiceExtendedTextLine; "Extended Text Line")
                 {
-                    DataItemLink = "Table Name" = FIELD ("Table Name"), "No." = FIELD ("No."), "Language Code" = FIELD ("Language Code"), "Text No." = FIELD ("Text No.");
-                    DataItemTableView = SORTING ("Table Name", "No.", "Language Code", "Text No.", "Line No.");
+                    DataItemLink = "Table Name" = FIELD("Table Name"), "No." = FIELD("No."), "Language Code" = FIELD("Language Code"), "Text No." = FIELD("Text No.");
+                    DataItemTableView = SORTING("Table Name", "No.", "Language Code", "Text No.", "Line No.");
                     column(FirstInvoiceExtendedTextLineNo; "No.")
                     {
                     }
@@ -549,7 +549,7 @@ report 50004 "AZ Service Invoice"
             }
             dataitem(CompanyInfo; "Company Information")
             {
-                DataItemTableView = SORTING ("Primary Key");
+                DataItemTableView = SORTING("Primary Key");
                 column(BasedOnExists; BasedOnExists)
                 {
                 }
@@ -697,32 +697,16 @@ report 50004 "AZ Service Invoice"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     trigger OnInitReport()
     begin
         GLSetup.Get;
-        AZSetup.Get;
+        RoleCenterSetup.Get;
         CompanyInfo.Get;
     end;
 
     var
         GLSetup: Record "General Ledger Setup";
-        AZSetup: Record "AZ Setup";
+        RoleCenterSetup: Record "AUZ Role Center Setup";
         Language: Record Language;
         BankAccount: Record "Bank Account";
         Salesperson: Record "Salesperson/Purchaser";
@@ -758,7 +742,7 @@ report 50004 "AZ Service Invoice"
         CaptShippingService: Label 'Shipping Type';
         CaptDocumentDate: Label 'Invoice Date';
         EInvoiceDocumentEncode: Codeunit "E-Invoice Document Encode";
-        MergeServiceInvoiceLines: Codeunit "Merge Service Invoice Lines";
+        MergeServiceInvoiceLines: Codeunit "AUZ Merge Serv. Inv. Lines";
         CompanyAddr: array[8] of Text[90];
         FirstAddr: array[8] of Text[90];
         SecondAddr: array[8] of Text[90];

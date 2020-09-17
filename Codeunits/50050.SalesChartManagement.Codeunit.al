@@ -1,4 +1,4 @@
-codeunit 50050 "Sales Chart Management"
+codeunit 50001 "AUZ Sales Chart Management"
 {
     procedure OnOpenPage(var SalesChartSetup: Record "AUZ Sales Chart Setup"; ChartView: Option Sales,"Accumulated Sales")
     begin
@@ -13,12 +13,12 @@ codeunit 50050 "Sales Chart Management"
 
     procedure UpdateData(var BusChartBuf: Record "Business Chart Buffer"; ChartView: Option Sales,"Accumulated Sales")
     var
-        AZSetup: Record "AZ Setup";
+        RoleCenterSetup: Record "AUZ Role Center Setup";
         SalesChartSetup: Record "AUZ Sales Chart Setup";
         BusChartMapColumn: Record "Business Chart Map";
         BusChartMapMeasure: Record "Business Chart Map";
     begin
-        AZSetup.Get;
+        RoleCenterSetup.Get;
         SalesChartSetup.Get(UserId, ChartView);
 
         with BusChartBuf do begin
@@ -36,7 +36,7 @@ codeunit 50050 "Sales Chart Management"
                               BusChartMapMeasure.Name,
                               BusChartMapColumn.Index,
                               CalcAmount(
-                                AZSetup,
+                                RoleCenterSetup,
                                 SalesChartSetup,
                                 BusChartMapColumn.Index,
                                 BusChartMapMeasure."Value String",
@@ -49,7 +49,7 @@ codeunit 50050 "Sales Chart Management"
 
     procedure DrillDown(var BusChartBuf: Record "Business Chart Buffer"; ChartView: Option Sales,"Accumulated Sales")
     var
-        AZSetup: Record "AZ Setup";
+        RoleCenterSetup: Record "AUZ Role Center Setup";
         SalesChartSetup: Record "AUZ Sales Chart Setup";
         GLBudgetEntry: Record "G/L Budget Entry";
         GLEntry: Record "G/L Entry";
@@ -57,7 +57,7 @@ codeunit 50050 "Sales Chart Management"
         ToDate: Date;
         Month: Integer;
     begin
-        AZSetup.Get;
+        RoleCenterSetup.Get;
         SalesChartSetup.Get(UserId, ChartView);
 
         Month := BusChartBuf."Drill-Down X Index";
@@ -68,12 +68,12 @@ codeunit 50050 "Sales Chart Management"
         case MeasureType of
             MeasureType::Budget:
                 begin
-                    SetBudgetFilter(GLBudgetEntry, AZSetup, SalesChartSetup, FromDate, ToDate);
+                    SetBudgetFilter(GLBudgetEntry, RoleCenterSetup, SalesChartSetup, FromDate, ToDate);
                     PAGE.RunModal(0, GLBudgetEntry);
                 end;
             MeasureType::Sales, MeasureType::"Sales Last Year":
                 begin
-                    SetActualFilter(GLEntry, AZSetup, SalesChartSetup, FromDate, ToDate);
+                    SetActualFilter(GLEntry, RoleCenterSetup, SalesChartSetup, FromDate, ToDate);
                     PAGE.RunModal(0, GLEntry);
                 end;
         end;
@@ -120,7 +120,7 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-    procedure CalcAmount(AZSetup: Record "AZ Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; Month: Integer; MType: Text; ChartView: Option Sales,"Accumulated Sales"): Decimal
+    procedure CalcAmount(RoleCenterSetup: Record "AUZ Role Center Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; Month: Integer; MType: Text; ChartView: Option Sales,"Accumulated Sales"): Decimal
     var
         FromDate: Date;
         ToDate: Date;
@@ -130,26 +130,26 @@ codeunit 50050 "Sales Chart Management"
 
         case MeasureType of
             MeasureType::Budget:
-                exit(CalcBudgetAmount(AZSetup, SalesChartSetup, FromDate, ToDate));
+                exit(CalcBudgetAmount(RoleCenterSetup, SalesChartSetup, FromDate, ToDate));
             MeasureType::Sales, MeasureType::"Sales Last Year":
-                exit(CalcActualAmount(AZSetup, SalesChartSetup, FromDate, ToDate));
+                exit(CalcActualAmount(RoleCenterSetup, SalesChartSetup, FromDate, ToDate));
         end;
     end;
 
-    local procedure CalcBudgetAmount(AZSetup: Record "AZ Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date): Decimal
+    local procedure CalcBudgetAmount(RoleCenterSetup: Record "AUZ Role Center Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date): Decimal
     var
         GLBudgetEntry: Record "G/L Budget Entry";
     begin
-        SetBudgetFilter(GLBudgetEntry, AZSetup, SalesChartSetup, FromDate, ToDate);
+        SetBudgetFilter(GLBudgetEntry, RoleCenterSetup, SalesChartSetup, FromDate, ToDate);
         GLBudgetEntry.CalcSums(Amount);
         exit(-GLBudgetEntry.Amount);
     end;
 
-    local procedure SetBudgetFilter(var GLBudgetEntry: Record "G/L Budget Entry"; AZSetup: Record "AZ Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date)
+    local procedure SetBudgetFilter(var GLBudgetEntry: Record "G/L Budget Entry"; RoleCenterSetup: Record "AUZ Role Center Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date)
     begin
         GLBudgetEntry.SetCurrentKey("Budget Name", "G/L Account No.", Date);
-        GLBudgetEntry.SetRange("Budget Name", AZSetup."Sales Chart Budget Name");
-        GLBudgetEntry.SetFilter("G/L Account No.", AZSetup."Sales Chart G/L Account Filter");
+        GLBudgetEntry.SetRange("Budget Name", RoleCenterSetup."Sales Chart Budget Name");
+        GLBudgetEntry.SetFilter("G/L Account No.", RoleCenterSetup."Sales Chart G/L Acc. Filter");
         GLBudgetEntry.SetRange(Date, FromDate, ToDate);
 
         GetGLSetup;
@@ -165,19 +165,19 @@ codeunit 50050 "Sales Chart Management"
         end;
     end;
 
-    local procedure CalcActualAmount(AZSetup: Record "AZ Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date): Decimal
+    local procedure CalcActualAmount(RoleCenterSetup: Record "AUZ Role Center Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date): Decimal
     var
         GLEntry: Record "G/L Entry";
     begin
-        SetActualFilter(GLEntry, AZSetup, SalesChartSetup, FromDate, ToDate);
+        SetActualFilter(GLEntry, RoleCenterSetup, SalesChartSetup, FromDate, ToDate);
         GLEntry.CalcSums(Amount);
         exit(-GLEntry.Amount);
     end;
 
-    local procedure SetActualFilter(var GLEntry: Record "G/L Entry"; AZSetup: Record "AZ Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date)
+    local procedure SetActualFilter(var GLEntry: Record "G/L Entry"; RoleCenterSetup: Record "AUZ Role Center Setup"; SalesChartSetup: Record "AUZ Sales Chart Setup"; FromDate: Date; ToDate: Date)
     begin
         GLEntry.SetCurrentKey("G/L Account No.", "Posting Date");
-        GLEntry.SetFilter("G/L Account No.", AZSetup."Sales Chart G/L Account Filter");
+        GLEntry.SetFilter("G/L Account No.", RoleCenterSetup."Sales Chart G/L Acc. Filter");
         GLEntry.SetRange("Posting Date", FromDate, ToDate);
 
         GetGLSetup;

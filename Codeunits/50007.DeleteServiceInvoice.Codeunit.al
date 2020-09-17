@@ -1,4 +1,4 @@
-codeunit 50007 "Delete Service Invoice"
+codeunit 50007 "AUZ Delete Service Invoice"
 {
     // AZ99999 18.12.2017 DHG Change code to set filter on type item.
 

@@ -1,4 +1,4 @@
-report 50096 "AZ Order Confirmation"
+report 50096 "AUZ Order Confirmation"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './AZOrderConfirmation.rdlc';

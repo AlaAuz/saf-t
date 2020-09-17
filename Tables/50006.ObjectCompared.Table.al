@@ -126,7 +126,7 @@ table 50006 "AUZ Object Compared"
 
     procedure ObjectImport()
     var
-        CaseNote: Page "Case Note";
+        CaseNote: Page "AUZ Case Note";
         MyNote: Text;
         CaseNoHandleObjects: Codeunit "AUZ Case Handle Objects";
     begin

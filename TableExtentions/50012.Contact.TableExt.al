@@ -66,7 +66,7 @@ tableextension 50012 "AUZ Contact" extends Contact
     procedure ShowLoginInformation()
     var
         ContactCompany: Record Contact;
-        ContactLoginInformation: Page "Contact Login Information";
+        ContactLoginInformation: Page "AUZ Contact Login Information";
     begin
         if "AUZ Login Company No." <> '' then
             ContactCompany.Get("AUZ Login Company No.")

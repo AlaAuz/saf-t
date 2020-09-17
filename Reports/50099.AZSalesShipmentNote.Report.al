@@ -1,4 +1,4 @@
-report 50099 "AZ Sales Shipment Note"
+report 50099 "AUZ Sales Shipment Note"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './AZSalesShipmentNote.rdlc';

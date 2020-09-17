@@ -1,5 +1,5 @@
 //ALA report 71100 "Copy Service Document 2"
-report 50009 "Copy Service Document 2"
+report 50009 "AUZ Copy Service Document 2"
 {
     Caption = 'Copy Service Document';
     ProcessingOnly = true;
@@ -23,6 +23,7 @@ report 50009 "Copy Service Document 2"
                     {
                         Caption = 'Document Type';
                         OptionCaption = 'Quote,Order,Invoice,Credit Memo,Posted Shipment,Posted Invoice,Posted Credit Memo';
+                        ApplicationArea = All;
 
                         trigger OnValidate()
                         begin
@@ -33,6 +34,7 @@ report 50009 "Copy Service Document 2"
                     field(DocumentNo; DocNo)
                     {
                         Caption = 'Document No.';
+                        ApplicationArea = All;
 
                         trigger OnLookup(var Text: Text): Boolean
                         begin
@@ -47,16 +49,19 @@ report 50009 "Copy Service Document 2"
                     field(CustNo; FromServiceHeader."Customer No.")
                     {
                         Caption = 'Bill-to Customer No.';
+                        ApplicationArea = All;
                         Editable = false;
                     }
                     field(Name; FromServiceHeader.Name)
                     {
                         Caption = 'Bill-to Name';
+                        ApplicationArea = All;
                         Editable = false;
                     }
                     field(IncludeHeader_Options; IncludeHeader)
                     {
                         Caption = 'Include Header';
+                        ApplicationArea = All;
 
                         trigger OnValidate()
                         begin
@@ -66,6 +71,7 @@ report 50009 "Copy Service Document 2"
                     field(RecalculateLines; RecalculateLines)
                     {
                         Caption = 'Recalculate Lines';
+                        ApplicationArea = All;
 
                         trigger OnValidate()
                         begin
@@ -75,10 +81,6 @@ report 50009 "Copy Service Document 2"
                     }
                 }
             }
-        }
-
-        actions
-        {
         }
 
         trigger OnOpenPage()
@@ -136,7 +138,7 @@ report 50009 "Copy Service Document 2"
         ServiceSetup: Record "Service Mgt. Setup";
         ServiceCopySetup: Record "AUZ Service Copy Setup";
         CopyDocMgt: Codeunit "Copy Document Mgt.";
-        ServCopyMgt: Codeunit "Service Copy Management";
+        ServCopyMgt: Codeunit "AUZ Service Copy Management";
         DocType: Option Quote,"Order",Invoice,"Credit Memo","Posted Shipment","Posted Invoice","Posted Credit Memo";
         DocNo: Code[20];
         IncludeHeader: Boolean;

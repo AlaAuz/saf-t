@@ -1,4 +1,4 @@
-report 50094 "AZ Sales Invoice"
+report 50094 "AUZ Sales Invoice"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './AZSalesInvoice.rdlc';

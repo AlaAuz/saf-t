@@ -11,7 +11,7 @@ pageextension 50006 "AUZ Sales Invoice" extends "Sales Invoice"
         }
         addafter(Control1900316107)
         {
-            part("AUZ Sales Case FactBox"; "Sales Case FactBox")
+            part("AUZ Sales Case FactBox"; "AUZ Sales Case FactBox")
             {
                 ApplicationArea = All;
                 Provider = SalesLines;

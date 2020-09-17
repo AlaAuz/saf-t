@@ -1,4 +1,4 @@
-report 50093 "AZ Sales Cr.Memo"
+report 50093 "AUZ Sales Cr.Memo"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './AZSalesCrMemo.rdlc';

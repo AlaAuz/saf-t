@@ -55,11 +55,7 @@
     {
       "from": 50000,
       "to": 59999
-    },
-    {
-      "from": 90000,
-      "to": 99999
-    }    
+    }
 ],
   "runtime": "5.0",
   "features": ["TranslationFile"],

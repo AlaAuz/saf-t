@@ -32,6 +32,7 @@ tableextension 50013 "AUZ Service Header" extends "Service Header"
     }
 
     //FIX
+    //Sjekk gammel STD kode for SetDefaultSalesPerson
     //Unsupported feature: Code Modification on "OnInsert".
 
     //trigger OnInsert()

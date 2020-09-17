@@ -1,4 +1,4 @@
-table 50001 "AUZ Customer Resp. Hours Approver" //FIX sjekke
+table 50001 "AUZ Cust. Resp. Hours Approver" //FIX sjekke
 {
     fields
     {

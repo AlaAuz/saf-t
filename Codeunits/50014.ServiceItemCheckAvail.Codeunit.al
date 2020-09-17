@@ -1,5 +1,5 @@
 //codeunit 71101 "Service Item-Check Avail."
-codeunit 50014 "Service Item-Check Avail."
+codeunit 50014 "AUZ Service Item-Check Avail."
 {
     procedure ServiceLineCheck(ServiceLine: Record "Service Line"; Recalculate: Boolean) Rollback: Boolean
     begin

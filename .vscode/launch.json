@@ -11,9 +11,11 @@
             "port": 7049,
             "authentication": "UserPassword",
             "breakOnError": true
-        },
-        /*
-        SYMBOLS 
+            },
+            */
+
+            /*
+            SYMBOLS 
         {
             "type": "al",
             "request": "launch",

@@ -1,4 +1,4 @@
-page 50005 "AZ Bookkeeper Activities"
+page 50005 "AUZ Bookkeeper Activities"
 {
     Caption = 'Activities';
     PageType = CardPart;
@@ -14,6 +14,7 @@ page 50005 "AZ Bookkeeper Activities"
                 field("Purchase Documents Due Today"; "Purchase Documents Due Today")
                 {
                     DrillDownPageID = "Vendor Ledger Entries";
+                    ApplicationArea = All;
                 }
 
                 actions
@@ -22,6 +23,7 @@ page 50005 "AZ Bookkeeper Activities"
                     {
                         Caption = 'Edit Payment Journal';
                         RunObject = Page "Payment Journal";
+                        ApplicationArea = All;
                     }
                 }
             }
@@ -31,6 +33,7 @@ page 50005 "AZ Bookkeeper Activities"
                 field("Overdue Sales Documents"; "Overdue Sales Documents")
                 {
                     DrillDownPageID = "Customer Ledger Entries";
+                    ApplicationArea = All;
                 }
 
                 actions
@@ -39,14 +42,11 @@ page 50005 "AZ Bookkeeper Activities"
                     {
                         Caption = 'Edit Cash Receipt Journal';
                         RunObject = Page "Cash Receipt Journal";
+                        ApplicationArea = All;
                     }
                 }
             }
         }
-    }
-
-    actions
-    {
     }
 
     trigger OnOpenPage()
@@ -61,4 +61,3 @@ page 50005 "AZ Bookkeeper Activities"
         SetFilter("Overdue Date Filter", '<%1', WorkDate);
     end;
 }
-

@@ -7,11 +7,11 @@ page 50006 "AUZ Dev. Admin. Role Center"
     {
         area(rolecenter)
         {
-            part(Control1901851508; "Case Activities")
+            part(Control1901851508; "AUZ Case Activities")
             {
                 ApplicationArea = All;
             }
-            part(Control1000000000; "My Case Lines")
+            part(Control1000000000; "AUZ My Case Lines")
             {
                 ApplicationArea = All;
             }
@@ -19,19 +19,19 @@ page 50006 "AUZ Dev. Admin. Role Center"
             {
                 ApplicationArea = All;
             }
-            part(Control1000000017; "Completed Cases")
+            part(Control1000000017; "AUZ Completed Cases")
             {
                 ApplicationArea = All;
             }
-            part(Control1000000011; "Case Line Chart")
+            part(Control1000000011; "AUZ Case Line Chart")
             {
                 ApplicationArea = All;
             }
-            part(Control1000000014; "Sales Chart")
+            part(Control1000000014; "AUZ Sales Chart")
             {
                 ApplicationArea = All;
             }
-            part(Control1000000015; "Accumulated Sales Chart")
+            part(Control1000000015; "AUZ Accumulated Sales Chart")
             {
                 ApplicationArea = All;
             }
@@ -52,7 +52,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                RunObject = Report "Case - Registered Hours";
+                RunObject = Report "AUZ Case - Registered Hours";
                 ApplicationArea = All;
             }
             action(Saksliste)
@@ -61,7 +61,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                RunObject = Report "Case List";
+                RunObject = Report "AUZCase List";
                 ApplicationArea = All;
             }
         }
@@ -70,19 +70,19 @@ page 50006 "AUZ Dev. Admin. Role Center"
             action("Standardløsninger")
             {
                 Caption = 'Standard Solutions';
-                RunObject = Page "Standard Solution List";
+                RunObject = Page "AUZ Std. Solution List";
                 ApplicationArea = All;
             }
             action(Saker)
             {
                 Caption = 'Cases';
-                RunObject = Page "Case List";
+                RunObject = Page "AUZ Case List";
                 ApplicationArea = All;
             }
             action("Saker - åpne")
             {
                 Caption = 'Cases - Open';
-                RunObject = Page "Case List";
+                RunObject = Page "AUZ Case List";
                 RunPageView = SORTING ("No.")
                               WHERE (Status = FILTER ("Not Started" | "In Progress" | "Waiting for Reply"));
                 ApplicationArea = All;
@@ -91,7 +91,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
             {
                 Caption = 'Cases - Completed';
                 ApplicationArea = All;
-                RunObject = Page "Case List";
+                RunObject = Page "AUZ Case List";
                 RunPageView = SORTING ("No.")
                               WHERE (Status = FILTER (Completed | Postponed));
             }
@@ -99,7 +99,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
             {
                 Caption = 'Cases - Running';
                 ApplicationArea = All;
-                RunObject = Page "Case List";
+                RunObject = Page "AUZ Case List";
                 RunPageView = SORTING ("No.")
                               WHERE (Status = CONST (Running));
             }
@@ -107,7 +107,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
             {
                 Caption = 'Case Lines';
                 ApplicationArea = All;
-                RunObject = Page "Case Line List";
+                RunObject = Page "AUZ Case Line List";
             }
             action(Kunder)
             {
@@ -135,7 +135,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
                 Image = Timesheet;
                 Promoted = true;
                 PromotedCategory = Process;
-                RunObject = Page "Case Line List";
+                RunObject = Page "AUZ Case Line List";
             }
             action(Sakstimekladd)
             {
@@ -144,9 +144,8 @@ page 50006 "AUZ Dev. Admin. Role Center"
                 Image = OpenJournal;
                 Promoted = true;
                 PromotedCategory = Process;
-                RunObject = Page "Case Journal";
+                RunObject = Page "AUZ Case Journal";
             }
         }
     }
 }
-

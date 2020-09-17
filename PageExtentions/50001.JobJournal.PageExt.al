@@ -15,7 +15,7 @@ pageextension 50001 "AUZ Job Journal" extends "Job Journal"
 
                 trigger OnAction()
                 var
-                    SuggestCaseJobJnlLines: Report "Suggest Case Job Jnl. Lines";
+                    SuggestCaseJobJnlLines: Report "AUZ Suggest Job Jnl. Lines";
                 begin
                     SuggestCaseJobJnlLines.SetJobJnlLine(Rec);
                     SuggestCaseJobJnlLines.RunModal;

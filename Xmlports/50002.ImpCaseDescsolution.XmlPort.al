@@ -1,4 +1,4 @@
-xmlport 50002 "Imp Case Desc solution"
+xmlport 50002 "AUZ Imp Case Desc solution"
 {
     FieldSeparator = ';';
     Format = VariableText;

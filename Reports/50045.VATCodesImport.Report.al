@@ -1,4 +1,4 @@
-report 50045 "VAT Codes Import"
+report 50045 "AUZ VAT Codes Import"
 {
     ProcessingOnly = true;
 

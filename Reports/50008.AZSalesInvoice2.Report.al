@@ -1,4 +1,4 @@
-report 50008 "AZ Sales Invoice 2"
+report 50008 "AUZ Sales Invoice 2"
 {
     // AZ99999 09.04.2015 HHV Changed addr fields when the FormatAddr function is changed.
     // AZ10327 17.08.2015 HHV Changed code to not require salesperson.
@@ -611,9 +611,7 @@ report 50008 "AZ Sales Invoice 2"
         CaptCustomerVATRegNo: Label 'VAT Registration No.';
         CaptYourReferecene: Label 'Your VAT Reg. No.';
         CaptDocumentDate: Label 'Invoice Date';
-        CustomerTools: Codeunit "ANSI <-> ASCII converter";
         FormatAddress: Codeunit "Format Address";
-        LanguageCode: Code[10];
         Language: Record Language;
         CaptShipTo: Label 'Ship-to:';
         CaptExternalDocumentNo: Label 'External Doc. No.';

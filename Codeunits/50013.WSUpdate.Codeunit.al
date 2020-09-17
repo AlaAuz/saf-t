@@ -1,4 +1,4 @@
-codeunit 50013 WSUpdate
+codeunit 50013 "AUZ WSUpdate"
 {
     procedure UpdateCaseDescription(CaseNo: Code[20]; CaseDescription: Text)
     var

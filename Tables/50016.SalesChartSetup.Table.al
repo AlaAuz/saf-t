@@ -52,7 +52,6 @@ table 50016 "AUZ Sales Chart Setup"
         }
     }
 
-
     procedure GetCurrentSelectionText(): Text[250]
     var
         Dimension: Record Dimension;

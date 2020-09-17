@@ -1,4 +1,4 @@
-page 50007 "Invoicing Periods"
+page 50007 "AUZ Invoicing Periods"
 {
     Caption = 'Invoicing Periods';
     PageType = List;
@@ -12,9 +12,11 @@ page 50007 "Invoicing Periods"
             {
                 field("Code"; Code)
                 {
+                    ApplicationArea = All;
                 }
                 field(Description; Description)
                 {
+                    ApplicationArea = All;
                 }
             }
         }

@@ -1,4 +1,4 @@
-page 50004 "Contact Login Information"
+page 50004 "AUZ Contact Login Information"
 {
     Caption = 'Login Information';
     DeleteAllowed = false;
@@ -17,6 +17,7 @@ page 50004 "Contact Login Information"
                 field(LoginInformation; LoginInformation)
                 {
                     Caption = 'Login Information';
+                    ApplicationArea = All;
                     Editable = DynamicEditable;
                     MultiLine = true;
                     ShowCaption = false;

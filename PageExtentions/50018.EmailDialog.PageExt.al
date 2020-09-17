@@ -4,7 +4,7 @@ pageextension 50018 "AUZ Email Dialog" extends "Email Dialog"
     // AZ99999 09.11.2018 HHV Commented out code to keep html text.
     layout
     {
-
+        //FIX
 
         //Unsupported feature: Code Modification on "MessageContents(Control 5).OnValidate".
 

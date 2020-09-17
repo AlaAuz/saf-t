@@ -1,1 +1,1 @@
-﻿{"Added":[],"Modified":[{"Id":50070,"Kind":11,"Name":"Camt.054","PackagePath":"/src/Codeunits/Codeunit%2050000%20-%20%20Camt054.al"}],"Removed":[]}
+﻿{"Added":[],"Modified":[{"Id":50013,"Kind":17,"Name":"AUZ Service Header","PackagePath":"/src/TableExtentions/50013.ServiceHeader.TableExt.al"},{"Id":50018,"Kind":16,"Name":"AUZ Email Dialog","PackagePath":"/src/PageExtentions/50018.EmailDialog.PageExt.al"},{"Id":50070,"Kind":11,"Name":"Camt.054","PackagePath":"/src/Codeunits/Codeunit%2050000%20-%20%20Camt054.al"}],"Removed":[]}

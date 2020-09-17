@@ -1,4 +1,4 @@
-page 50001 "Time Sheet Query"
+page 50001 "AUZ Time Sheet Query"
 {
     PageType = Worksheet;
     SourceTable = "Integer";
@@ -11,19 +11,23 @@ page 50001 "Time Sheet Query"
             {
                 field(Resource; TimeSheet.Resource_No)
                 {
-                    Caption = 'Ressurs nr.';
+                    Caption = 'Resource No.';
+                    ApplicationArea = All;
                 }
                 field(Description; TimeSheet.Description)
                 {
-                    Caption = 'Beskrivelse';
+                    Caption = 'Description';
+                    ApplicationArea = All;
                 }
                 field(Date; TimeSheet.Date)
                 {
-                    Caption = 'Dato';
+                    Caption = 'Date';
+                    ApplicationArea = All;
                 }
                 field(Quantity; TimeSheet.Quantity)
                 {
-                    Caption = 'Antall';
+                    Caption = 'Quantity';
+                    ApplicationArea = All;
                 }
             }
         }

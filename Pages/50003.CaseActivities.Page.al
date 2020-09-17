@@ -1,4 +1,4 @@
-page 50003 "Case Activities"
+page 50003 "AUZ Case Activities"
 {
     Caption = 'Activities';
     PageType = CardPart;
@@ -14,15 +14,19 @@ page 50003 "Case Activities"
                 field(Open; Open)
                 {
                     ToolTip = 'Shows all open cases';
+                    ApplicationArea = All;
                 }
                 field(Running; Running)
                 {
+                    ApplicationArea = All;
                 }
                 field(Due; Due)
                 {
+                    ApplicationArea = All;
                 }
                 field(Postponed; Postponed)
                 {
+                    ApplicationArea = All;
                 }
 
                 actions
@@ -30,8 +34,9 @@ page 50003 "Case Activities"
                     action("Ny sak")
                     {
                         Caption = 'New Case';
+                        ApplicationArea = All;
                         Image = Task;
-                        RunObject = Page "Case Card";
+                        RunObject = Page "AUZ Case Card";
                         RunPageMode = Create;
                     }
                 }
@@ -41,15 +46,19 @@ page 50003 "Case Activities"
                 Caption = 'My Open Cases';
                 field("Registered by Me"; "Registered by Me")
                 {
+                    ApplicationArea = All;
                 }
                 field("Not Started"; "Not Started")
                 {
+                    ApplicationArea = All;
                 }
                 field("In Progress"; "In Progress")
                 {
+                    ApplicationArea = All;
                 }
                 field("Waiting for Reply"; "Waiting for Reply")
                 {
+                    ApplicationArea = All;
                 }
             }
             cuegroup("Mine prioriterte saker")
@@ -57,19 +66,24 @@ page 50003 "Case Activities"
                 Caption = 'My Priority Cases';
                 field("Waiting for Me"; "Waiting for Me")
                 {
+                    ApplicationArea = All;
                 }
                 field("Ready for Testing"; "Ready for Testing")
                 {
+                    ApplicationArea = All;
                 }
                 field("Ready for Installation"; "Ready for Installation")
                 {
+                    ApplicationArea = All;
                 }
                 field("High Priority"; "High Priority")
                 {
+                    ApplicationArea = All;
                 }
                 field("Promised Delivery"; "Promised Delivery")
                 {
                     Caption = 'Promised Delivery (Within 1 Week)';
+                    ApplicationArea = All;
                 }
             }
         }
@@ -91,7 +105,7 @@ page 50003 "Case Activities"
                     CueRecordRef: RecordRef;
                 begin
                     CueRecordRef.GetTable(Rec);
-                    //ALA CueSetup.OpenCustomizePageForCurrentUser(CueRecordRef.Number);
+                    CueSetup.OpenCustomizePageForCurrentUser(CueRecordRef.Number);
                 end;
             }
         }
@@ -125,6 +139,6 @@ page 50003 "Case Activities"
 
     var
         UserSetup: Record "User Setup";
-        //ALA CueSetup: Codeunit "Cue Setup";
+        CueSetup: Codeunit "Cue Setup";
 }
 
