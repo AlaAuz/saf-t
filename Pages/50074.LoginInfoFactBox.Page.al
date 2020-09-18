@@ -105,6 +105,11 @@ page 50074 "AUZ Login Info. FactBox"
         }
     }
 
+    procedure SetCaseHeader(NewCaseHeader: Record "AUZ Case Header")
+    begin
+        CaseHeader := NewCaseHeader;
+    end;
+
     trigger OnOpenPage()
     begin
         ActionText := ClickToShowTxt
@@ -116,11 +121,4 @@ page 50074 "AUZ Login Info. FactBox"
         FileMgt: Codeunit "File Management";
         ClickToHideTxt: Label 'Click here to hide login info.';
         ActionText: Text;
-
-
-    procedure SetCaseHeader(NewCaseHeader: Record "AUZ Case Header")
-    begin
-        CaseHeader := NewCaseHeader;
-    end;
 }
-

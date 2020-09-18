@@ -189,4 +189,3 @@ page 50053 "AUZ Case SubPage"
         FirstDescription: Text[50];
         ShowMandatoryReference: Boolean;
 }
-

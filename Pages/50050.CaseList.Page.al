@@ -492,4 +492,3 @@ page 50050 "AUZ Case List"
         CurrPage.Update(true);
     end;
 }
-

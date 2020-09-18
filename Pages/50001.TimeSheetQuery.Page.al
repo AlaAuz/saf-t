@@ -63,4 +63,3 @@ page 50001 "AUZ Time Sheet Query"
         TimeSheet: Query "AUZ Time Sheet";
         NumberOfRows: Integer;
 }
-

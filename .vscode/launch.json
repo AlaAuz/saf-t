@@ -29,6 +29,20 @@
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
             "sandboxName": "Sandbox4",
+        },
+        
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Sandbox - Synchronize",
+            "authentication": "AAD",
+            "server": "https://businesscentral.dynamics.com/",
+            "tenant": "neo.no",
+            "serverInstance": "Sandbox2",
+            "sandboxName": "Sandbox2",
+            "schemaUpdateMode": "ForceSync",
+            "breakOnError": true,
+            "launchBrowser": true,
         } 
         */
     ]

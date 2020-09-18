@@ -31,7 +31,7 @@ page 50010 "AUZ Employee Role Center"
             {
                 ApplicationArea = All;
             }
-            part(Control1000000020; "External Files")
+            part(Control1000000020; "AUZ External Files")
             {
                 ApplicationArea = All;
             }

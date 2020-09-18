@@ -31,10 +31,6 @@ page 50004 "AUZ Contact Login Information"
         }
     }
 
-    actions
-    {
-    }
-
     trigger OnAfterGetCurrRecord()
     begin
         DynamicEditable := CurrPage.Editable;
@@ -49,4 +45,3 @@ page 50004 "AUZ Contact Login Information"
         LoginInformation: Text;
         DynamicEditable: Boolean;
 }
-

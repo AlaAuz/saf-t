@@ -250,9 +250,13 @@ page 50070 "AUZ Case Journal"
         User: Record User;
         IdentityManagement: Codeunit "Identity Management";
     begin
+        //ALA
+        //FIX
+        /*
         User.SetRange("User Name", UserId);
         User.FindFirst;
         WebServiceID := IdentityManagement.GetWebServicesKey(User."User Security ID");
+        */
     end;
 
     local procedure CalcTotalQty()

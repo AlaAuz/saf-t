@@ -142,4 +142,3 @@ page 50014 "AUZ Accumulated Sales Chart"
           (OldSalesChartSetup."Dimension Filter 3" <> SalesChartSetup."Dimension Filter 3"));
     end;
 }
-

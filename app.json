@@ -9,6 +9,7 @@
   "EULA": "http://auzilium.no",
   "help": "http://auzilium.no",
   "url": "http://auzilium.no",
+  "contextSensitiveHelpUrl": "http://auzilium.no",
   "logo": "logo.png",
   "dependencies": [
     {
@@ -46,6 +47,18 @@
       "publisher": "Auzilium",
       "name": "Auzilium Document Distribution",
       "version": "1.11.0.2"
+    },
+    {
+      "id": "6da8dd2f-e698-461f-9147-8e404244dd85",
+      "publisher": "Continia Software",
+      "name": "Continia Document Capture 365",
+      "version": "6.0.3.0"
+    },
+    {
+      "id": "4b915d7e-c02a-435f-85ab-649086c1e002",
+      "publisher": "Continia Software",
+      "name": "Continia Core",
+      "version": "2.0.3.0"
     }
   ],
   "screenshots": [],
