@@ -1,7 +1,7 @@
 report 50094 "AUZ Sales Invoice"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './AZSalesInvoice.rdlc';
+    RDLCLayout = 'Reports/Layouts/AZSalesInvoice.rdlc';
     Caption = 'Auzilium AS Invoice';
 
     dataset
@@ -591,4 +591,3 @@ report 50094 "AUZ Sales Invoice"
         Resource: Record Resource;
         SalesInvoiceLine: Record "Sales Invoice Line";
 }
-

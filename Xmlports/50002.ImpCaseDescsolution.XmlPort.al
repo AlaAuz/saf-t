@@ -42,21 +42,8 @@ xmlport 50002 "AUZ Imp Case Desc solution"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
     var
         Cases: Record "AUZ Case Header";
         MyText: Text;
         LineFeed: Text[2];
 }
-

@@ -1,7 +1,7 @@
 report 50093 "AUZ Sales Cr.Memo"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './AZSalesCrMemo.rdlc';
+    RDLCLayout = 'Reports/Layouts/AZSalesCrMemo.rdlc';
     Caption = 'Auzilium AS Invoice';
 
     dataset
@@ -478,22 +478,6 @@ report 50093 "AUZ Sales Cr.Memo"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     var
         CompanyAddr: array[8] of Text[90];
         FirstAddr: array[8] of Text[90];
@@ -571,4 +555,3 @@ report 50093 "AUZ Sales Cr.Memo"
         LineNo: Text;
         Resource: Record Resource;
 }
-

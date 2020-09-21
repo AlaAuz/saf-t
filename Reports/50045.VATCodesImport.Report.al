@@ -6,7 +6,7 @@ report 50045 "AUZ VAT Codes Import"
     {
         dataitem("Integer"; "Integer")
         {
-            DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+            DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
 
             trigger OnAfterGetRecord()
             var
@@ -52,25 +52,6 @@ report 50045 "AUZ VAT Codes Import"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
-    var
-        Window: Dialog;
-        Counter: Integer;
 
     local procedure InsertRec("Code": Code[10]; GenPostingType: Option; Description2: Text[250]; TradeSettlement2017BoxNo: Option; ReverseChargeReportBoxNo: Option)
     var
@@ -108,5 +89,9 @@ report 50045 "AUZ VAT Codes Import"
         VATCode."Trade Settlement 2017 Box No." := TradeSettlement2017BoxNo;
         VATCode."Reverse Charge Report Box No." := ReverseChargeReportBoxNo;
     end;
+
+    var
+        Window: Dialog;
+        Counter: Integer;
 }
 

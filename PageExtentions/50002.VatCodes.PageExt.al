@@ -13,4 +13,3 @@ pageextension 50002 "AUZ VAT Codes" extends "VAT Codes"
         }
     }
 }
-

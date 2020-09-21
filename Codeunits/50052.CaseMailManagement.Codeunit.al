@@ -186,7 +186,6 @@ codeunit 50052 "AUZ Case Mail Management"
             until UserSetup.Next = 0;
     end;
 
-
     procedure SelectTemplate(var CasesMailTemplate: Record "AUZ Case E-Mail Template"): Boolean
     var
         CaseMailLayoutList: Page "AUZ Case E-Mail Templates";
@@ -203,7 +202,6 @@ codeunit 50052 "AUZ Case Mail Management"
             exit(true);
         end;
     end;
-
 
     procedure SetToDevelopmentAdmin(Value: Boolean)
     begin
@@ -224,4 +222,3 @@ codeunit 50052 "AUZ Case Mail Management"
         BrowserTxt: Label 'browser';
         BusinessCentralAppTxt: Label 'Business Central App';
 }
-

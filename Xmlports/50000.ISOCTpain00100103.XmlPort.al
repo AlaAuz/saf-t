@@ -689,4 +689,3 @@ xmlport 50000 "AUZ ISO CT pain.001.001.03" //FIX SJEKK
         PaymentExportData.Reset;
     end;
 }
-

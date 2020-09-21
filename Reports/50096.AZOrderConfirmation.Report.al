@@ -1,7 +1,7 @@
 report 50096 "AUZ Order Confirmation"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './AZOrderConfirmation.rdlc';
+    RDLCLayout = 'Reports/Layouts/AZOrderConfirmation.rdlc';
 
     dataset
     {
@@ -449,22 +449,6 @@ report 50096 "AUZ Order Confirmation"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     var
         CompanyAddr: array[8] of Text[90];
         FirstAddr: array[8] of Text[90];
@@ -530,4 +514,3 @@ report 50096 "AUZ Order Confirmation"
         TotalLineYesNo: Integer;
         BankAccount: Record "Bank Account";
 }
-

@@ -203,4 +203,3 @@ report 50101 "AUZ Suggest Job Jnl. Lines"
             until CaseHours.Next = 0;
     end;
 }
-

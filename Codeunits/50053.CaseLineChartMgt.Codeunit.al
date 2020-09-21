@@ -15,7 +15,6 @@ codeunit 50053 "AUZ Case Line Chart Mgt."
             end;
     end;
 
-
     procedure UpdateData(var BusChartBuf: Record "Business Chart Buffer")
     var
         CaseHoursChartSetup: Record "AUZ Case Line Chart Setup";

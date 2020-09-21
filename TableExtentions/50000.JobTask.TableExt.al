@@ -46,4 +46,3 @@ tableextension 50000 "AUZ Job Task" extends "Job Task"
         }
     }
 }
-

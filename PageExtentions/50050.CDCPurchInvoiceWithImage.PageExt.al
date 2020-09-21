@@ -1,3 +1,7 @@
+//ALA
+//FIX
+
+/*
 pageextension 50050 "AUZ Purch. Invoice With Image" extends "CDC Purch. Invoice With Image"
 {
     layout
@@ -56,4 +60,4 @@ pageextension 50050 "AUZ Purch. Invoice With Image" extends "CDC Purch. Invoice 
             }
         }
     }
-}
+} */

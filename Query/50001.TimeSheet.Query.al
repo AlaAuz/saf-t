@@ -1,6 +1,5 @@
 query 50001 "AUZ Time Sheet"
 {
-
     elements
     {
         dataitem(Time_Sheet_Header; "Time Sheet Header")
@@ -34,4 +33,3 @@ query 50001 "AUZ Time Sheet"
         }
     }
 }
-

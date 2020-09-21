@@ -171,18 +171,14 @@ xmlport 50050 "AUZ Case Journal Import"
         CaseSetup.Get;
     end;
 
-    var
-        CaseSetup: Record "AUZ Case Setup";
-        CaseHourJnlLine: Record "AUZ Case Journal Line";
-        EntryNo: Integer;
-        TempBT: BigText;
-        OStream: OutStream;
-        LineNo: Integer;
-        Text000: Label 'You need version %1 of Time Registration to be able to upload hours. You have version %2.';
-
     local procedure IsPreMicrosoftStoreRelease(): Boolean
     begin
         exit(version in ['1.0.0.0', '1.1.0.1']);
     end;
-}
 
+    var
+        CaseSetup: Record "AUZ Case Setup";
+        CaseHourJnlLine: Record "AUZ Case Journal Line";
+        LineNo: Integer;
+        Text000: Label 'You need version %1 of Time Registration to be able to upload hours. You have version %2.';
+}

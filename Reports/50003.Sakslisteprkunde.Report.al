@@ -1,7 +1,7 @@
 report 50003 "AUZ Saksliste pr. kunde"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Sakslisteprkunde.rdlc';
+    RDLCLayout = 'Reports/Layouts/Sakslisteprkunde.rdlc';
 
     dataset
     {
@@ -15,15 +15,15 @@ report 50003 "AUZ Saksliste pr. kunde"
             }
             dataitem("Case Line"; "AUZ Case Line")
             {
-                DataItemLink = "Case No." = FIELD ("No.");
-                DataItemTableView = SORTING ("Case No.", "Line No.") WHERE (Chargeable = CONST (true));
+                DataItemLink = "Case No." = FIELD("No.");
+                DataItemTableView = SORTING("Case No.", "Line No.") WHERE(Chargeable = CONST(true));
                 column(CaseHoursLineNo; "Case Line"."Line No.")
                 {
                 }
                 dataitem("Case Line Description"; "AUZ Case Line Description")
                 {
-                    DataItemLink = "Case No." = FIELD ("Case No."), "Case Line No." = FIELD ("Line No.");
-                    DataItemTableView = SORTING ("Case No.", "Case Line No.", "Line No.") WHERE (Description = FILTER (<> ''));
+                    DataItemLink = "Case No." = FIELD("Case No."), "Case Line No." = FIELD("Line No.");
+                    DataItemTableView = SORTING("Case No.", "Case Line No.", "Line No.") WHERE(Description = FILTER(<> ''));
 
                     trigger OnAfterGetRecord()
                     begin
@@ -37,7 +37,7 @@ report 50003 "AUZ Saksliste pr. kunde"
                 }
                 dataitem("Integer"; "Integer")
                 {
-                    DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+                    DataItemTableView = SORTING(Number) WHERE(Number = CONST(1));
                     column(CaseHoursDate; "Case Line".Date)
                     {
                     }
@@ -74,24 +74,7 @@ report 50003 "AUZ Saksliste pr. kunde"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     var
         CaseDescription: Text;
         SumCasesHours: Decimal;
 }
-

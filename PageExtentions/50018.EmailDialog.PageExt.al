@@ -38,4 +38,3 @@ pageextension 50018 "AUZ Email Dialog" extends "Email Dialog"
         //end;
     }
 }
-

@@ -26,5 +26,4 @@ codeunit 50009 "AUZ Sales Management"
         JobResPrice.SetRange("Work Type Code", JobPlanningLine."Work Type Code");
     end;
     //COD70000.DELTA Flerer ting som må fikses i denne filen
-
 }

@@ -1,7 +1,7 @@
 report 50100 "AUZCase List"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './CaseList.rdlc';
+    RDLCLayout = 'Reports/Layouts/CaseList.rdlc';
     Caption = 'Case List';
 
     dataset
@@ -94,25 +94,7 @@ report 50100 "AUZCase List"
         }
     }
 
-    requestpage
-    {
-        SaveValues = true;
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     var
         CaptDate: Label 'Date';
         CaptType: Label 'Type';
 }
-

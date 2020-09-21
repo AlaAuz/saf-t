@@ -3,7 +3,7 @@ report 50004 "AUZ Service Invoice"
     // *** Auzilium AS ***
     // AZ12786 03.01.2018 DHG Added code to merge lines.
     DefaultLayout = RDLC;
-    RDLCLayout = './AZServiceInvoice.rdlc';
+    RDLCLayout = 'Reports/Layouts/AZServiceInvoice.rdlc';
 
     Caption = 'Invoice';
 
@@ -827,4 +827,3 @@ report 50004 "AUZ Service Invoice"
         ShowPeriod: Boolean;
         DescriptionText: Text;
 }
-

@@ -5,7 +5,7 @@ report 50008 "AUZ Sales Invoice 2"
     // AZ10327 18.08.2015 HHV Added description 2
     // AZ10543 07.09.2015 HHV Added code to set description if "Sales Description" on item has a value
     DefaultLayout = RDLC;
-    RDLCLayout = './AZSalesInvoice2.rdlc';
+    RDLCLayout = 'Reports/Layouts/AZSalesInvoice2.rdlc';
 
 
     dataset
@@ -561,22 +561,6 @@ report 50008 "AUZ Sales Invoice 2"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     var
         CompanyAddr: array[8] of Text[90];
         FirstAddr: array[8] of Text[90];
@@ -661,4 +645,3 @@ report 50008 "AUZ Sales Invoice 2"
         DocumentTools: Codeunit DocumentTools;
         CaptKID: Label 'OCR';
 }
-

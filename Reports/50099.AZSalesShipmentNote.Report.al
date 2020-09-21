@@ -1,7 +1,7 @@
 report 50099 "AUZ Sales Shipment Note"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './AZSalesShipmentNote.rdlc';
+    RDLCLayout = 'Reports/Layouts/AZSalesShipmentNote.rdlc';
 
     dataset
     {
@@ -307,4 +307,3 @@ report 50099 "AUZ Sales Shipment Note"
         CaptBillTo: Label 'Bill-to Customer No.';
         CaptCustomerVATRegNo: Label 'VAT Registration No.';
 }
-

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,78 +11,6 @@
       <rd:DataSourceID>e9255536-f32f-42a8-9f6c-925345134340</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="ResourceNo_CaseHeader">
-          <DataField>ResourceNo_CaseHeader</DataField>
-        </Field>
-        <Field Name="ResourceName_CaseHeader">
-          <DataField>ResourceName_CaseHeader</DataField>
-        </Field>
-        <Field Name="ContactCompanyNo_CaseHeader">
-          <DataField>ContactCompanyNo_CaseHeader</DataField>
-        </Field>
-        <Field Name="ContactCompanyName_CaseHeader">
-          <DataField>ContactCompanyName_CaseHeader</DataField>
-        </Field>
-        <Field Name="CaseNo_CaseHeader">
-          <DataField>CaseNo_CaseHeader</DataField>
-        </Field>
-        <Field Name="DateClosed_CaseHeader">
-          <DataField>DateClosed_CaseHeader</DataField>
-        </Field>
-        <Field Name="Status_CaseHeader">
-          <DataField>Status_CaseHeader</DataField>
-        </Field>
-        <Field Name="Comment_CaseHeader">
-          <DataField>Comment_CaseHeader</DataField>
-        </Field>
-        <Field Name="Description_CaseHeader">
-          <DataField>Description_CaseHeader</DataField>
-        </Field>
-        <Field Name="StatusDevelopment_CaseHeader">
-          <DataField>StatusDevelopment_CaseHeader</DataField>
-        </Field>
-        <Field Name="StandardSolutionNo_CaseHeader">
-          <DataField>StandardSolutionNo_CaseHeader</DataField>
-        </Field>
-        <Field Name="CaptDate">
-          <DataField>CaptDate</DataField>
-        </Field>
-        <Field Name="CaptType">
-          <DataField>CaptType</DataField>
-        </Field>
-        <Field Name="LineNo_CaseHour">
-          <DataField>LineNo_CaseHour</DataField>
-        </Field>
-        <Field Name="Date_CaseHour">
-          <DataField>Date_CaseHour</DataField>
-        </Field>
-        <Field Name="Description_CaseHour">
-          <DataField>Description_CaseHour</DataField>
-        </Field>
-        <Field Name="WorkType_CaseHour">
-          <DataField>WorkType_CaseHour</DataField>
-        </Field>
-        <Field Name="LineNo_CaseHourDescription">
-          <DataField>LineNo_CaseHourDescription</DataField>
-        </Field>
-        <Field Name="Description_CaseHourDescription">
-          <DataField>Description_CaseHourDescription</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1197,4 +1125,71 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ResourceNo_CaseHeader">
+          <DataField>ResourceNo_CaseHeader</DataField>
+        </Field>
+        <Field Name="ResourceName_CaseHeader">
+          <DataField>ResourceName_CaseHeader</DataField>
+        </Field>
+        <Field Name="ContactCompanyNo_CaseHeader">
+          <DataField>ContactCompanyNo_CaseHeader</DataField>
+        </Field>
+        <Field Name="ContactCompanyName_CaseHeader">
+          <DataField>ContactCompanyName_CaseHeader</DataField>
+        </Field>
+        <Field Name="CaseNo_CaseHeader">
+          <DataField>CaseNo_CaseHeader</DataField>
+        </Field>
+        <Field Name="DateClosed_CaseHeader">
+          <DataField>DateClosed_CaseHeader</DataField>
+        </Field>
+        <Field Name="Status_CaseHeader">
+          <DataField>Status_CaseHeader</DataField>
+        </Field>
+        <Field Name="Comment_CaseHeader">
+          <DataField>Comment_CaseHeader</DataField>
+        </Field>
+        <Field Name="Description_CaseHeader">
+          <DataField>Description_CaseHeader</DataField>
+        </Field>
+        <Field Name="StatusDevelopment_CaseHeader">
+          <DataField>StatusDevelopment_CaseHeader</DataField>
+        </Field>
+        <Field Name="StandardSolutionNo_CaseHeader">
+          <DataField>StandardSolutionNo_CaseHeader</DataField>
+        </Field>
+        <Field Name="CaptDate">
+          <DataField>CaptDate</DataField>
+        </Field>
+        <Field Name="CaptType">
+          <DataField>CaptType</DataField>
+        </Field>
+        <Field Name="LineNo_CaseHour">
+          <DataField>LineNo_CaseHour</DataField>
+        </Field>
+        <Field Name="Date_CaseHour">
+          <DataField>Date_CaseHour</DataField>
+        </Field>
+        <Field Name="Description_CaseHour">
+          <DataField>Description_CaseHour</DataField>
+        </Field>
+        <Field Name="WorkType_CaseHour">
+          <DataField>WorkType_CaseHour</DataField>
+        </Field>
+        <Field Name="LineNo_CaseHourDescription">
+          <DataField>LineNo_CaseHourDescription</DataField>
+        </Field>
+        <Field Name="Description_CaseHourDescription">
+          <DataField>Description_CaseHourDescription</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

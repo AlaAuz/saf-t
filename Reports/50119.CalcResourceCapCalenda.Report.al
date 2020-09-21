@@ -52,32 +52,7 @@ report 50119 "AUZ Calc. Resource Cap Calenda"
         SumWeekTotal();
     end;
 
-    var
-        Text000: Label 'The starting date is later than the ending date.';
-        Text001: Label 'You must select a work-hour template.';
-        Text002: Label 'You must fill in the Starting Date field.';
-        Text003: Label 'You must fill in the Ending Date field.';
-        Text004: Label 'Do you want to change the capacity for %1 %2?';
-        Text006: Label 'The capacity for %1 days was changed successfully.';
-        Text007: Label 'The capacity for %1 day was changed successfully.';
-        Text008: Label 'The capacity change was unsuccessful.';
-        TempDate: Date;
-        WorkTemplateRec: Record "Work-Hour Template";
-        WeekTotal: Decimal;
-        CalChange: Record "Customized Calendar Change";
-        ResCapacityEntry: Record "Res. Capacity Entry";
-        ResCapacityEntry2: Record "Res. Capacity Entry";
-        ServMgtSetup: Record "Service Mgt. Setup";
-        CalendarMgmt: Codeunit "Calendar Management";
-        WorkTemplateCode: Code[10];
-        StartDate: Date;
-        EndDate: Date;
-        TempCapacity: Decimal;
-        ChangedDays: Integer;
-        LastEntry: Decimal;
-        CalendarCustomized: Boolean;
-        Holiday: Boolean;
-        NewDescription: Text[50];
+
 
 
     procedure CalculateCap(Rec: Record Resource)
@@ -180,5 +155,31 @@ report 50119 "AUZ Calc. Resource Cap Calenda"
         WeekTotal := WorkTemplateRec.Monday + WorkTemplateRec.Tuesday + WorkTemplateRec.Wednesday +
           WorkTemplateRec.Thursday + WorkTemplateRec.Friday + WorkTemplateRec.Saturday + WorkTemplateRec.Sunday;
     end;
-}
 
+    var
+        Text000: Label 'The starting date is later than the ending date.';
+        Text001: Label 'You must select a work-hour template.';
+        Text002: Label 'You must fill in the Starting Date field.';
+        Text003: Label 'You must fill in the Ending Date field.';
+        Text004: Label 'Do you want to change the capacity for %1 %2?';
+        Text006: Label 'The capacity for %1 days was changed successfully.';
+        Text007: Label 'The capacity for %1 day was changed successfully.';
+        Text008: Label 'The capacity change was unsuccessful.';
+        TempDate: Date;
+        WorkTemplateRec: Record "Work-Hour Template";
+        WeekTotal: Decimal;
+        CalChange: Record "Customized Calendar Change";
+        ResCapacityEntry: Record "Res. Capacity Entry";
+        ResCapacityEntry2: Record "Res. Capacity Entry";
+        ServMgtSetup: Record "Service Mgt. Setup";
+        CalendarMgmt: Codeunit "Calendar Management";
+        WorkTemplateCode: Code[10];
+        StartDate: Date;
+        EndDate: Date;
+        TempCapacity: Decimal;
+        ChangedDays: Integer;
+        LastEntry: Decimal;
+        CalendarCustomized: Boolean;
+        Holiday: Boolean;
+        NewDescription: Text[50];
+}

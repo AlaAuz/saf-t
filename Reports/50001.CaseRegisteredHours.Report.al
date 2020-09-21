@@ -1,7 +1,7 @@
 report 50001 "AUZ Case - Registered Hours"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './CaseRegisteredHours.rdlc';
+    RDLCLayout = 'Reports/Layouts/CaseRegisteredHours.rdlc';
     Caption = 'Case - Registered Hours';
 
     dataset
@@ -59,10 +59,6 @@ report 50001 "AUZ Case - Registered Hours"
                 }
             }
         }
-
-        actions
-        {
-        }
     }
 
     labels
@@ -88,4 +84,3 @@ report 50001 "AUZ Case - Registered Hours"
         Heading: Text[50];
         text001: Label 'Hour report from %1 to %2';
 }
-

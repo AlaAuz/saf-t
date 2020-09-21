@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,36 +10,6 @@
       <rd:DataSourceID>6e77f006-fd89-4fcc-a3b5-ca526ce28aa6</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CasesNo">
-          <DataField>CasesNo</DataField>
-        </Field>
-        <Field Name="CaseDescription">
-          <DataField>CaseDescription</DataField>
-        </Field>
-        <Field Name="CaseHours_ResourceNo">
-          <DataField>CaseHours_ResourceNo</DataField>
-        </Field>
-        <Field Name="CaseHours_Quantity">
-          <DataField>CaseHours_Quantity</DataField>
-        </Field>
-        <Field Name="CaseHours_QuantityFormat">
-          <DataField>CaseHours_QuantityFormat</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -581,4 +551,29 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CasesNo">
+          <DataField>CasesNo</DataField>
+        </Field>
+        <Field Name="CaseDescription">
+          <DataField>CaseDescription</DataField>
+        </Field>
+        <Field Name="CaseHours_ResourceNo">
+          <DataField>CaseHours_ResourceNo</DataField>
+        </Field>
+        <Field Name="CaseHours_Quantity">
+          <DataField>CaseHours_Quantity</DataField>
+        </Field>
+        <Field Name="CaseHours_QuantityFormat">
+          <DataField>CaseHours_QuantityFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -81,17 +81,4 @@ xmlport 50051 "AUZ Case Export"
             }
         }
     }
-
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
 }
-
