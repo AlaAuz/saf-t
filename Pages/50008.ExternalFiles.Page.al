@@ -1,3 +1,4 @@
+/*
 page 50008 "AUZ External Files"
 {
     Caption = 'Applications';
@@ -77,5 +78,5 @@ page 50008 "AUZ External Files"
     var
         StandardSolution: Record "AUZ Standard Solution";
         FileMgt: Codeunit "AFM File Management";
-}
+} */
 

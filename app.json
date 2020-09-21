@@ -2,75 +2,26 @@
   "id": "405b5386-8f56-49b1-9bb2-31e714d9ed0b",
   "name": "Auzilium",
   "publisher": "Auzilium",
-  "brief": "Auzilium",
-  "description": "Auzilium",
+  "brief": "",
+  "description": "",
   "version": "1.0.0.0",
   "privacyStatement": "http://auzilium.no",
   "EULA": "http://auzilium.no",
   "help": "http://auzilium.no",
   "url": "http://auzilium.no",
-  "contextSensitiveHelpUrl": "http://auzilium.no",
   "logo": "logo.png",
-  "dependencies": [
-    {
-      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
-      "publisher": "Microsoft",
-      "name": "System Application",
-      "version": "16.0.0.0"
-    },
-    {
-      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
-      "publisher": "Microsoft",
-      "name": "Base Application",
-      "version": "16.0.0.0"
-    },
-    {
-      "id": "7131e8bb-6f25-4d99-b4ad-182893108dc8",
-      "publisher": "Auzilium",
-      "name": "Auzilium Base",
-      "version": "1.0.0.0"
-    },
-    {
-      "id": "e70df9e8-898c-4372-9b32-d02b866bd03c",
-      "publisher": "Auzilium",
-      "name": "Auzilium Norway",
-      "version": "1.0.0.0"
-    },
-    {
-      "id": "3d70a30e-809b-4eaf-9d17-d597109746a2",
-      "publisher": "Auzilium",
-      "name": "Auzilium File Management",
-      "version": "1.0.0.0"
-    },
-    {
-      "id": "eef016c5-19c0-4415-b389-304273556c8b",
-      "publisher": "Auzilium",
-      "name": "Auzilium Document Distribution",
-      "version": "1.11.0.2"
-    },
-    {
-      "id": "6da8dd2f-e698-461f-9147-8e404244dd85",
-      "publisher": "Continia Software",
-      "name": "Continia Document Capture 365",
-      "version": "6.0.3.0"
-    },
-    {
-      "id": "4b915d7e-c02a-435f-85ab-649086c1e002",
-      "publisher": "Continia Software",
-      "name": "Continia Core",
-      "version": "2.0.3.0"
-    }
-  ],
+  "capabilities": [],
+  "dependencies": [],
   "screenshots": [],
-  "platform": "16.0.0.0",
-  "application": "16.0.0.0",
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
   "idRanges":[ 
     {
-      "from": 50000,
-      "to": 59999
+    "from": 50000,
+    "to": 50150
     }
 ],
-  "runtime": "5.0",
-  "features": ["TranslationFile"],
-  "showMyCode": true
+  "runtime": "3.0",
+  "target":"Extension",
+  "features": ["TranslationFile"]
 }

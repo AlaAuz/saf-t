@@ -172,10 +172,10 @@ page 50077 "AUZ Case Work Card"
         }
         area(factboxes)
         {
-            part(AFMFileFactBox; "AFM File FactBox")
+            /*part(AFMFileFactBox; "AFM File FactBox")
             {
                 ApplicationArea = All;
-            }
+            } */
             part(LoginInfoFactBox; "AUZ Login Info. FactBox")
             {
                 ApplicationArea = All;
@@ -384,7 +384,7 @@ page 50077 "AUZ Case Work Card"
         CurrPage.LoginInfoFactBox.PAGE.SetCaseHeader(Rec);
 
         //AZ99999+
-        CurrPage.AFMFileFactBox.PAGE.SetRecordVariant(Rec);
+        //CurrPage.AFMFileFactBox.PAGE.SetRecordVariant(Rec);
         //AZ99999-
     end;
 

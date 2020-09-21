@@ -197,10 +197,10 @@ page 50108 "AUZ Std. Solution Card"
         }
         area(factboxes)
         {
-            part(AFMFileFactBox; "AFM File FactBox")
+            /*part(AFMFileFactBox; "AFM File FactBox")
             {
                 ApplicationArea = All;
-            }
+            } */
         }
     }
 
@@ -260,7 +260,7 @@ page 50108 "AUZ Std. Solution Card"
     trigger OnAfterGetCurrRecord()
     begin
         //AZ99999+
-        CurrPage.AFMFileFactBox.PAGE.SetRecordVariant(Rec);
+        //CurrPage.AFMFileFactBox.PAGE.SetRecordVariant(Rec);
         //AZ99999-
     end;
 

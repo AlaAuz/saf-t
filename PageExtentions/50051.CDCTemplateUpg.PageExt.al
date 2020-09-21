@@ -1,3 +1,4 @@
+/*
 pageextension 50051 "AUZ Template Upg." extends "CDC Template Upg."
 {
     Caption = 'CDC Template Upg.';
@@ -29,4 +30,4 @@ pageextension 50051 "AUZ Template Upg." extends "CDC Template Upg."
             Caption = 'Upgrade Templates';
         }
     }
-}
+} */

@@ -35,10 +35,10 @@ page 50006 "AUZ Dev. Admin. Role Center"
             {
                 ApplicationArea = All;
             }
-            part(Control1000000021; "AUZ External Files")
+            /*part(Control1000000021; "AUZ External Files")
             {
                 ApplicationArea = All;
-            }
+            } */
         }
     }
 

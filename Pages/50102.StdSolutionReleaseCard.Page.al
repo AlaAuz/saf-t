@@ -66,17 +66,17 @@ page 50102 "AUZ Std. Solution Release Card"
         }
         area(factboxes)
         {
-            part(AFMFileFactBox; "AFM File FactBox")
+            /*part(AFMFileFactBox; "AFM File FactBox")
             {
                 ApplicationArea = All;
-            }
+            } */
         }
     }
 
     trigger OnAfterGetCurrRecord()
     begin
         //AZ99999+
-        CurrPage.AFMFileFactBox.PAGE.SetRecordVariant(Rec);
+        //CurrPage.AFMFileFactBox.PAGE.SetRecordVariant(Rec);
         //AZ99999-
     end;
 }
