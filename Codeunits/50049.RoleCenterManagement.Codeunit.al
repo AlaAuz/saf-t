@@ -1,4 +1,4 @@
-codeunit 50049 "AUZ Role Center Management"
+codeunit 60050 "AUZ Role Center Management"
 {
     procedure GetSalespersPurchCode(): Code[10]
     begin

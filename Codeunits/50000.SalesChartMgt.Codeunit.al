@@ -1,4 +1,4 @@
-codeunit 50000 "AUZ Sales Chart Mgt."
+codeunit 50032 "AUZ Sales Chart Mgt."
 {
     procedure UpdateData(var BusChartBuf: Record "Business Chart Buffer")
     var

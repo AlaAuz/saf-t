@@ -1,5 +1,5 @@
 //Last ned DC Symbols
-page 50000 "AUZ Role Center Setup"
+page 60000 "AUZ Role Center Setup"
 {
     PageType = Card;
     ApplicationArea = All;

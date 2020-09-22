@@ -1,4 +1,4 @@
-pageextension 50000 "AUZ Job Task Lines Subform" extends "Job Task Lines Subform"
+/*pageextension 50000 "AUZ Job Task Lines Subform" extends "Job Task Lines Subform"
 {
     layout
     {
@@ -31,5 +31,5 @@ pageextension 50000 "AUZ Job Task Lines Subform" extends "Job Task Lines Subform
             }
         }
     }
-}
+} */
 

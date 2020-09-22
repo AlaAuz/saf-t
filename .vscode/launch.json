@@ -1,18 +1,17 @@
 {
     "version": "0.2.0",
     "configurations": [
-        /*
         {
             "type": "al",
             "request": "launch",
-            "name": "Auzilium",
-            "server": "https://auziliumapp03.auzilium.no",
-            "serverInstance": "PROD",
+            "name": "BC16",
+            "server": "13.79.226.5",
+            "serverInstance": "BC160",
             "port": 7049,
             "authentication": "UserPassword",
             "breakOnError": true
             },
-            */
+        
 
             /*
             SYMBOLS 

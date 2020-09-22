@@ -1,4 +1,4 @@
-page 50004 "AUZ Contact Login Information"
+page 60002 "AUZ Contact Login Information"
 {
     Caption = 'Login Information';
     DeleteAllowed = false;

@@ -1,4 +1,4 @@
-page 50005 "AUZ Bookkeeper Activities"
+page 60003 "AUZ Bookkeeper Activities"
 {
     Caption = 'Activities';
     PageType = CardPart;

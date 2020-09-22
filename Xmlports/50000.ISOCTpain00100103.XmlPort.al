@@ -554,8 +554,8 @@ xmlport 50000 "AUZ ISO CT pain.001.001.03" //FIX SJEKK
         PaymentGroupNo: Integer;
     begin
         GenJournalLine.Copy("Gen. Journal Line");
-        if GenJournalLine.FindFirst then
-            IsNorgeExport := DocumentTools.IsNorgeSEPACT(GenJournalLine);
+        //if GenJournalLine.FindFirst then
+            //IsNorgeExport := DocumentTools.IsNorgeSEPACT(GenJournalLine);
         SEPACTFillExportBuffer.FillExportBuffer("Gen. Journal Line", PaymentExportData);
         //AZ99999+
         MergeEqualPayments();

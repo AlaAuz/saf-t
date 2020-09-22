@@ -1,4 +1,4 @@
-page 50010 "AUZ Employee Role Center"
+page 60005 "AUZ Employee Role Center"
 {
     Caption = 'Role Center';
     PageType = RoleCenter;
@@ -61,7 +61,7 @@ page 50010 "AUZ Employee Role Center"
             {
                 Caption = 'Case - Registered Hours';
                 Image = "Report";
-                RunObject = Report "AUZ Case - Registered Hours";
+                //RunObject = Report "AUZ Case - Registered Hours";
                 ApplicationArea = All;
             }
         }

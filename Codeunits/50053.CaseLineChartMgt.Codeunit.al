@@ -1,4 +1,4 @@
-codeunit 50053 "AUZ Case Line Chart Mgt."
+codeunit 60054 "AUZ Case Line Chart Mgt."
 {
     // TODO:
     // - Lage knapper for akkumulert.

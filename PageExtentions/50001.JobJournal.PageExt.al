@@ -13,13 +13,13 @@ pageextension 50001 "AUZ Job Journal" extends "Job Journal"
                 PromotedCategory = Process;
                 ApplicationArea = All;
 
-                trigger OnAction()
+                /*trigger OnAction()
                 var
                     SuggestCaseJobJnlLines: Report "AUZ Suggest Job Jnl. Lines";
                 begin
                     SuggestCaseJobJnlLines.SetJobJnlLine(Rec);
                     SuggestCaseJobJnlLines.RunModal;
-                end;
+                end; */
             }
         }
     }

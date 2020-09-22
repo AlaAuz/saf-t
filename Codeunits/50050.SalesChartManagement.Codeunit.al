@@ -1,4 +1,4 @@
-codeunit 50001 "AUZ Sales Chart Management"
+codeunit 60053 "AUZ Sales Chart Management"
 {
     procedure OnOpenPage(var SalesChartSetup: Record "AUZ Sales Chart Setup"; ChartView: Option Sales,"Accumulated Sales")
     begin

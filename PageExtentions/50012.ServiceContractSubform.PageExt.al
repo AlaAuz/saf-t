@@ -1,4 +1,4 @@
-pageextension 50012 "AUZ Service Contract Subform" extends "Service Contract Subform"
+/*pageextension 50012 "AUZ Service Contract Subform" extends "Service Contract Subform"
 {
     layout
     {
@@ -22,5 +22,5 @@ pageextension 50012 "AUZ Service Contract Subform" extends "Service Contract Sub
             }
         }
     }
-}
+} */
 

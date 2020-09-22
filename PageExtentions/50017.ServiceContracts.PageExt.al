@@ -2,7 +2,7 @@ pageextension 50017 "AUZ Service Contracts" extends "Service Contracts"
 {
     layout
     {
-        modify("Ship-to Code")
+/*        modify("Ship-to Code")
         {
             Visible = false;
         }
@@ -13,7 +13,7 @@ pageextension 50017 "AUZ Service Contracts" extends "Service Contracts"
         modify("Service Order Type")
         {
             Visible = false;
-        }
+        } */
         modify("Invoice Period")
         {
             Visible = false;

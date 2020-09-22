@@ -1,4 +1,4 @@
-page 50056 "AUZ Case Note"
+page 60006 "AUZ Case Note"
 {
     Caption = 'Case Note';
     PageType = StandardDialog;

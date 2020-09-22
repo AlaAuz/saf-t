@@ -1,4 +1,4 @@
-page 50100 "AUZ Std. Solution Setup"
+page 60009 "AUZ Std. Solution Setup"
 {
     Caption = 'Standard Solution Setup';
     SourceTable = "AUZ Standard Solution Setup";

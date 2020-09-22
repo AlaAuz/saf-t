@@ -1,4 +1,4 @@
-page 50057 "AUZ Case E-Mail Templates"
+page 60007 "AUZ Case E-Mail Templates"
 {
     Caption = 'Case E-Mail Templates';
     CardPageID = "AUZ Case E-Mail Template";

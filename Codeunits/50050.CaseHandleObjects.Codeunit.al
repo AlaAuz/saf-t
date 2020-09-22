@@ -1,7 +1,7 @@
 //90000 - 90099 -> 50050 -- 50099
 //90100 - 90199 -> 50100 -- 50150
 
-codeunit 50050 "AUZ Case Handle Objects"
+codeunit 60051 "AUZ Case Handle Objects"
 {
     // Oseberg Solutions by EVA :)
     // 

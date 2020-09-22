@@ -1,4 +1,5 @@
 //codeunit 71101 "Service Item-Check Avail."
+/*
 codeunit 50014 "AUZ Service Item-Check Avail."
 {
     procedure ServiceLineCheck(ServiceLine: Record "Service Line"; Recalculate: Boolean) Rollback: Boolean
@@ -168,4 +169,4 @@ codeunit 50014 "AUZ Service Item-Check Avail."
         ReservedRcpt: Decimal;
         ReservedReq: Decimal;
         Text000: Label 'The update has been interrupted to respect the warning.';
-}
+} */

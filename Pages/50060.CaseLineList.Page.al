@@ -1,4 +1,4 @@
-page 50060 "AUZ Case Line List"
+page 600020 "AUZ Case Line List"
 {
     Caption = 'Case Lines';
     Editable = false;

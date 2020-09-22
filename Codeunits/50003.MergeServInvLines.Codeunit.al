@@ -1,4 +1,4 @@
-codeunit 50003 "AUZ Merge Serv. Inv. Lines"
+codeunit 50030 "AUZ Merge Serv. Inv. Lines"
 {
     procedure MergeServiceInvoiceLines(var TempLine: Record "Service Invoice Line" temporary; ServiceInvoiceHeader: Record "Service Invoice Header")
     var

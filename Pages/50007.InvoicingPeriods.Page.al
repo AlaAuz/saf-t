@@ -1,4 +1,4 @@
-page 50007 "AUZ Invoicing Periods"
+page 60008 "AUZ Invoicing Periods"
 {
     Caption = 'Invoicing Periods';
     PageType = List;

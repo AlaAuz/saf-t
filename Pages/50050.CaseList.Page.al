@@ -426,7 +426,7 @@ page 50050 "AUZ Case List"
                 ApplicationArea = All;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                RunObject = Report "AUZCase List";
+                //RunObject = Report "AUZCase List";
             }
         }
     }

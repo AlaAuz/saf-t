@@ -12,7 +12,7 @@ codeunit 50010 "AUZ Job Management"
                 SalesLine.Validate("Shortcut Dimension 1 Code", SalesLine."No.");
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Create-Invoice", 'OnAfterCreateSalesLine', '', false, false)]
+    /*[EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Create-Invoice", 'OnAfterCreateSalesLine', '', false, false)]
     local procedure InsertCaseHoursAndExpensesOnafterCreateSalesLine(var SalesLine: Record "Sales Line"; SalesHeader: Record "Sales Header"; Job: Record Job; var JobPlanningLine: Record "Job Planning Line")
     begin
         if JobPlanningLine."AUZ Case No." <> '' then begin
@@ -20,7 +20,7 @@ codeunit 50010 "AUZ Job Management"
 
             InsertCaseExpenses(SalesLine, JobPlanningLine."AUZ Case No.", JobPlanningLine."AUZ Case Line No.");
         end;
-    end;
+    end; */
 
     procedure InsertCaseHoursText(var SalesLine: Record "Sales Line"; CaseNo: Code[20]; CaseHourLineNo: Integer);
     var

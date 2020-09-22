@@ -1,4 +1,4 @@
-page 50006 "AUZ Dev. Admin. Role Center"
+page 60004 "AUZ Dev. Admin. Role Center"
 {
     Caption = 'Role Center';
     PageType = RoleCenter;
@@ -46,7 +46,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
     {
         area(reporting)
         {
-            action("Sak - registrerte timer")
+           /* action("Sak - registrerte timer")
             {
                 Caption = 'Case - Registered Hours';
                 Image = "Report";
@@ -63,7 +63,7 @@ page 50006 "AUZ Dev. Admin. Role Center"
                 PromotedCategory = "Report";
                 RunObject = Report "AUZCase List";
                 ApplicationArea = All;
-            }
+            } */
         }
         area(embedding)
         {

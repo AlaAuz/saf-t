@@ -1,4 +1,4 @@
-codeunit 50100 "AUZ Standard Solution Mgt."
+codeunit 50101 "AUZ Standard Solution Mgt."
 {
     procedure CheckChangePermissions(StandardSolution: Record "AUZ Standard Solution"; ChangeType: Option Insertion,Modification,Deletion)
     var
