@@ -30,7 +30,7 @@
             "enableSqlInformationDebugger": true,
             "sandboxName": "Sandbox4",
         },
-        
+        */
         {
             "type": "al",
             "request": "launch",
@@ -38,12 +38,10 @@
             "authentication": "AAD",
             "server": "https://businesscentral.dynamics.com/",
             "tenant": "neo.no",
-            "serverInstance": "Sandbox2",
-            "sandboxName": "Sandbox2",
-            "schemaUpdateMode": "ForceSync",
+            "serverInstance": "Sandbox",
+            "environmentName": "BC17",
             "breakOnError": true,
             "launchBrowser": true,
         } 
-        */
     ]
 }
